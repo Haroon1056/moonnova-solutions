@@ -1,0 +1,51 @@
+{% load static %}
+{% for post in posts %}
+<article class="blog-card" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|divisibleby:3|yesno:'0,100,200' }}">
+    <div class="card-image">
+        <a href="{{ post.get_absolute_url }}">
+            {% if post.featured_image %}
+            <img 
+                src="{{ post.featured_image.url }}" 
+                alt="{{ post.image_alt|default:post.title }}"
+                loading="lazy"
+                onerror="this.src='{% static 'images/blog-placeholder.jpg' %}'"
+            >
+            {% else %}
+            <img 
+                src="{% static 'images/blog-placeholder.jpg' %}" 
+                alt="{{ post.title }}"
+                loading="lazy"
+            >
+            {% endif %}
+        </a>
+        {% if post.category %}
+        <a href="{% url 'blog:category' post.category.slug %}" class="card-category">
+            {{ post.category.name }}
+        </a>
+        {% endif %}
+    </div>
+    <div class="card-content">
+        <div class="card-meta">
+            <span class="post-date">
+                <i class="bi bi-calendar3"></i>
+                {{ post.published_at|date:"M d, Y" }}
+            </span>
+            <span class="reading-time">
+                <i class="bi bi-clock"></i> {{ post.reading_time }} min
+            </span>
+        </div>
+        <h3 class="card-title">
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </h3>
+        <a href="{{ post.get_absolute_url }}" class="read-more">
+            Read More <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+</article>
+{% empty %}
+<div class="no-results active">
+    <i class="bi bi-journal-x"></i>
+    <h3>No articles yet</h3>
+    <p>Check back soon for new content!</p>
+</div>
+{% endfor %}

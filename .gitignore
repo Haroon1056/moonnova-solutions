@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.sqlite3
+db.sqlite3
+
+# Virtual environments
+venv/
+.venv/
+moonnova-venv/
+ENV/
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+
+# Django generated
+staticfiles/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

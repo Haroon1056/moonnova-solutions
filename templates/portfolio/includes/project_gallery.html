@@ -1,0 +1,27 @@
+{% load static %}
+{% if gallery_images %}
+<div class="gallery-section">
+    <div class="container">
+        <h2 class="gallery-title" data-aos="fade-up">Project Gallery</h2>
+        
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+            {% for image in gallery_images %}
+            <div class="gallery-item">
+                <a href="{{ image.image.url }}" 
+                   class="gallery-link" 
+                   data-lightbox="project-{{ project.id }}"
+                   data-title="{{ image.alt_text|default:project.title }}">
+                    <img src="{{ image.image.url }}" 
+                         alt="{{ image.alt_text|default:project.title }}"
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="bi bi-arrows-fullscreen"></i>
+                        <span class="overlay-text">View Larger</span>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}

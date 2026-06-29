@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Explore our portfolio of successful web development, e-commerce, AI, and software projects. See how we help businesses grow with custom digital solutions.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== HERO SECTION ========== -->
+<section class="portfolio-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-badge">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Work</span>
+                <span class="badge-line"></span>
+            </div>
+            
+            <h1 class="hero-title">
+                Our Work & <span class="gradient-text">Case Studies</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Selected projects showcasing our expertise in web, software, and digital solutions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FILTER BAR ========== -->
+<section class="filter-section">
+    <div class="container">
+        <div class="filter-container" data-aos="fade-up">
+            <div class="category-filters">
+                <button class="filter-btn {% if current_category == 'all' %}active{% endif %}" data-category="all">
+                    All Projects
+                    <span class="filter-count">{{ total_projects|default:projects.count }}</span>
+                </button>
+                {% for category in categories %}
+                <button class="filter-btn {% if current_category == category.slug %}active{% endif %}" 
+                        data-category="{{ category.slug }}">
+                    {{ category.name }}
+                    <span class="filter-count">{{ category.project_count }}</span>
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PORTFOLIO GRID ========== -->
+<section class="portfolio-section">
+    <div class="container">
+        <div id="portfolioGrid" class="portfolio-grid">
+            {% include 'portfolio/includes/portfolio_cards.html' with projects=projects %}
+        </div>
+        
+        <div id="noResults" class="no-results" style="display: none;">
+            <div class="no-results-icon">
+                <i class="bi bi-folder-x"></i>
+            </div>
+            <h3>No projects found</h3>
+            <p>Try selecting a different category to find what you're looking for.</p>
+            <button class="reset-btn" onclick="resetFilter()">
+                <i class="bi bi-arrow-counterclockwise"></i>
+                View All Projects
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FEATURED PROJECTS ========== -->
+{% if featured_projects %}
+<section class="featured-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle">Some of our best work</p>
+        </div>
+        
+        <div class="featured-grid">
+            {% for project in featured_projects %}
+            <div class="featured-card" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|divisibleby:3|yesno:'0,100,200' }}">
+                <div class="featured-image">
+                    <img src="{{ project.featured_image.url }}" alt="{{ project.title }}">
+                    <div class="featured-overlay">
+                        <div class="featured-content">
+                            <span class="featured-category">{{ project.category.name }}</span>
+                            <h3 class="featured-title">{{ project.title }}</h3>
+                            <a href="{{ project.get_absolute_url }}" class="featured-link">
+                                View Case Study <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ========== CTA SECTION ========== -->
+<section class="cta-strong-section">
+    <div class="container">
+        <div class="cta-strong-card" data-aos="zoom-in">
+            <h2 class="cta-strong-title">Have a project in mind?</h2>
+            <p class="cta-strong-text">
+                Let's discuss your ideas and turn them into reality.
+            </p>
+            <div class="cta-strong-buttons">
+                <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                    <i class="bi bi-chat-dots"></i>
+                    Start a Project
+                </a>
+                <a href="{% url 'core:home' %}" class="btn-outline-light btn-large">
+                    <i class="bi bi-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'ease-out-cubic'
+    });
+    
+    function resetFilter() {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.category === 'all') {
+                btn.classList.add('active');
+            }
+        });
+        filterProjects('all');
+    }
+</script>
+<script src="{% static 'js/portfolio.js' %}"></script>
+{% endblock %}

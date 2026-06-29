@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} Projects | MoonNova Portfolio{% endblock %}
+
+{% block meta_description %}{{ category.description|default:category.name }} projects by MoonNova Solutions.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== CTA SECTION ========== -->
+<style>
+    .category-cta-section {
+        padding: 5rem 0;
+        background: #050510;
+    }
+    .category-cta-card {
+        background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(37, 99, 235, 0.15));
+        border: 1px solid rgba(124, 58, 237, 0.3);
+        border-radius: 48px;
+        padding: 4rem 3rem;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+    }
+    .category-cta-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(124, 58, 237, 0.2), transparent 70%);
+        border-radius: 50%;
+        animation: rotate 20s linear infinite;
+    }
+    .category-cta-title {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        font-weight: 800;
+        color: white;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+    .category-cta-text {
+        font-size: 1.25rem;
+        color: #9ca3af;
+        margin-bottom: 2.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 2;
+    }
+    .category-cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+    }
+    .category-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, #7c3aed, #3b82f6);
+        border: none;
+        border-radius: 9999px;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .category-btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+        color: #f3f4f6;
+    }
+    .category-btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 9999px;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .category-btn-outline:hover {
+        border-color: #7c3aed;
+        background: rgba(124, 58, 237, 0.1);
+        transform: translateY(-3px);
+    }
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @media (max-width: 768px) {
+        .category-cta-card { padding: 3rem 1.5rem; }
+        .category-cta-buttons { flex-direction: column; }
+        .category-btn-primary,
+        .category-btn-outline { width: 100%; justify-content: center; }
+    }
+</style>
+
+<!-- ========== CATEGORY HERO SECTION ========== -->
+<section class="portfolio-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-badge">
+                <span class="badge-line"></span>
+                <span class="badge-text">{{ category.name }}</span>
+                <span class="badge-line"></span>
+            </div>
+            
+            <h1 class="hero-title">
+                {{ category.name }} <span class="gradient-text">Projects</span>
+            </h1>
+            
+            {% if category.description %}
+            <p class="hero-subtitle">{{ category.description }}</p>
+            {% else %}
+            <p class="hero-subtitle">Explore our {{ category.name|lower }} projects and case studies</p>
+            {% endif %}
+            
+            <!-- Category Stats -->
+            <div class="hero-stats-row">
+                <div class="stat-pill">
+                    <span class="stat-pill-number">{{ posts.paginator.count }}</span>
+                    <span class="stat-pill-label">Projects</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CATEGORY FILTER BAR ========== -->
+<section class="filter-section">
+    <div class="container">
+        <div class="filter-container" data-aos="fade-up">
+            <div class="category-filters">
+                <a href="{% url 'portfolio:portfolio_list' %}" class="filter-btn">
+                    All Projects
+                </a>
+                {% for cat in categories %}
+                <a href="{% url 'portfolio:category' cat.slug %}" 
+                   class="filter-btn {% if cat.slug == category.slug %}active{% endif %}">
+                    {{ cat.name }}
+                    <span class="filter-count">{{ cat.project_count }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CATEGORY PROJECTS GRID ========== -->
+<section class="portfolio-section">
+    <div class="container">
+        {% if posts %}
+        <div class="portfolio-grid" data-aos="fade-up">
+            {% for project in posts %}
+            <article class="portfolio-card">
+                <div class="card-image">
+                    <a href="{{ project.get_absolute_url }}">
+                        {% if project.featured_image %}
+                        <img 
+                            src="{{ project.featured_image.url }}" 
+                            alt="{{ project.image_alt|default:project.title }}"
+                            loading="lazy"
+                        >
+                        {% else %}
+                        <img 
+                            src="{% static 'images/portfolio-placeholder.jpg' %}" 
+                            alt="{{ project.title }}"
+                            loading="lazy"
+                        >
+                        {% endif %}
+                        <div class="image-overlay">
+                            <span class="overlay-text">View Project</span>
+                            <i class="bi bi-arrow-right overlay-icon"></i>
+                        </div>
+                    </a>
+                    {% if project.category %}
+                    <span class="card-category">{{ project.category.name }}</span>
+                    {% endif %}
+                </div>
+                
+                <div class="card-content">
+                    <h3 class="card-title">
+                        <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
+                    </h3>
+                    <p class="card-description">{{ project.short_description }}</p>
+                    
+                    <!-- Technologies Preview -->
+                    {% if project.technologies.all %}
+                    <div class="card-tech-preview">
+                        {% for tech in project.technologies.all|slice:":3" %}
+                        <span class="tech-pill">
+                            {% if tech.icon %}
+                            <i class="bi {{ tech.icon }}"></i>
+                            {% endif %}
+                            {{ tech.name }}
+                        </span>
+                        {% endfor %}
+                        {% if project.technologies.count > 3 %}
+                        <span class="tech-pill more">+{{ project.technologies.count|add:"-3" }}</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    
+                    <a href="{{ project.get_absolute_url }}" class="card-link">
+                        Read Case Study <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if is_paginated %}
+        <div class="pagination-wrapper" data-aos="fade-up">
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-nav prev">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                {% endif %}
+                
+                <div class="page-numbers">
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num == page_obj.number %}
+                        <span class="page-number active">{{ num }}</span>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                        <a href="?page={{ num }}" class="page-number">{{ num }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="page-nav next">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <!-- No Projects Found -->
+        <div class="no-results">
+            <div class="no-results-icon">
+                <i class="bi bi-folder-x"></i>
+            </div>
+            <h3>No projects in this category yet</h3>
+            <p>Check back soon for new {{ category.name|lower }} projects!</p>
+            <a href="{% url 'portfolio:portfolio_list' %}" class="reset-btn">
+                <i class="bi bi-arrow-counterclockwise"></i>
+                View All Projects
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- ========== CTA SECTION ========== -->
+<section class="category-cta-section">
+    <div class="container">
+        <div class="category-cta-card" data-aos="zoom-in">
+            <h2 class="category-cta-title">
+                Have a {{ category.name }} Project in Mind?
+            </h2>
+            <p class="category-cta-text">
+                Let's discuss your requirements and turn your idea into reality.
+            </p>
+            <div class="category-cta-buttons">
+                <a href="{% url 'contact:contact' %}" class="category-btn-primary">
+                    <i class="bi bi-chat-dots"></i>
+                    Start a Project
+                </a>
+                <a href="{% url 'portfolio:portfolio_list' %}" class="category-btn-outline">
+                    <i class="bi bi-grid"></i>
+                    Browse All Projects
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'ease-out-cubic'
+    });
+</script>
+{% endblock %}

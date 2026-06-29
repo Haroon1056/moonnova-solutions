@@ -1,0 +1,1243 @@
+{% load static %}
+<div id="moonnova-chatbot" class="moonnova-chatbot">
+    <!-- Chat Toggle Button - MoonNova Branded Premium Design -->
+    <button id="chat-toggle-btn" class="chat-toggle-btn">
+        <span class="btn-glow"></span>
+        <span class="btn-pulse"></span>
+        <div class="btn-icon-wrapper">
+            <i class="bi bi-chat-dots-fill"></i>
+        </div>
+        <span class="chat-status-dot"></span>
+        <span class="chat-tooltip">
+            <i class="bi bi-chat"></i>
+            Chat with us
+        </span>
+    </button>
+    
+    <!-- Chat Window -->
+    <div id="chat-window" class="chat-window">
+        <!-- Resize Handle -->
+        <div id="chat-resize-handle" class="chat-resize-handle">
+            <div class="resize-line"></div>
+        </div>
+        
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="bi bi-robot"></i>
+                </div>
+                <div>
+                    <h3>MoonNova Assistant</h3>
+                    <p><span class="online-dot"></span> Online</p>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button id="chat-resize" class="chat-action-btn" title="Resize">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                </button>
+                <button id="chat-minimize" class="chat-action-btn" title="Minimize">
+                    <i class="bi bi-dash-lg"></i>
+                </button>
+                <button id="chat-close" class="chat-action-btn" title="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Messages Area -->
+        <div id="chat-messages" class="chat-messages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="bi bi-robot"></i>
+                </div>
+                <div class="message-bubble">
+                    <p>👋 Hi there! I'm MoonNova's AI assistant.</p>
+                    <p class="message-small">I can help you with services, pricing, portfolio, or schedule a consultation.</p>
+                    <div class="quick-replies">
+                        <button class="quick-reply-btn" data-message="What services do you offer?">Services</button>
+                        <button class="quick-reply-btn" data-message="Show me your portfolio">Portfolio</button>
+                        <button class="quick-reply-btn" data-message="How can I contact you?">Contact</button>
+                        <button class="quick-reply-btn" data-message="Schedule a consultation">Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Typing Indicator -->
+        <div id="chat-typing" class="chat-typing">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="typing-text">Assistant is typing</span>
+        </div>
+        
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." autocomplete="off">
+            <button id="chat-send" class="chat-send-btn">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <div class="chat-footer">
+            <span class="footer-separator"></span>
+            <p><span class="footer-ai">AI Assistant</span> <span class="footer-divider">•</span> <a href="/privacy-policy/">Privacy</a></p>
+        </div>
+    </div>
+    
+    <!-- Lead Capture Modal -->
+    <div id="lead-capture-modal" class="lead-capture-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="bi bi-calendar-check"></i> Schedule Consultation</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Fill out the form below and our team will contact you within 24 hours.</p>
+                <form id="lead-capture-form">
+                    <div class="form-field">
+                        <i class="bi bi-person"></i>
+                        <input type="text" id="lead-name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-field">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="lead-email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-field">
+                        <i class="bi bi-telephone"></i>
+                        <input type="tel" id="lead-phone" placeholder="Phone number (optional)">
+                    </div>
+                    <div class="form-field">
+                        <i class="bi bi-grid"></i>
+                        <select id="lead-project-type">
+                            <option value="">Project type</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="E-commerce">E-commerce</option>
+                            <option value="Mobile App">Mobile App</option>
+                            <option value="Custom Software">Custom Software</option>
+                            <option value="AI/ML Solution">AI/ML Solution</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <i class="bi bi-chat"></i>
+                        <textarea id="lead-message" placeholder="Tell us about your project..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="submit-lead-btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* ============================================
+   MOONNOVA CHATBOT - PREMIUM BRANDED STYLE
+   Matches MoonNova Solutions Brand Identity
+============================================ */
+
+:root {
+    --chat-primary: #8b5cf6;
+    --chat-primary-dark: #7c3aed;
+    --chat-primary-light: #a78bfa;
+    --chat-secondary: #3b82f6;
+    --chat-success: #10b981;
+    --chat-bg: #ffffff;
+    --chat-surface: #f8fafc;
+    --chat-surface-hover: #f1f5f9;
+    --chat-border: #e2e8f0;
+    --chat-text-primary: #1e293b;
+    --chat-text-secondary: #475569;
+    --chat-text-muted: #94a3b8;
+    --chat-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --chat-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --chat-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --chat-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Container */
+.moonnova-chatbot {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ========== MOONNOVA BRANDED CHAT TOGGLE BUTTON ========== */
+.chat-toggle-btn {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px -4px rgba(139, 92, 246, 0.4), 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+}
+
+/* Glow effect on hover */
+.btn-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Pulse animation ring */
+.btn-pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: 36px;
+    background: transparent;
+    border: 2px solid rgba(139, 92, 246, 0.6);
+    opacity: 0;
+    animation: pulseRing 2s ease-out infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* Icon wrapper with animation */
+.btn-icon-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-icon-wrapper i {
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.chat-toggle-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 28px -6px rgba(139, 92, 246, 0.6), 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.chat-toggle-btn:hover .btn-glow {
+    opacity: 1;
+}
+
+.chat-toggle-btn:hover .btn-icon-wrapper i {
+    transform: scale(1.05);
+}
+
+/* Tooltip */
+.chat-tooltip {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--chat-text-primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+    pointer-events: none;
+    box-shadow: var(--chat-shadow-lg);
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    background: rgba(30, 41, 59, 0.95);
+}
+
+.chat-tooltip i {
+    font-size: 0.9rem;
+    color: var(--chat-primary-light);
+}
+
+.chat-tooltip::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid rgba(30, 41, 59, 0.95);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.chat-toggle-btn:hover .chat-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 88px;
+}
+
+/* Status dot */
+.chat-status-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 14px;
+    height: 14px;
+    background: var(--chat-success);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+    animation: statusPulse 2s infinite;
+    z-index: 3;
+}
+
+@keyframes statusPulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1; 
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+    }
+    50% { 
+        transform: scale(1.1); 
+        opacity: 0.9; 
+        box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.2);
+    }
+}
+
+/* Chat Window - Fixed Height */
+.chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 400px;
+    height: 500px;
+    background: var(--chat-bg);
+    border-radius: 28px;
+    box-shadow: var(--chat-shadow-xl);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.96);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--chat-border);
+}
+
+.chat-window.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Resize mode indicator */
+.chat-window.resizable-mode {
+    cursor: ew-resize;
+    box-shadow: 0 0 0 2px var(--chat-primary), var(--chat-shadow-xl);
+}
+
+/* Custom Resize Handle */
+.chat-resize-handle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    cursor: ew-resize;
+    z-index: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-window.resizable-mode .chat-resize-handle {
+    display: flex;
+}
+
+.resize-line {
+    width: 3px;
+    height: 60px;
+    background: var(--chat-primary);
+    border-radius: 3px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.chat-resize-handle:hover .resize-line {
+    opacity: 1;
+    width: 4px;
+}
+
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-avatar {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.chat-header-info h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.chat-header-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.online-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--chat-success);
+    border-radius: 50%;
+    display: inline-block;
+    animation: statusPulse 2s infinite;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.chat-action-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.chat-action-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+/* Messages Area */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--chat-surface);
+}
+
+/* Message Styles */
+.message {
+    display: flex;
+    gap: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--chat-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--chat-text-muted);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.user-message .message-avatar {
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    color: white;
+}
+
+.message-bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.bot-message .message-bubble {
+    background: var(--chat-bg);
+    color: var(--chat-text-primary);
+    border: 1px solid var(--chat-border);
+    border-bottom-left-radius: 6px;
+}
+
+.user-message .message-bubble {
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    color: white;
+    border-bottom-right-radius: 6px;
+}
+
+.message-small {
+    font-size: 0.7rem;
+    color: var(--chat-text-muted);
+    margin-top: 6px;
+}
+
+.user-message .message-small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.message-bubble p {
+    margin: 0;
+}
+
+/* Quick Replies */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.quick-reply-btn {
+    background: var(--chat-bg);
+    border: 1px solid var(--chat-border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: var(--chat-text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-reply-btn:hover {
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    border-color: transparent;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Typing Indicator */
+.chat-typing {
+    display: none;
+    padding: 12px 20px;
+    align-items: center;
+    gap: 10px;
+    background: var(--chat-surface);
+    border-top: 1px solid var(--chat-border);
+}
+
+.typing-dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.typing-dots span {
+    width: 6px;
+    height: 6px;
+    background: var(--chat-primary);
+    border-radius: 50%;
+    display: inline-block;
+    animation: typingWave 1.2s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: 0s; }
+.typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes typingWave {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+
+.typing-text {
+    font-size: 0.7rem;
+    color: var(--chat-text-muted);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Area */
+.chat-input-area {
+    padding: 12px 16px;
+    border-top: 1px solid var(--chat-border);
+    display: flex;
+    gap: 10px;
+    background: var(--chat-bg);
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px 16px;
+    background: var(--chat-surface);
+    border: 1px solid var(--chat-border);
+    border-radius: 24px;
+    color: var(--chat-text-primary);
+    font-size: 0.85rem;
+    outline: none;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.chat-input:focus {
+    border-color: var(--chat-primary);
+    background: var(--chat-bg);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.chat-input::placeholder {
+    color: var(--chat-text-muted);
+}
+
+.chat-send-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.chat-send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Footer */
+.chat-footer {
+    padding: 10px 16px;
+    text-align: center;
+    background: var(--chat-bg);
+    border-top: 1px solid var(--chat-border);
+}
+
+.footer-separator {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--chat-primary), var(--chat-secondary));
+    margin: 0 auto 8px auto;
+    border-radius: 2px;
+    opacity: 0.5;
+}
+
+.chat-footer p {
+    margin: 0;
+    font-size: 0.65rem;
+    color: var(--chat-text-muted);
+    letter-spacing: 0.3px;
+}
+
+.footer-ai {
+    color: var(--chat-text-secondary);
+    font-weight: 500;
+}
+
+.footer-divider {
+    margin: 0 4px;
+    opacity: 0.5;
+}
+
+.chat-footer a {
+    color: var(--chat-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.chat-footer a:hover {
+    color: var(--chat-primary);
+}
+
+/* Lead Capture Modal */
+.lead-capture-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.modal-content {
+    background: var(--chat-bg);
+    border-radius: 24px;
+    width: 90%;
+    max-width: 440px;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease;
+    box-shadow: var(--chat-shadow-xl);
+    border: 1px solid var(--chat-border);
+}
+
+@keyframes modalSlideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--chat-border);
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+}
+
+.modal-header h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-close {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body p {
+    color: var(--chat-text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+#lead-capture-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-field i {
+    position: absolute;
+    left: 14px;
+    color: var(--chat-text-muted);
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 14px 10px 40px;
+    background: var(--chat-surface);
+    border: 1px solid var(--chat-border);
+    border-radius: 12px;
+    color: var(--chat-text-primary);
+    font-size: 0.85rem;
+    outline: none;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.form-field textarea {
+    padding: 10px 14px 10px 40px;
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--chat-primary);
+    background: var(--chat-bg);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.submit-lead-btn {
+    margin-top: 8px;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--chat-primary), var(--chat-secondary));
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-lead-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--chat-shadow-sm);
+}
+
+/* Scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: var(--chat-border);
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--chat-primary-light);
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--chat-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .moonnova-chatbot {
+        bottom: 16px;
+        right: 16px;
+    }
+    
+    .chat-window {
+        width: calc(100vw - 32px);
+        right: 0;
+        height: calc(100vh - 100px);
+        bottom: 72px;
+    }
+    
+    .chat-toggle-btn {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .btn-icon-wrapper i {
+        font-size: 1.5rem;
+    }
+    
+    .chat-messages {
+        padding: 16px;
+    }
+    
+    .message-bubble {
+        max-width: 85%;
+    }
+    
+    .chat-tooltip {
+        display: none;
+    }
+    
+    .chat-resize-handle {
+        display: none !important;
+    }
+    
+    .btn-pulse {
+        inset: -3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-window {
+        width: calc(100vw - 24px);
+        height: calc(100vh - 80px);
+        bottom: 68px;
+    }
+    
+    .chat-toggle-btn {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .btn-icon-wrapper i {
+        font-size: 1.3rem;
+    }
+    
+    .chat-header {
+        padding: 12px 16px;
+    }
+    
+    .chat-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .chat-toggle-btn,
+    .chat-window,
+    .chat-action-btn,
+    .quick-reply-btn,
+    .chat-send-btn,
+    .submit-lead-btn,
+    .modal-close,
+    .typing-dots span,
+    .chat-status-dot,
+    .btn-pulse {
+        transition: none;
+        animation: none;
+    }
+    
+    .chat-toggle-btn:hover {
+        transform: none;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
+    const chatToggle = document.getElementById('chat-toggle-btn');
+    const chatWindow = document.getElementById('chat-window');
+    const chatMinimize = document.getElementById('chat-minimize');
+    const chatClose = document.getElementById('chat-close');
+    const chatResizeBtn = document.getElementById('chat-resize');
+    const chatResizeHandle = document.getElementById('chat-resize-handle');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatTyping = document.getElementById('chat-typing');
+    const leadModal = document.getElementById('lead-capture-modal');
+    
+    let conversationId = localStorage.getItem('moonnova_conversation_id') || null;
+    let isResizable = false;
+    let isResizing = false;
+    let startX = 0;
+    let startWidth = 0;
+    
+    // Get CSRF Token
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    // Toggle Chat Window
+    chatToggle.addEventListener('click', () => {
+        chatWindow.classList.toggle('open');
+    });
+    
+    chatMinimize.addEventListener('click', () => {
+        chatWindow.classList.remove('open');
+    });
+    
+    chatClose.addEventListener('click', () => {
+        chatWindow.classList.remove('open');
+    });
+    
+    // Enable/Disable Resize Mode
+    chatResizeBtn.addEventListener('click', () => {
+        isResizable = !isResizable;
+        if (isResizable) {
+            chatWindow.classList.add('resizable-mode');
+            chatResizeBtn.innerHTML = '<i class="bi bi-arrows-angle-contract"></i>';
+            chatResizeBtn.title = 'Lock width';
+            document.body.style.cursor = 'default';
+        } else {
+            chatWindow.classList.remove('resizable-mode');
+            chatResizeBtn.innerHTML = '<i class="bi bi-arrows-angle-expand"></i>';
+            chatResizeBtn.title = 'Resize width';
+            chatWindow.style.width = '';
+        }
+    });
+    
+    // Mouse events for resizing
+    function startResize(e) {
+        if (!isResizable) return;
+        e.preventDefault();
+        isResizing = true;
+        startX = e.clientX;
+        startWidth = chatWindow.offsetWidth;
+        
+        document.body.style.cursor = 'ew-resize';
+        document.body.style.userSelect = 'none';
+        
+        document.addEventListener('mousemove', doResize);
+        document.addEventListener('mouseup', stopResize);
+    }
+    
+    function doResize(e) {
+        if (!isResizing) return;
+        
+        const deltaX = startX - e.clientX;
+        let newWidth = startWidth + deltaX;
+        
+        // Min and max width constraints
+        newWidth = Math.max(360, Math.min(700, newWidth));
+        
+        chatWindow.style.width = newWidth + 'px';
+    }
+    
+    function stopResize() {
+        isResizing = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+        document.removeEventListener('mousemove', doResize);
+        document.removeEventListener('mouseup', stopResize);
+    }
+    
+    chatResizeHandle.addEventListener('mousedown', startResize);
+    
+    // Format message with links
+    function formatMessageWithLinks(text) {
+        let formatted = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function(match, linkText, url) {
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer">${linkText}</a>`;
+        });
+        formatted = formatted.replace(/\n/g, '<br>');
+        return formatted;
+    }
+    
+    function addMessage(text, sender) {
+        const formattedText = formatMessageWithLinks(text);
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender === 'user' ? 'user-message' : 'bot-message'}`;
+        messageDiv.innerHTML = `
+            <div class="message-avatar">
+                <i class="bi ${sender === 'user' ? 'bi-person' : 'bi-robot'}"></i>
+            </div>
+            <div class="message-bubble">
+                <div>${formattedText}</div>
+            </div>
+        `;
+        chatMessages.appendChild(messageDiv);
+        scrollToBottom();
+    }
+    
+    function scrollToBottom() {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function showTyping() {
+        chatTyping.style.display = 'flex';
+        scrollToBottom();
+    }
+    
+    function hideTyping() {
+        chatTyping.style.display = 'none';
+    }
+    
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        addMessage(message, 'user');
+        chatInput.value = '';
+        
+        showTyping();
+        
+        fetch('/chatbot/send/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify({
+                message: message,
+                conversation_id: conversationId
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            hideTyping();
+            
+            if (data.conversation_id) {
+                conversationId = data.conversation_id;
+                localStorage.setItem('moonnova_conversation_id', conversationId);
+            }
+            
+            addMessage(data.response, 'bot');
+            
+            if (data.ask_details) {
+                setTimeout(() => {
+                    leadModal.style.display = 'flex';
+                }, 500);
+            }
+            
+            scrollToBottom();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            hideTyping();
+            addMessage("Sorry, I'm having trouble. Please email us at info@moonnovasolutions.com or call +92 318 704 0877.", 'bot');
+            scrollToBottom();
+        });
+    }
+    
+    // Modal functions
+    const modalClose = document.querySelector('.modal-close');
+    if (modalClose) {
+        modalClose.addEventListener('click', () => {
+            leadModal.style.display = 'none';
+        });
+    }
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === leadModal) {
+            leadModal.style.display = 'none';
+        }
+    });
+    
+    const leadForm = document.getElementById('lead-capture-form');
+    if (leadForm) {
+        leadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('lead-name').value.trim();
+            const email = document.getElementById('lead-email').value.trim();
+            const phone = document.getElementById('lead-phone').value.trim();
+            const projectType = document.getElementById('lead-project-type').value;
+            const message = document.getElementById('lead-message').value.trim();
+            
+            if (!name || !email) {
+                alert('Please enter your name and email address.');
+                return;
+            }
+            
+            fetch('/chatbot/capture-lead/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    conversation_id: conversationId,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    project_type: projectType,
+                    message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    leadModal.style.display = 'none';
+                    addMessage(data.message, 'bot');
+                    scrollToBottom();
+                } else {
+                    alert(data.error || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try again.');
+            });
+        });
+    }
+    
+    // Quick Reply Buttons
+    document.querySelectorAll('.quick-reply-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            chatInput.value = btn.dataset.message;
+            sendMessage();
+        });
+    });
+    
+    // Send on Enter
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+    
+    chatSend.addEventListener('click', sendMessage);
+    
+    // Hide resize handle on mobile
+    if (window.innerWidth <= 768) {
+        if (chatResizeHandle) chatResizeHandle.style.display = 'none';
+    }
+});
+</script>

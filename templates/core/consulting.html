@@ -1,0 +1,604 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Technology Consulting for Growing Businesses | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Strategic technology consulting for startups and growing businesses. Product planning, system architecture, tech stack selection, and MVP strategy. Clear guidance, no complexity.{% endblock %}
+
+{% block meta_keywords %}technology consulting, tech strategy, product planning, system architecture, MVP development, startup consulting, digital transformation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/consulting.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO SECTION ========== -->
+<section class="consulting-hero">
+    <div class="consulting-hero-bg">
+        <div class="bg-grid"></div>
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">Technology Consulting</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Get Clear Technical Direction <span class="gradient-text">Before You Build</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Strategic guidance to help you plan, build, and scale the right digital solution 
+                without wasting time or budget.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="#contact-form" class="btn-primary btn-large">
+                    <i class="bi bi-calendar-check"></i>
+                    Book a Consultation
+                </a>
+                <a href="#contact-form" class="btn-outline btn-large">
+                    <i class="bi bi-chat-dots"></i>
+                    Discuss Your Idea
+                </a>
+            </div>
+            
+            <div class="hero-trust-note">
+                <i class="bi bi-check2-circle"></i>
+                <span>Practical advice. Clear direction. No unnecessary complexity.</span>
+            </div>
+        </div>
+    </div>
+    
+    {% comment %} <div class="hero-scroll-indicator">
+        <span class="scroll-text">Explore Consulting</span>
+        <span class="scroll-line"></span>
+    </div> {% endcomment %}
+</section>
+
+<!-- ========== 2️⃣ WHAT WE HELP WITH (CLARITY SECTION) ========== -->
+<section class="help-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">What We Help You Solve</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Clear guidance for<span class="gradient-text"> your biggest questions</span></h2>
+        </div>
+        
+        <div class="help-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Product Planning -->
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <h3 class="help-title">Product Planning</h3>
+                <p class="help-desc">Turn your idea into a structured roadmap with clear features and milestones.</p>
+            </div>
+            
+            <!-- System Architecture -->
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="bi bi-layers"></i>
+                </div>
+                <h3 class="help-title">System Architecture</h3>
+                <p class="help-desc">Design scalable and secure technical foundations that grow with you.</p>
+            </div>
+            
+            <!-- Technology Stack Selection -->
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="bi bi-cpu"></i>
+                </div>
+                <h3 class="help-title">Technology Stack Selection</h3>
+                <p class="help-desc">Choose the right tools and frameworks for your specific goals.</p>
+            </div>
+            
+            <!-- MVP Strategy -->
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="bi bi-rocket"></i>
+                </div>
+                <h3 class="help-title">MVP Strategy</h3>
+                <p class="help-desc">Launch faster with a focused Minimum Viable Product that validates your idea.</p>
+            </div>
+            
+            <!-- Automation & Optimization -->
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <h3 class="help-title">Automation & Optimization</h3>
+                <p class="help-desc">Identify opportunities to improve efficiency through technology.</p>
+            </div>
+            
+            <!-- Performance & Scalability Review -->
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <h3 class="help-title">Performance & Scalability Review</h3>
+                <p class="help-desc">Evaluate and improve your existing systems for better results.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ WHO THIS IS FOR (POSITIONING) ========== -->
+<section class="who-for-section">
+    <div class="who-for-bg">
+        <div class="bg-dots"></div>
+    </div>
+    
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="who-for-content">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Who This Is For</span>
+                    </div>
+                    
+                    <h2 class="section-title">
+                        Our Consulting Is <span class="gradient-text">Ideal For:</span>
+                    </h2>
+                    
+                    <ul class="who-for-list">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Startups validating new product ideas</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Small businesses planning digital transformation</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Founders unsure about technical decisions</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Companies needing system restructuring</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Businesses planning AI integration</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="who-for-note">
+                        <i class="bi bi-lightbulb"></i>
+                        <p>If you're building something digital and want to do it right, you're in the right place.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="who-for-visual">
+                    <img src="{% static 'images/consulting/strategy-session.png' %}" 
+                         alt="Business strategy consultation session"
+                         class="who-for-image"
+                         onerror="this.src='{% static 'images/consulting/placeholder.png' %}'">
+                    
+                    <div class="visual-badge">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Startups & Growing Businesses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ HOW OUR CONSULTING PROCESS WORKS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Approach</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Simple, structured<span class="gradient-text"> consulting process</span></h2>
+        </div>
+        
+        <div class="consulting-process-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Step 1 -->
+            <div class="process-step-large">
+                <div class="step-number-wrapper">
+                    <span class="step-number">01</span>
+                    <div class="step-line"></div>
+                </div>
+                <div class="step-content-wrapper">
+                    <h3 class="step-title">Discovery Call</h3>
+                    <p class="step-desc">We understand your goals, current challenges, and constraints.</p>
+                    <div class="step-duration">
+                        <i class="bi bi-clock"></i>
+                        <span>30-45 min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="process-step-large">
+                <div class="step-number-wrapper">
+                    <span class="step-number">02</span>
+                    <div class="step-line"></div>
+                </div>
+                <div class="step-content-wrapper">
+                    <h3 class="step-title">Technical Assessment</h3>
+                    <p class="step-desc">We analyze your idea, system, or requirements in depth.</p>
+                    <div class="step-duration">
+                        <i class="bi bi-clock"></i>
+                        <span>2-3 days</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="process-step-large">
+                <div class="step-number-wrapper">
+                    <span class="step-number">03</span>
+                    <div class="step-line"></div>
+                </div>
+                <div class="step-content-wrapper">
+                    <h3 class="step-title">Strategic Recommendations</h3>
+                    <p class="step-desc">Clear action steps, architecture suggestions, and roadmap guidance.</p>
+                    <div class="step-duration">
+                        <i class="bi bi-clock"></i>
+                        <span>Delivery session</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="process-step-large">
+                <div class="step-number-wrapper">
+                    <span class="step-number">04</span>
+                </div>
+                <div class="step-content-wrapper">
+                    <h3 class="step-title">Execution Support</h3>
+                    <p class="step-desc">Optional: We help implement the solution or support your internal team.</p>
+                    <div class="step-duration">
+                        <i class="bi bi-clock"></i>
+                        <span>Flexible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="process-note" data-aos="fade-up">
+            <i class="bi bi-check-circle"></i>
+            <p>Each engagement is tailored to your specific needs. No rigid templates, no one-size-fits-all advice.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ WHAT YOU GET (CLEAR DELIVERABLES) ========== -->
+<section class="deliverables-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">What You Get</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Real outcomes,<span class="gradient-text"> not vague promises</span></h2>
+        </div>
+        
+        <div class="deliverables-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="deliverable-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Clear technical roadmap</span>
+            </div>
+            <div class="deliverable-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Defined feature prioritization</span>
+            </div>
+            <div class="deliverable-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Architecture suggestions</span>
+            </div>
+            <div class="deliverable-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Risk identification</span>
+            </div>
+            <div class="deliverable-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Budget & timeline estimation guidance</span>
+            </div>
+            <div class="deliverable-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Honest feedback</span>
+            </div>
+        </div>
+        
+        <div class="deliverables-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="deliverables-icon">
+                <i class="bi bi-file-text"></i>
+            </div>
+            <div class="deliverables-content">
+                <h3>You'll leave with a clear action plan</h3>
+                <p>No jargon. No fluff. Just practical steps to move forward with confidence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY WORK WITH MOONNOVA FOR CONSULTING ========== -->
+<section class="why-choose-consulting-section">
+    <div class="why-choose-bg">
+        <div class="bg-grid-pattern"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why Clients Choose Us</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Practical guidance from<span class="gradient-text"> experienced builders</span></h2>
+        </div>
+        
+        <div class="choose-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="choose-item">
+                <div class="choose-check">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="choose-content">
+                    <h3>Practical, real-world guidance</h3>
+                    <p>We've built products ourselves we know what actually works.</p>
+                </div>
+            </div>
+            
+            <div class="choose-item">
+                <div class="choose-check">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="choose-content">
+                    <h3>No overcomplicated strategies</h3>
+                    <p>Simple, actionable advice you can actually implement.</p>
+                </div>
+            </div>
+            
+            <div class="choose-item">
+                <div class="choose-check">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="choose-content">
+                    <h3>Business-focused thinking</h3>
+                    <p>Every recommendation ties back to your goals and ROI.</p>
+                </div>
+            </div>
+            
+            <div class="choose-item">
+                <div class="choose-check">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="choose-content">
+                    <h3>Transparent communication</h3>
+                    <p>No hidden agendas. We tell you what you need to hear.</p>
+                </div>
+            </div>
+            
+            <div class="choose-item">
+                <div class="choose-check">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <div class="choose-content">
+                    <h3>Implementation-ready recommendations</h3>
+                    <p>You can execute immediately or we can help.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 7️⃣ PRICING APPROACH ========== -->
+<section class="pricing-section">
+    <div class="container">
+        <div class="pricing-card" data-aos="zoom-in">
+            <div class="pricing-icon">
+                <i class="bi bi-cash-stack"></i>
+            </div>
+            <h2 class="pricing-title">Flexible Engagement Options</h2>
+            <p class="pricing-description">
+                We offer engagement models that fit your needs and budget.
+            </p>
+            
+            <div class="pricing-options">
+                <div class="pricing-option">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>One-time consultation sessions</span>
+                </div>
+                <div class="pricing-option">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Short-term advisory support</span>
+                </div>
+                <div class="pricing-option">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <span>Ongoing technical consulting</span>
+                </div>
+            </div>
+            
+            <div class="pricing-cta">
+                <a href="#contact-form" class="btn-primary">
+                    <i class="bi bi-chat"></i>
+                    Contact us to discuss your specific needs
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ SHORT FAQ SECTION ========== -->
+<section class="consulting-faq-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Quick Questions</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Common <span class="gradient-text">questions</span></h2>
+        </div>
+        
+        <div class="faq-mini-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- FAQ 1 -->
+            <div class="faq-mini-item">
+                <div class="faq-mini-q">
+                    <i class="bi bi-question-circle"></i>
+                    <h3>Do I need to have technical knowledge?</h3>
+                </div>
+                <p class="faq-mini-a">No. We explain everything clearly and simply no technical background required.</p>
+            </div>
+            
+            <!-- FAQ 2 -->
+            <div class="faq-mini-item">
+                <div class="faq-mini-q">
+                    <i class="bi bi-question-circle"></i>
+                    <h3>Can you review an existing project?</h3>
+                </div>
+                <p class="faq-mini-a">Yes, we provide audits and improvement recommendations for existing systems.</p>
+            </div>
+            
+            <!-- FAQ 3 -->
+            <div class="faq-mini-item">
+                <div class="faq-mini-q">
+                    <i class="bi bi-question-circle"></i>
+                    <h3>Do you help after consulting?</h3>
+                </div>
+                <p class="faq-mini-a">Yes, we can assist with implementation or support your internal team.</p>
+            </div>
+            
+            <!-- FAQ 4 -->
+            <div class="faq-mini-item">
+                <div class="faq-mini-q">
+                    <i class="bi bi-question-circle"></i>
+                    <h3>Is consulting only for large businesses?</h3>
+                </div>
+                <p class="faq-mini-a">No, we primarily support startups and growing companies like yours.</p>
+            </div>
+        </div>
+        
+        <div class="faq-more" data-aos="fade-up">
+            <p>Have more questions? <a href="{% url 'contact:contact' %}">Let's talk</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 9️⃣ STRONG CTA SECTION ========== -->
+<section class="consulting-cta-section">
+    <div class="container">
+        <div class="consulting-cta-card" data-aos="zoom-in">
+            <h2 class="cta-title">Avoid Costly Mistakes Before You Start</h2>
+            <p class="cta-text">
+                Get clear direction, technical guidance, and a practical roadmap before you invest time and money.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact-form" class="btn-primary btn-large">
+                    <i class="bi bi-calendar-check"></i>
+                    Schedule a Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT FORM SECTION (for bookings) ========== -->
+<section id="contact-form" class="consulting-contact-section">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="consulting-contact-content">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Let's Talk</span>
+                    </div>
+                    
+                    <h2 class="section-title">Ready to get<span class="gradient-text"> clear direction?</span></h2>
+                    
+                    <p class="contact-description">
+                        Tell us a bit about your project and we'll schedule a consultation call to discuss how we can help.
+                    </p>
+                    
+                    <div class="contact-benefits">
+                        <div class="contact-benefit">
+                            <i class="bi bi-check-circle"></i>
+                            <span>30-min discovery call</span>
+                        </div>
+                        <div class="contact-benefit">
+                            <i class="bi bi-check-circle"></i>
+                            <span>No pressure, just advice</span>
+                        </div>
+                        <div class="contact-benefit">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Clear next steps</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-direct">
+                        <p>Prefer to email directly?</p>
+                        <a href="mailto:consulting@moonnovasolutions.com" class="contact-email">
+                            <i class="bi bi-envelope"></i>
+                            consulting@moonnovasolutions.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="consulting-form-card">
+                    <h3 class="form-title">Book Your Consultation</h3>
+                    
+                    <form method="post" action="{% url 'core:book_consultation' %}" class="consulting-form">
+                        {% csrf_token %}
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">What would you like to discuss? *</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">I agree to the <a href="{% url 'core:privacy_policy' %}">Privacy Policy</a></label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-full">
+                            <i class="bi bi-calendar-check"></i>
+                            Request Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/consulting.js' %}"></script>
+{% endblock %}

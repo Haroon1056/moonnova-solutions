@@ -1,0 +1,1132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}E-Commerce Website Development Services | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Custom e-commerce website development for startups and growing brands. We build fast, secure online stores with optimized checkout, payment integrations, and scalable architecture.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/ecommerce-development.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO ========== -->
+<section class="service-hero">
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">E‑Commerce Development</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Build Your <span class="gradient-text">Profitable Online Store</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    At MoonNova Solutions, we create powerful e-commerce platforms designed to help businesses sell more effectively online. From custom online stores to scalable marketplace platforms, we build solutions designed to grow with your business.
+                    <br/><br/>
+                    We design and develop high-performance e-commerce websites, handling payments, product management, performance optimization, and integrations so you can focus on running and growing your business.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-cart-check"></i>
+                        Start Your Project
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-grid"></i>
+                        View Our Portfolio
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="shopping-window">
+                        <div class="shopping-header">
+                            <span class="header-icon"><i class="bi bi-cart-fill"></i></span>
+                            <span class="header-title">Your Store</span>
+                            <span class="header-cart">$129.00</span>
+                        </div>
+                        <div class="shopping-content">
+                            <div class="product-row">
+                                <div class="product-image"></div>
+                                <div class="product-details">
+                                    <div class="product-name">Wireless Headphones</div>
+                                    <div class="product-price">$79.99</div>
+                                </div>
+                                <div class="product-add"><i class="bi bi-plus-circle"></i></div>
+                            </div>
+                            <div class="product-row">
+                                <div class="product-image"></div>
+                                <div class="product-details">
+                                    <div class="product-name">Smart Watch</div>
+                                    <div class="product-price">$199.99</div>
+                                </div>
+                                <div class="product-add"><i class="bi bi-plus-circle"></i></div>
+                            </div>
+                            <div class="product-row">
+                                <div class="product-image"></div>
+                                <div class="product-details">
+                                    <div class="product-name">Premium Backpack</div>
+                                    <div class="product-price">$49.99</div>
+                                </div>
+                                <div class="product-add"><i class="bi bi-plus-circle"></i></div>
+                            </div>
+                            <div class="checkout-button">Checkout →</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-credit-card"></i>
+                        <span>Secure payments</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-truck"></i>
+                        <span>Shipping included</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>Real sales data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== TRUST LINE SECTION - BETWEEN HERO AND INTRODUCTION ========== -->
+<section class="trust-line-section">
+    <div class="container">
+        <div class="trust-line-wrapper" data-aos="fade-up">
+            <div class="trust-badge">
+                <span class="trust-dot"></span>
+                <span class="trust-badge-text">Trusted by</span>
+            </div>
+            
+            <h3 class="trust-heading">
+                Trusted by startups, founders, and growing online brands.
+            </h3>
+            
+            <p class="trust-text">
+                We help founders, small businesses, and online brands launch reliable e‑commerce platforms that are built to scale.
+            </p>
+            
+            <div class="trust-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="bi bi-arrow-down"></i></span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 2️⃣ INTRODUCTION ========== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Introduction</span>
+                </div>
+                
+                <h2 class="section-title">
+                    E-Commerce Development Solutions That <span class="gradient-text">Drive Sales</span>
+                </h2>
+                
+                <p class="intro-text">
+                    An online store has one main job: making it easy for customers to buy from you. Our focus is on the fundamentals: clear product presentation, a smooth checkout experience, and a site that stays fast even when traffic grows.
+                </p>
+                
+                <p class="intro-text">
+                    Whether you’re a founder launching a new brand or an established business moving online, we help you choose the right approach. Sometimes that’s a custom build. Sometimes it’s a well‑configured platform like Shopify or WooCommerce. We’re transparent about what fits.
+                </p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-cart-check-fill"></i>
+                        <span>Checkout flows that convert</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-shield-lock-fill"></i>
+                        <span>PCI‑compliant & secure</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-phone-fill"></i>
+                        <span>Works perfectly on mobile</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>Inventory and order tools</span>
+                    </div>
+                </div>           
+            </div>
+            
+            <div class="intro-visual" data-aos="fade-left">
+                <div class="visual-card">
+                    <img src="{% static 'images/services/ecommerce-dashboard.png' %}" 
+                         alt="E‑Commerce Dashboard Mockup"
+                         onerror="this.src='{% static 'images/services/mockup-fallback1.png' %}'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY INVEST SECTION - SEO & VALUE ========== -->
+<section class="why-invest-section">
+    <div class="container">
+        <div class="why-invest-wrapper" data-aos="fade-up">
+            
+            <div class="why-invest-grid">
+                <!-- Left Column - Main Content -->
+                <div class="why-invest-content" data-aos="fade-right">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Why it matters</span>
+                    </div>
+                    
+                    <h2 class="why-invest-title">
+                        Why Invest in Professional <span class="gradient-text">E-Commerce Development?</span>
+                    </h2>
+                    
+                    <p class="why-invest-text">
+                        A successful online store is more than a product catalog. It needs fast performance, a reliable checkout experience, and a structure that helps customers find what they want quickly.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        Professional e-commerce development ensures your store is secure, scalable, and optimized for conversions.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        Our goal is to build platforms that support long-term growth from product management and payment integrations to performance optimization and mobile shopping experiences.
+                    </p>
+                    
+                    <div class="why-invest-highlights">
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Secure & PCI compliant</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Optimized for conversions</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Built to scale with you</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Mobile-first experience</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Stats/Visual -->
+                <div class="why-invest-visual" data-aos="fade-left">
+                    <div class="invest-stats-card">
+                        <div class="stat-item-large">
+                            <span class="stat-number">78%</span>
+                            <span class="stat-label">of online shoppers abandon carts due to poor checkout experience</span>
+                        </div>
+                        
+                        <div class="stat-divider-horizontal"></div>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item-small">
+                                <span class="stat-number">53%</span>
+                                <span class="stat-label">of mobile users leave if site takes >3s to load</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <span class="stat-number">2x</span>
+                                <span class="stat-label">higher conversion rate for professional store designs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="invest-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>Professional development directly impacts your bottom line</span>
+                        </div>
+                    </div>
+                    
+                    {% comment %} <div class="invest-quote-card">
+                        <i class="bi bi-quote"></i>
+                        <p>"We saw a 40% increase in online sales after rebuilding our store with MoonNova. The checkout flow alone made a huge difference."</p>
+                        <div class="quote-author">
+                            <span class="author-name">— Sarah Chen</span>
+                            <span class="author-title">Founder, Modern Home Goods</span>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ WHAT WE OFFER ========== -->
+<section class="offerings-section">
+    <div class="offerings-bg">
+        <div class="bg-pattern"></div>
+        <div class="bg-glow"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Services</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Our E-Commerce Development <span class="gradient-text">Services</span>
+            </h2>
+            <p class="section-description">
+                We focus on building the features that actually matter for your business. Instead of adding unnecessary complexity, we design stores around your products, your customers, and your growth plans.
+            </p>
+        </div>
+        
+        <div class="offerings-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1 -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-shop"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Custom online stores</h3>
+                        <p class="offering-brief">When you need something specific that off‑the‑shelf themes can’t handle.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Unique design that fits your brand</li>
+                            <li><i class="bi bi-check-lg"></i> Custom product catalogs and filters</li>
+                            <li><i class="bi bi-check-lg"></i> Fast, clean code that loads quickly</li>
+                            <li><i class="bi bi-check-lg"></i> Easy to update and maintain</li>
+                            <li><i class="bi bi-check-lg"></i> Works in multiple currencies</li>
+                            <li><i class="bi bi-check-lg"></i> Built for search engines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Payments & checkout</h3>
+                        <p class="offering-brief">A smooth, secure checkout is the difference between a sale and an abandoned cart.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Stripe, PayPal, and local gateways</li>
+                            <li><i class="bi bi-check-lg"></i> Apple Pay, Google Pay, BNPL options</li>
+                            <li><i class="bi bi-check-lg"></i> Subscription and recurring billing</li>
+                            <li><i class="bi bi-check-lg"></i> PCI‑compliant from day one</li>
+                            <li><i class="bi bi-check-lg"></i> Clear, distraction‑free checkout flow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-boxes"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Inventory & orders</h3>
+                        <p class="offering-brief">Tools to keep your stock in check and your orders on track.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Real‑time stock tracking</li>
+                            <li><i class="bi bi-check-lg"></i> Low‑stock alerts</li>
+                            <li><i class="bi bi-check-lg"></i> Supplier and SKU management</li>
+                            <li><i class="bi bi-check-lg"></i> Bulk product uploads</li>
+                            <li><i class="bi bi-check-lg"></i> Order management dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Multi‑vendor marketplaces</h3>
+                        <p class="offering-brief">If you have multiple sellers, we can build a platform that handles the complexity.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Vendor dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Commission and payout logic</li>
+                            <li><i class="bi bi-check-lg"></i> Product approval workflows</li>
+                            <li><i class="bi bi-check-lg"></i> Seller ratings and reviews</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Mobile shopping</h3>
+                        <p class="offering-brief">More than half your customers will shop on their phone. We make sure that experience is smooth.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Responsive, touch‑friendly design</li>
+                            <li><i class="bi bi-check-lg"></i> Mobile wallet integration</li>
+                            <li><i class="bi bi-check-lg"></i> Fast loading on mobile networks</li>
+                            <li><i class="bi bi-check-lg"></i> Thumb‑friendly navigation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-megaphone"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Marketing & growth</h3>
+                        <p class="offering-brief">Once your store is live, we help you connect it to the tools that bring customers back.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> SEO‑friendly product pages</li>
+                            <li><i class="bi bi-check-lg"></i> Email marketing (Klaviyo, Mailchimp)</li>
+                            <li><i class="bi bi-check-lg"></i> Discount codes and promotions</li>
+                            <li><i class="bi bi-check-lg"></i> Abandoned cart recovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offerings-footer" data-aos="fade-up">
+            <p>Need a custom e-commerce feature? <a href="{% url 'contact:contact' %}">Let's discuss your specific requirements</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ OUR PROCESS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">How We Build Your Store</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Our E-Commerce Development <span class="gradient-text">Process</span>
+            </h2>
+            <p class="section-description">
+                We don’t disappear for months and come back with a surprise. You’ll know what’s happening at every stage.
+            </p>
+        </div>
+        
+        <div class="process-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-center">
+                <div class="center-icon">
+                    <i class="bi bi-cart-check"></i>
+                </div>
+                <div class="center-text">Built around<br>your business</div>
+            </div>
+            
+            <!-- Process Steps in Circular Layout -->
+            <div class="process-step step-1">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Discovery</h3>
+                    <p>We analyze your products, target audience, and business goals.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Product catalog review</li>
+                            <li>Competitor analysis</li>
+                            <li>Target customer profiling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-2">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Strategy</h3>
+                    <p>We plan your store architecture and choose the right platform.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Platform selection</li>
+                            <li>Payment gateway setup</li>
+                            <li>Shipping strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-3">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Design</h3>
+                    <p>We create conversion-focused store designs.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Product page design</li>
+                            <li>Checkout flow optimization</li>
+                            <li>Mobile shopping experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-4">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Development</h3>
+                    <p>We build your store with all features and integrations.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Product catalog setup</li>
+                            <li>Payment integration</li>
+                            <li>Inventory system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-5">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Testing</h3>
+                    <p>We test every step of the customer journey.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Payment testing</li>
+                            <li>Mobile responsiveness</li>
+                            <li>Checkout flow testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-6">
+                <div class="step-marker">06</div>
+                <div class="step-content">
+                    <h3>Launch</h3>
+                    <p>We deploy your store and ensure everything works perfectly.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Product data migration</li>
+                            <li>Go-live support</li>
+                            <li>Post-launch monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-connector"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ TECH STACK ========== -->
+{% comment %} <section class="tech-stack-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Tools we use</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Platforms and tools <span class="gradient-text">we know well</span>
+            </h2>
+            <p class="section-description">
+                We pick the right tool for your project whether that’s a popular platform or a custom build.
+            </p>
+        </div>
+        
+        <div class="tech-tabs" data-aos="fade-up" data-aos-delay="100">
+            <div class="tech-tab-content active" id="tab-all">
+                <div class="tech-masonry-grid">
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-cart"></i>
+                            E‑Commerce platforms
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Shopify">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/shopify" alt="Shopify">
+                                </div>
+                                <span>Shopify</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="WooCommerce">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/woocommerce" alt="WooCommerce">
+                                </div>
+                                <span>WooCommerce</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Magento">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/magento" alt="Magento">
+                                </div>
+                                <span>Magento</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="BigCommerce">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/bigcommerce" alt="BigCommerce">
+                                </div>
+                                <span>BigCommerce</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-credit-card"></i>
+                            Payment gateways
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Stripe">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/stripe" alt="Stripe">
+                                </div>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="PayPal">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/paypal" alt="PayPal">
+                                </div>
+                                <span>PayPal</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Razorpay">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/razorpay" alt="Razorpay">
+                                </div>
+                                <span>Razorpay</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-truck"></i>
+                            Shipping & fulfilment
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="ShipStation">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/shipstation" alt="ShipStation">
+                                </div>
+                                <span>ShipStation</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Shippo">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/shippo" alt="Shippo">
+                                </div>
+                                <span>Shippo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-graph-up"></i>
+                            Marketing & analytics
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Google Analytics">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/googleanalytics" alt="Google Analytics">
+                                </div>
+                                <span>Google Analytics</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Klaviyo">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/klaviyo" alt="Klaviyo">
+                                </div>
+                                <span>Klaviyo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<!-- ========== 7️⃣ INDUSTRIES ========== -->
+<section class="industries-section">
+    <div class="industries-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Industries</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                We work with all kinds of <span class="gradient-text">businesses</span>
+            </h2>
+            <p class="section-description">
+                From product founders to established retailers, we help businesses build reliable online stores.
+            </p>
+        </div>
+        
+        <div class="industries-premium-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/fashion.png' %}" alt="Fashion & Apparel">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-handbag"></i>
+                    </div>
+                    <h3>Fashion & Apparel</h3>
+                    <p>Clothing, accessories, and footwear. We build stores that show off your products.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/electronics.png' %}" alt="Electronics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>Gadgets, computers, and accessories. Clear specs and easy browsing.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/food.png' %}" alt="Food & Beverage">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cup-straw"></i>
+                    </div>
+                    <h3>Food & Beverage</h3>
+                    <p>Grocery delivery, meal kits, specialty foods. We handle subscriptions and recurring orders.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/beauty.png' %}" alt="Health & Beauty">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-flower1"></i>
+                    </div>
+                    <h3>Health & Beauty</h3>
+                    <p>Skincare, cosmetics, wellness. Stores that build trust and encourage repeat buys.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/furniture.png' %}" alt="Home & Furniture">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-house-heart"></i>
+                    </div>
+                    <h3>Home & Furniture</h3>
+                    <p>Furniture, decor, and homewares. We help you showcase products clearly.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/sports.png' %}" alt="Sports & Outdoors">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-bicycle"></i>
+                    </div>
+                    <h3>Sports & Outdoors</h3>
+                    <p>Sporting goods, camping gear, outdoor equipment. Built for enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY CHOOSE US ========== -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why MoonNova</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                A partner who <span class="gradient-text">explains things clearly</span>
+            </h2>
+            <p class="section-description">
+                We’re a focused team that works closely with our clients. When you work with MoonNova, you communicate directly with the people designing and building your store, not layers of project managers.
+            </p>
+        </div>
+        
+        <div class="choose-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="choose-center">
+                <img src="{% static 'images/logo-icon.svg' %}" alt="MoonNova" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="center-text-fallback">MoonNova</span>
+            </div>
+            
+            <!-- Benefits in Circular Layout -->
+            <div class="benefit-item benefit-1">
+                <div class="benefit-icon">
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+                <h3>Conversion-Focused Design</h3>
+                <p>Store layouts built to turn visitors into customers.</p>
+            </div>
+            
+            <div class="benefit-item benefit-2">
+                <div class="benefit-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <h3>Secure & PCI Compliant</h3>
+                <p>Your customers' payment data is always protected</p>
+            </div>
+            
+            <div class="benefit-item benefit-3">
+                <div class="benefit-icon">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <h3>Mobile-First Shopping</h3>
+                <p>Flawless shopping experience on all devices</p>
+            </div>
+            
+            <div class="benefit-item benefit-4">
+                <div class="benefit-icon">
+                    <i class="bi bi-rocket"></i>
+                </div>
+                <h3>Fast Loading Stores</h3>
+                <p>Optimized performance that reduces cart abandonment</p>
+            </div>
+            
+            <div class="benefit-item benefit-5">
+                <div class="benefit-icon">
+                    <i class="bi bi-graph-up"></i>
+                </div>
+                <h3>Scalable for Growth</h3>
+                <p>Your store grows with your business, handling thousands of products</p>
+            </div>
+            
+            <div class="benefit-item benefit-6">
+                <div class="benefit-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <h3>Ongoing Support</h3>
+                <p>We're here to help you manage and grow your online business</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ BLOG ========== -->
+<section class="blog-premium-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Latest Insights</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Insights & <span class="gradient-text">Resources</span>
+            </h2>
+            <p class="section-description">
+                Insights, guides, and practical advice for building successful online stores.
+            </p>
+        </div>
+        
+        <div class="blog-featured-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="{% static 'images/blog/ecommerce-trends.jpg' %}" alt="E‑Commerce Trends">
+                    <div class="blog-featured-category">Strategy</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-featured-meta">
+                        <span><i class="bi bi-calendar3"></i> Mar 2024</span>
+                        <span><i class="bi bi-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>What actually matters in e‑commerce right now</h3>
+                    <p>Forget the hype. Here’s what we’re seeing work for real stores.</p>
+                    <a href="#" class="blog-featured-link">
+                        Read article <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="blog-grid-posts">
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/checkout-optimization.jpg' %}" alt="Checkout">
+                        <div class="blog-grid-category">Conversion</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Feb 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h4>How to improve your checkout (without overthinking it)</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/payment-gateways.jpg' %}" alt="Payments">
+                        <div class="blog-grid-category">Payments</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Jan 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h4>Choosing a payment gateway: what to ask</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/payment-gateways.jpg' %}" alt="Payments">
+                        <div class="blog-grid-category">Payments</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Jan 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h4>Choosing a payment gateway: what to ask</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 9️⃣ FAQ ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Frequently Asked <span class="gradient-text">Questions</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        Everything you need to know about our E-commerce development process. Can't find what you're looking for? Feel free to reach out directly.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Still have questions?</h4>
+                    <p>We're here to help you with any queries about your project.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="{% url 'contact:contact' %}" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How much does an e‑commerce site cost?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>It depends on complexity. A straightforward store with a standard platform might start around £8k–12k. A custom build with more features will be more. We’re happy to give you a clear estimate after a quick chat about what you need.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Shopify, WooCommerce, or custom?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>We don’t push one platform. Shopify is great for getting started quickly. WooCommerce works well if you’re already on WordPress. Custom makes sense when you need something specific. We’ll help you choose the right fit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How long does it take?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>A simple store can be ready in 4–6 weeks. More complex projects take longer. We’ll give you a realistic timeline upfront and keep you updated as we go.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Will I be able to update it myself?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes. We build with content management in mind you’ll be able to add products, update prices, and manage orders without needing to code. We’ll also show you how it works.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>What happens after launch?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>We don’t disappear. We offer ongoing support and maintenance if you need it or we can just be here if you have questions later. It’s up to you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 🔟 FINAL CTA ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <div class="cta-content-wrapper">
+                <h2 class="final-cta-title">
+                    Ready to Launch Your <span class="gradient-text">Online Store?</span>
+                </h2>
+                <p class="final-cta-text">
+                    Let’s build an online store that is fast, reliable, and designed to convert visitors into customers.
+                </p>
+                <div class="final-cta-buttons">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-chat-dots"></i>
+                        Start Your Project
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-calendar-check"></i>
+                        Schedule a Consultation
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Free consultation • No obligation • 100% confidential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic'
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-premium-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-premium-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Floating cards animation
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 2}s`;
+        });
+    });
+</script>
+{% endblock %}

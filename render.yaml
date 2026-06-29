@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: moonnova-solutions
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: gunicorn moonnova.wsgi:application
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: moonnova-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: SERVE_MEDIA
+        value: "True"
+      - key: WEB_CONCURRENCY
+        value: "4"
+      - key: GEMINI_API_KEY
+        sync: false
+
+databases:
+  - name: moonnova-db
+    plan: free

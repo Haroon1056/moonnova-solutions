@@ -1,0 +1,1202 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mobile App Development Services | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Cross-platform mobile app development using React Native and Expo. We build iOS and Android apps that work flawlessly on both platforms from a single codebase.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/mobile-app.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO ========== -->
+<section class="service-hero">
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Mobile App Development</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    iOS and Android Apps <span class="gradient-text">From One Codebase</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Building separate apps for iOS and Android can be expensive and time-consuming. We use React Native and Expo to create high-quality mobile apps that work perfectly on both platforms, saving you time and money.
+                    <br/><br/>
+                    Whether you need a customer-facing app, an internal mobile tool, or an MVP to validate your idea, we build cross-platform mobile apps that feel native on both iOS and Android devices.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-phone"></i>
+                        Discuss Your App Idea
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-grid"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="app-header">
+                                    <span class="app-time">9:41</span>
+                                    <span class="app-battery"><i class="bi bi-battery-full"></i></span>
+                                </div>
+                                <div class="app-content">
+                                    <div class="app-welcome">Welcome back</div>
+                                    <div class="app-title">MoonNova App</div>
+                                    <div class="app-features">
+                                        <div class="app-feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Cross-platform</span>
+                                        </div>
+                                        <div class="app-feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Native performance</span>
+                                        </div>
+                                        <div class="app-feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Expo powered</span>
+                                        </div>
+                                    </div>
+                                    <div class="app-button">Get Started</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-frame phone-frame-right">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="app-header">
+                                    <span class="app-time">9:41</span>
+                                    <span class="app-battery"><i class="bi bi-battery-full"></i></span>
+                                </div>
+                                <div class="app-content">
+                                    <div class="app-welcome">Welcome back</div>
+                                    <div class="app-title">MoonNova App</div>
+                                    <div class="app-features">
+                                        <div class="app-feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>iOS & Android</span>
+                                        </div>
+                                        <div class="app-feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>One codebase</span>
+                                        </div>
+                                        <div class="app-feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Fast development</span>
+                                        </div>
+                                    </div>
+                                    <div class="app-button">Get Started</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-apple"></i>
+                        <span>iOS</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-android2"></i>
+                        <span>Android</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <span>Expo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== TRUST LINE SECTION ========== -->
+<section class="trust-line-section">
+    <div class="container">
+        <div class="trust-line-wrapper" data-aos="fade-up">
+            <div class="trust-badge">
+                <span class="trust-dot"></span>
+                <span class="trust-badge-text">Trusted by</span>
+            </div>
+            
+            <h3 class="trust-heading">
+                Trusted by startups, founders, and businesses launching mobile products.
+            </h3>
+            
+            <p class="trust-text">
+                We help teams launch iOS and Android apps faster with React Native and Expo, without compromising on quality or user experience.
+            </p>
+            
+            <div class="trust-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="bi bi-arrow-down"></i></span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 2️⃣ INTRODUCTION ========== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Introduction</span>
+                </div>
+                
+                <h2 class="section-title">
+                    Mobile Apps That Work <span class="gradient-text">On Every Device</span>
+                </h2>
+                
+                <p class="intro-text">
+                    Building two separate apps for iOS and Android means double the development time, double the maintenance, and double the cost. With React Native and Expo, we build a single mobile application that runs natively on both platforms.
+                </p>
+                
+                <p class="intro-text">
+                    Your users get a smooth, responsive experience whether they're on an iPhone or a Pixel. You get faster development, easier updates, and a single team managing everything. It's the best of both worlds.
+                </p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-apple"></i>
+                        <span>iOS apps</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-android2"></i>
+                        <span>Android apps</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-phone"></i>
+                        <span>One codebase</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-lightning"></i>
+                        <span>Fast development</span>
+                    </div>
+                </div>           
+            </div>
+            
+            <div class="intro-visual" data-aos="fade-left">
+                <div class="visual-card">
+                    <img src="{% static 'images/services/mobile-app-showcase.png' %}" 
+                         alt="Mobile App Showcase on iOS and Android">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY REACT NATIVE SECTION ========== -->
+<section class="why-invest-section">
+    <div class="container">
+        <div class="why-invest-wrapper" data-aos="fade-up">
+            
+            <div class="why-invest-grid">
+                <div class="why-invest-content" data-aos="fade-right">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Why React Native</span>
+                    </div>
+                    
+                    <h2 class="why-invest-title">
+                        Cross-Platform Development <span class="gradient-text">Without Compromise</span>
+                    </h2>
+                    
+                    <p class="why-invest-text">
+                        React Native and Expo let us build apps that look and feel native on both iOS and Android, using a single codebase. You get all the benefits of native development without the cost of building and maintaining two separate apps.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        Updates and new features ship to both platforms at the same time. Bug fixes go live everywhere instantly. And your users get a consistent experience no matter what device they use.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        With Expo, we also get access to a huge library of pre-built components and services, which means faster development and fewer bugs. Camera access, push notifications, payments, and maps all work out of the box.
+                    </p>
+                    
+                    <div class="why-invest-highlights">
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>50% faster development</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Native performance</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Single team, one codebase</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Instant updates with Expo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-invest-visual" data-aos="fade-left">
+                    <div class="invest-stats-card">
+                        <div class="stat-item-large">
+                            <span class="stat-number">2x</span>
+                            <span class="stat-label">faster time to market compared to building two native apps</span>
+                        </div>
+                        
+                        <div class="stat-divider-horizontal"></div>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item-small">
+                                <span class="stat-number">30-40%</span>
+                                <span class="stat-label">lower development costs with cross-platform approach</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">code shared between iOS and Android versions</span>
+                            </div>
+                        </div>
+                        
+                        <div class="invest-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>React Native is trusted by companies like Shopify, Pinterest, and Uber</span>
+                        </div>
+                    </div>
+                    
+                    {% comment %} <div class="invest-quote-card">
+                        <i class="bi bi-quote"></i>
+                        <p>"MoonNova built our customer app for both iOS and Android in half the time it would have taken with separate teams. The app feels native on both platforms and our users love it."</p>
+                        <div class="quote-author">
+                            <span class="author-name">— David Park</span>
+                            <span class="author-title">Founder, UrbanDash</span>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ WHAT WE OFFER ========== -->
+<section class="offerings-section">
+    <div class="offerings-bg">
+        <div class="bg-pattern"></div>
+        <div class="bg-glow"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Services</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Mobile App Development <span class="gradient-text">Services</span>
+            </h2>
+            <p class="section-description">
+                We build mobile apps that solve real problems. From MVPs to full-featured products, we deliver quality apps for both platforms.
+            </p>
+        </div>
+        
+        <div class="offerings-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1 -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Consumer Apps</h3>
+                        <p class="offering-brief">Beautiful, engaging mobile apps for your customers, built for both iOS and Android.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Clean, user-friendly interfaces</li>
+                            <li><i class="bi bi-check-lg"></i> Social features and sharing</li>
+                            <li><i class="bi bi-check-lg"></i> Push notifications</li>
+                            <li><i class="bi bi-check-lg"></i> In-app purchases</li>
+                            <li><i class="bi bi-check-lg"></i> User accounts and profiles</li>
+                            <li><i class="bi bi-check-lg"></i> Real-time updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Business & Enterprise Apps</h3>
+                        <p class="offering-brief">Internal mobile tools that help your team work more efficiently on the go.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Employee dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Field service tools</li>
+                            <li><i class="bi bi-check-lg"></i> Inventory management</li>
+                            <li><i class="bi bi-check-lg"></i> Reporting and analytics</li>
+                            <li><i class="bi bi-check-lg"></i> Offline capability</li>
+                            <li><i class="bi bi-check-lg"></i> Secure authentication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">MVP Development</h3>
+                        <p class="offering-brief">Launch your app idea quickly, validate with real users, and iterate based on feedback.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Core feature development</li>
+                            <li><i class="bi bi-check-lg"></i> Fast time to market</li>
+                            <li><i class="bi bi-check-lg"></i> User testing and feedback</li>
+                            <li><i class="bi bi-check-lg"></i> Iterative improvements</li>
+                            <li><i class="bi bi-check-lg"></i> Scalable foundation</li>
+                            <li><i class="bi bi-check-lg"></i> App store submission help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-camera"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Camera & AR Features</h3>
+                        <p class="offering-brief">Apps that use the camera, QR codes, image recognition, and augmented reality.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> QR and barcode scanning</li>
+                            <li><i class="bi bi-check-lg"></i> Image recognition</li>
+                            <li><i class="bi bi-check-lg"></i> Photo and video capture</li>
+                            <li><i class="bi bi-check-lg"></i> Document scanning</li>
+                            <li><i class="bi bi-check-lg"></i> AR experiences with Expo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-map"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Location & Maps</h3>
+                        <p class="offering-brief">Apps that use GPS, maps, and location services to provide real-world context.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Interactive maps</li>
+                            <li><i class="bi bi-check-lg"></i> Geofencing and alerts</li>
+                            <li><i class="bi bi-check-lg"></i> Location tracking</li>
+                            <li><i class="bi bi-check-lg"></i> Nearby search</li>
+                            <li><i class="bi bi-check-lg"></i> Route planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Payments & Subscriptions</h3>
+                        <p class="offering-brief">Monetize your app with in-app purchases, subscriptions, and payment integrations.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> In-app purchases (iOS/Android)</li>
+                            <li><i class="bi bi-check-lg"></i> Subscription management</li>
+                            <li><i class="bi bi-check-lg"></i> Stripe and PayPal</li>
+                            <li><i class="bi bi-check-lg"></i> Apple Pay and Google Pay</li>
+                            <li><i class="bi bi-check-lg"></i> Receipt validation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offerings-footer" data-aos="fade-up">
+            <p>Have a specific app idea? <a href="{% url 'contact:contact' %}">Let's talk about what you want to build</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ OUR PROCESS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">How We Build Apps</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Our Mobile App Development <span class="gradient-text">Process</span>
+            </h2>
+            <p class="section-description">
+                From idea to app store, we guide you through every step of building your mobile app.
+            </p>
+        </div>
+        
+        <div class="process-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-center">
+                <div class="center-icon">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <div class="center-text">Built for<br>both platforms</div>
+            </div>
+            
+            <div class="process-step step-1">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Discovery</h3>
+                    <p>We learn about your users, your goals, and what your app needs to do.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>User research</li>
+                            <li>Feature prioritization</li>
+                            <li>Technical requirements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-2">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Strategy</h3>
+                    <p>We plan the architecture and map out the user experience.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Information architecture</li>
+                            <li>User flow mapping</li>
+                            <li>Technology selection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-3">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Design</h3>
+                    <p>We create intuitive, platform-appropriate interfaces for iOS and Android.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Wireframing</li>
+                            <li>UI/UX design</li>
+                            <li>Interactive prototypes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-4">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Development</h3>
+                    <p>We build your app with React Native and Expo, testing on both platforms.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Cross-platform development</li>
+                            <li>Weekly builds</li>
+                            <li>Expo updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-5">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Testing</h3>
+                    <p>We test thoroughly on real iOS and Android devices.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Device testing</li>
+                            <li>User acceptance testing</li>
+                            <li>Performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-6">
+                <div class="step-marker">06</div>
+                <div class="step-content">
+                    <h3>Launch & Support</h3>
+                    <p>We help you launch on both app stores and provide ongoing support.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>App store submission</li>
+                            <li>Launch support</li>
+                            <li>Ongoing maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-connector"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ TECH STACK ========== -->
+<section class="tech-stack-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Technologies</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Our Mobile App <span class="gradient-text">Tech Stack</span>
+            </h2>
+            <p class="section-description">
+                We use React Native and Expo to build high-quality apps for both iOS and Android from a single codebase.
+            </p>
+        </div>
+        
+        <div class="tech-tabs" data-aos="fade-up" data-aos-delay="100">
+            <div class="tech-tab-content active" id="tab-all">
+                <div class="tech-masonry-grid">
+                    <!-- Core Technologies -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-phone"></i>
+                            Core Framework
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="React Native">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/react" alt="React Native">
+                                </div>
+                                <span>React Native</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Expo">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/expo" alt="Expo">
+                                </div>
+                                <span>Expo</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="TypeScript">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript">
+                                </div>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="JavaScript">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                                </div>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation & State -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-diagram-3"></i>
+                            Navigation & State
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="React Navigation">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/react" alt="React Navigation">
+                                </div>
+                                <span>React Navigation</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Redux">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/redux" alt="Redux">
+                                </div>
+                                <span>Redux</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Zustand">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/zustand" alt="Zustand">
+                                </div>
+                                <span>Zustand</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="React Query">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/reactquery" alt="React Query">
+                                </div>
+                                <span>React Query</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend & APIs -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-hdd-stack"></i>
+                            Backend & APIs
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Node.js">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js">
+                                </div>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Firebase">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/firebase" alt="Firebase">
+                                </div>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Supabase">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/supabase" alt="Supabase">
+                                </div>
+                                <span>Supabase</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="GraphQL">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/graphql" alt="GraphQL">
+                                </div>
+                                <span>GraphQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Expo Modules -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-puzzle"></i>
+                            Expo Modules
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Camera">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/expo" alt="Camera">
+                                </div>
+                                <span>Camera</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Notifications">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/expo" alt="Notifications">
+                                </div>
+                                <span>Notifications</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Location">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/expo" alt="Location">
+                                </div>
+                                <span>Location</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Maps">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/expo" alt="Maps">
+                                </div>
+                                <span>Maps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY CHOOSE US ========== -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why MoonNova</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Why Choose Us For Your <span class="gradient-text">Mobile App</span>
+            </h2>
+            <p class="section-description">
+                We're mobile app specialists who focus on React Native and Expo to deliver quality apps faster.
+            </p>
+        </div>
+        
+        <div class="choose-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="choose-center">
+                <img src="{% static 'images/logo-icon.svg' %}" alt="MoonNova" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="center-text-fallback">MoonNova</span>
+            </div>
+            
+            <div class="benefit-item benefit-1">
+                <div class="benefit-icon">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <h3>iOS & Android Experts</h3>
+                <p>We build for both platforms simultaneously, so you don't have to choose.</p>
+            </div>
+            
+            <div class="benefit-item benefit-2">
+                <div class="benefit-icon">
+                    <i class="bi bi-lightning"></i>
+                </div>
+                <h3>Fast Time to Market</h3>
+                <p>Cross-platform development means your app launches in half the time.</p>
+            </div>
+            
+            <div class="benefit-item benefit-3">
+                <div class="benefit-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <h3>Expo Experts</h3>
+                <p>We leverage Expo to add features quickly and update apps instantly.</p>
+            </div>
+            
+            <div class="benefit-item benefit-4">
+                <div class="benefit-icon">
+                    <i class="bi bi-rocket"></i>
+                </div>
+                <h3>MVP Specialists</h3>
+                <p>We help startups launch quickly and iterate based on real feedback.</p>
+            </div>
+            
+            <div class="benefit-item benefit-5">
+                <div class="benefit-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <h3>Easy Updates</h3>
+                <p>With Expo, we can push updates instantly without app store reviews.</p>
+            </div>
+            
+            <div class="benefit-item benefit-6">
+                <div class="benefit-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <h3>Ongoing Support</h3>
+                <p>We help you maintain and improve your app after launch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 7️⃣ APP TYPES ========== -->
+<section class="industries-section">
+    <div class="industries-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">App Types</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Mobile Apps We <span class="gradient-text">Specialize In</span>
+            </h2>
+            <p class="section-description">
+                From consumer apps to internal business tools, we design and develop mobile applications for many different industries.
+            </p>
+        </div>
+        
+        <div class="industries-premium-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/ecommerce-app.png' %}" alt="E-commerce Apps">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cart"></i>
+                    </div>
+                    <h3>E-commerce Apps</h3>
+                    <p>Mobile storefronts with product catalogs, carts, and secure checkout.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/social-app.png' %}" alt="Social Apps">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>Social & Community Apps</h3>
+                    <p>Apps that connect people with messaging, feeds, and profiles.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/fitness-app.png' %}" alt="Fitness Apps">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+                    <h3>Health & Fitness</h3>
+                    <p>Workout trackers, wellness apps, and health monitoring tools.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/delivery-app.png' %}" alt="Delivery Apps">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <h3>On-Demand & Delivery</h3>
+                    <p>Apps for booking services, tracking deliveries, and managing orders.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/education-app.png' %}" alt="Education Apps">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <h3>Education & Learning</h3>
+                    <p>Course platforms, learning tools, and educational content apps.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/productivity-app.png' %}" alt="Productivity Apps">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-check2-square"></i>
+                    </div>
+                    <h3>Productivity Tools</h3>
+                    <p>Task managers, note-taking apps, and business productivity tools.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ BLOG ========== -->
+<section class="blog-premium-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">From our blog</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Mobile App <span class="gradient-text">Insights</span>
+            </h2>
+            <p class="section-description">
+                Practical advice for planning, building, and launching mobile apps.
+            </p>
+        </div>
+        
+        <div class="blog-featured-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="{% static 'images/blog/react-native-guide.jpg' %}" alt="React Native Guide">
+                    <div class="blog-featured-category">Development</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-featured-meta">
+                        <span><i class="bi bi-calendar3"></i> Mar 2024</span>
+                        <span><i class="bi bi-clock"></i> 8 min read</span>
+                    </div>
+                    <h3>React Native vs. Native: What's right for your project?</h3>
+                    <p>A practical comparison to help you decide which approach makes sense for your app.</p>
+                    <a href="#" class="blog-featured-link">
+                        Read article <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="blog-grid-posts">
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/expo-benefits.jpg' %}" alt="Expo Benefits">
+                        <div class="blog-grid-category">Tools</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Feb 2024</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h4>Why we build mobile apps with Expo</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/app-store-submission.jpg' %}" alt="App Store Submission">
+                        <div class="blog-grid-category">Launch</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Jan 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h4>How to prepare for iOS and Android app store submission</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/mvp-cost.jpg' %}" alt="MVP Cost">
+                        <div class="blog-grid-category">Planning</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Dec 2023</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h4>How much does it cost to build a mobile app MVP?</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 9️⃣ FAQ ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Common Questions About <span class="gradient-text">Mobile Apps</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        Answers to the questions we get asked most often. If yours isn't here, just ask.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Ready to discuss your app idea?</h4>
+                    <p>We're happy to answer questions and help you plan your mobile project.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="{% url 'contact:contact' %}" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Get in touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How is React Native different from building separate native apps?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>With React Native, we write one codebase that works on both iOS and Android. Native apps require separate teams, separate codebases, and double the development time. React Native apps perform like native apps but cost less and launch faster.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>What is Expo and why do you use it?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Expo is a framework that sits on top of React Native and provides pre-built modules for common features like cameras, notifications, and maps. It speeds up development significantly and lets us push updates instantly without going through app store approval.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How much does a mobile app cost?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>A simple MVP might start around $20k-30k. More complex apps with custom features can range from $40k-80k. We'll give you a clear estimate after understanding your requirements. No vague ballpark figures.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How long does it take to build an app?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>An MVP can be ready in 2-4 months. More feature-rich apps take 4-6 months. Because we build for both platforms simultaneously, you're saving 40-50% of the time it would take to build two separate native apps.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Will my app feel native on both iOS and Android?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes. React Native compiles to native code, so the performance and feel are native. We also follow platform-specific design guidelines so your app feels right at home on both iOS and Android devices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do you help with app store submission?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Absolutely. We handle the entire app store submission process for both Apple App Store and Google Play Store, including preparing screenshots, writing descriptions, and navigating the review process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 🔟 FINAL CTA ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <div class="cta-content-wrapper">
+                <h2 class="final-cta-title">
+                    Ready to Build Your <span class="gradient-text">Mobile App?</span>
+                </h2>
+                <p class="final-cta-text">
+                    Let's talk about your idea and how we can bring it to life on iOS and Android.
+                </p>
+                <div class="final-cta-buttons">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-chat-dots"></i>
+                        Start the Conversation
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-calendar-check"></i>
+                        Schedule a Call
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Free consultation • No obligation • 100% confidential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic'
+        });
+        
+        const faqItems = document.querySelectorAll('.faq-premium-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-premium-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 2}s`;
+        });
+    });
+</script>
+{% endblock %}

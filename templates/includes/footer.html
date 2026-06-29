@@ -1,0 +1,196 @@
+<!-- templates/includes/footer.html -->
+<!-- MoonNova Solutions - Compact Professional Footer -->
+<footer class="moonnova-footer compact-footer">
+    <!-- Background Elements -->
+    <div class="footer-bg-elements">
+        <div class="bg-grid"></div>
+        <div class="bg-gradient"></div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-container">
+        <!-- Luxury Divider -->
+        <div class="luxury-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <!-- Main Footer Grid -->
+        <div class="footer-main-grid">
+            <!-- Brand Section -->
+            <div class="footer-brand-section">
+                <a href="{% url 'core:home' %}" class="compact-brand-link1">
+                    {% comment %} <div class="brand-orb">
+                        <div class="orb-inner">
+                            <div class="orb-core"></div>
+                        </div>
+                    </div> {% endcomment %}
+                    <div class="brand-orb1">
+                        <div class="orb-inner1">
+                            <div class="orb-core1"></div>
+                            <div class="orb-ring2"></div>
+                            <div class="orb-particles1">
+                                <span class="particle1"></span>
+                                <span class="particle1"></span>
+                                <span class="particle1"></span>
+                                <span class="particle1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand-text1">
+                        <span class="brand-name1">MoonNova</span>
+                        <span class="brand-tag1">Solutions</span>
+                    </div>
+                </a>
+                <p class="brand-slogan1">
+                    Where innovation meets <span class="highlight1">excellence</span>
+                </p>
+                
+                <!-- Contact Info -->
+                <div class="compact-contact1">
+                    <a href="mailto:info@moonnovasolutions.com" class="contact-link1">
+                        <i class="bi bi-envelope"></i>
+                        info@moonnovasolutions.com
+                    </a>
+                    <a href="tel:+923187040877" class="contact-link1">
+                        <i class="bi bi-telephone"></i>
+                        +92 (318) 704-0877
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links Grid -->
+            <div class="footer-links-grid">
+                <!-- Services -->
+                <div class="footer-column">
+                    <h5 class="column-title">Services</h5>
+                    <div class="column-links">
+                        <a href="{% url 'services:web_development' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Web Development
+                        </a>
+                        <a href="{% url 'services:custom_software_development' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Custom Software
+                        </a>
+                        <a href="{% url 'services:mobile_app_development' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Mobile Apps
+                        </a>
+                        <a href="{% url 'services:ai_ml_solutions' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            AI & ML Solutions
+                        </a>
+                        {% comment %} <a href="{% url 'services:data_analytics' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Data Analytics
+                        </a> {% endcomment %}
+                        
+
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-column">
+                    <h5 class="column-title">Company</h5>
+                    <div class="column-links">
+                        <a href="{% url 'core:about' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            About Us
+                        </a>
+                        <a href="{% url 'blog:blog_list' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Blog
+                        </a>
+                        <a href="{% url 'core:consulting' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Counsultation
+                        </a>
+                        <a href="{% url 'contact:contact' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-column">
+                    <h5 class="column-title">Resources</h5>
+                    <div class="column-links">
+                        <a href="{% url 'portfolio:portfolio_list' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Portfolio
+                        </a>
+                        <a href="{% url 'core:privacy_policy' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Privacy Policy
+                        </a>
+                        <a href="{% url 'core:terms_of_service' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Terms of Service
+                        </a>
+                        <a href="{% url 'core:cookies_policy' %}" class="compact-link">
+                            <span class="link-icon">›</span>
+                            Cookie Policy
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA & Social -->
+            <div class="footer-cta-section">
+                <a href="{% url 'contact:contact' %}" class="contact-cta">
+                    <span>Get in Touch</span>
+                    {% comment %} <i class="bi bi-arrow-right"></i> {% endcomment %}
+                </a>
+                
+                <!-- Social Media -->
+                <div class="compact-social">
+                    <h5 class="social-title">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/company/moonnovasolutions" class="social-icon linkedin" target="_blank" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/moonnovasolutions" class="social-icon twitter" target="_blank" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/moonnovasolutions" class="social-icon facebook" target="_blank" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/moonnovasolutions" class="social-icon instagram" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/moonnovasolutions" class="social-icon youtube" target="_blank" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <div class="copyright-section">
+                <div class="copyright-content">
+                    <p>© <span id="current-year"></span> MoonNova Solutions. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="{% url 'core:privacy_policy' %}" class="legal-link">Privacy Policy</a>
+                        <span class="divider">•</span>
+                        <a href="{% url 'core:terms_of_service' %}" class="legal-link">Terms of Service</a>
+                        <span class="divider">•</span>
+                        <a href="{% url 'core:cookies_policy' %}" class="legal-link">Cookie Policy</a>
+                        <span class="divider">•</span>
+                        <a href="/sitemap.xml" class="legal-link">Sitemap</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    {% comment %} <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="bi bi-chevron-up"></i>
+    </button> {% endcomment %}
+</footer>

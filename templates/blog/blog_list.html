@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Insights, guides and articles on web development, AI solutions, and digital growth.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== MINIMAL HERO SECTION ========== -->
+<section class="blog-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">
+                Insights & <span class="gradient-text">Articles</span>
+            </h1>
+            <p class="hero-subtitle">
+                Practical guides on web development, AI solutions, and digital growth.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FILTER BAR ========== -->
+<section class="filter-section">
+    <div class="container">
+        <div class="filter-card" data-aos="fade-up">
+            <div class="filter-container">
+                <!-- Search Input -->
+                <div class="search-wrapper">
+                    <i class="bi bi-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        class="search-input" 
+                        placeholder="Search articles..."
+                        autocomplete="off"
+                        value="{{ search_query }}"
+                    >
+                    <button class="search-clear" id="clearSearch" {% if not search_query %}style="display: none;"{% endif %}>
+                        <i class="bi bi-x"></i>
+                    </button>
+                    
+                    <!-- Search Suggestions -->
+                    <div id="searchSuggestions" class="search-suggestions"></div>
+                </div>
+                
+                <!-- Categories Dropdown -->
+                <div class="category-wrapper">
+                    <select id="categorySelect" class="category-select">
+                        <option value="all">All Categories</option>
+                        {% for category in categories %}
+                        <option value="{{ category.slug }}" {% if current_category == category.slug %}selected{% endif %}>
+                            {{ category.name }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    <i class="bi bi-chevron-down select-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== BLOG GRID ========== -->
+<section class="blog-section">
+    <div class="container">
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        
+        <!-- Blog Grid -->
+        <div id="blogGrid" class="blog-grid">
+            {% include 'blog/includes/blog_cards.html' with posts=posts %}
+        </div>
+        
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <div class="no-results-icon">
+                <i class="bi bi-search"></i>
+            </div>
+            <h3>No articles found</h3>
+            <p>Try adjusting your search or filter to find what you're looking for.</p>
+            <button class="reset-btn" onclick="resetFilters()">
+                <i class="bi bi-arrow-counterclockwise"></i>
+                Reset Filters
+            </button>
+        </div>
+        
+        <!-- Pagination -->
+        <div id="pagination" class="pagination-wrapper">
+            {% if is_paginated %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <button class="page-nav prev" data-page="{{ page_obj.previous_page_number }}">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                {% endif %}
+                
+                <div class="page-numbers">
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num == page_obj.number %}
+                        <span class="page-number active">{{ num }}</span>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                        <button class="page-number" data-page="{{ num }}">{{ num }}</button>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
+                {% if page_obj.has_next %}
+                <button class="page-nav next" data-page="{{ page_obj.next_page_number }}">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'ease-out-cubic'
+    });
+    
+    window.BLOG_CONFIG = {
+        postsUrl: "{% url 'blog:blog_list' %}",
+        suggestionsUrl: "{% url 'blog:search_suggestions' %}",
+        csrfToken: "{{ csrf_token }}"
+    };
+    
+    function resetFilters() {
+        document.getElementById('searchInput').value = '';
+        document.getElementById('categorySelect').value = 'all';
+        document.getElementById('clearSearch').style.display = 'none';
+        fetchPosts();
+    }
+</script>
+<script src="{% static 'js/blog.js' %}"></script>
+{% endblock %}

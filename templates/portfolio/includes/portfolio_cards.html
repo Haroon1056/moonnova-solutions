@@ -1,0 +1,37 @@
+{% load static %}
+{% for project in projects %}
+<article class="portfolio-card">
+    <div class="card-image">
+        <a href="{{ project.get_absolute_url }}">
+            <img 
+                src="{{ project.featured_image.url }}" 
+                alt="{{ project.image_alt|default:project.title }}"
+                loading="lazy"
+            >
+            <div class="image-overlay">
+                <span class="overlay-text">View Project</span>
+                <i class="bi bi-arrow-right overlay-icon"></i>
+            </div>
+        </a>
+        {% if project.category %}
+        <span class="card-category">{{ project.category.name }}</span>
+        {% endif %}
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">
+            <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
+        </h3>
+        <p class="card-description">{{ project.short_description }}</p>
+        <a href="{{ project.get_absolute_url }}" class="card-link">
+            Read Case Study <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+</article>
+{% empty %}
+<div class="no-results">
+    <i class="bi bi-folder-x"></i>
+    <h3>No projects yet</h3>
+    <p>Check back soon for our latest work!</p>
+</div>
+{% endfor %}

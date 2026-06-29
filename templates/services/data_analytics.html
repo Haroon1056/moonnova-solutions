@@ -1,0 +1,1168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Data Science & Analytics Services | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Turn your data into decisions. We provide data analysis, visualization, business intelligence, and predictive analytics to help you understand your business better.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/data-analytics.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO ========== -->
+<section class="service-hero">
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Data Science & Analytics</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Turn Your Data Into <span class="gradient-text">Clear Decisions</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Every business generates data customers, sales, website traffic, and operations. But raw data doesn't tell you much. We help you make sense of it all.
+                    <br/><br/>
+                    From cleaning up messy spreadsheets to building interactive dashboards, we give you the tools to understand what's happening in your business and make better decisions.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-bar-chart"></i>
+                        Discuss Your Data
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-grid"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="data-visualization">
+                        <div class="chart chart-1"></div>
+                        <div class="chart chart-2"></div>
+                        <div class="chart chart-3"></div>
+                        <div class="data-points">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="dashboard-preview">
+                            <div class="dashboard-header">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="dashboard-row"></div>
+                            <div class="dashboard-row"></div>
+                            <div class="dashboard-row"></div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-pie-chart"></i>
+                        <span>Visualization</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Predictive Analytics</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="bi bi-database"></i>
+                        <span>Data Cleaning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== TRUST LINE SECTION ========== -->
+<section class="trust-line-section">
+    <div class="container">
+        <div class="trust-line-wrapper" data-aos="fade-up">
+            <div class="trust-badge">
+                <span class="trust-dot"></span>
+                <span class="trust-badge-text">Trusted by</span>
+            </div>
+            
+            <h3 class="trust-heading">
+                Trusted by businesses that want to understand their data, not just collect it.
+            </h3>
+            
+            <p class="trust-text">
+                We help companies clean up messy data, build dashboards that actually get used, and find insights that lead to better decisions.
+            </p>
+            
+            <div class="trust-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="bi bi-arrow-down"></i></span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 2️⃣ INTRODUCTION ========== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Introduction</span>
+                </div>
+                
+                <h2 class="section-title">
+                    From Raw Data to <span class="gradient-text">Real Insights</span>
+                </h2>
+                
+                <p class="intro-text">
+                    Most businesses sit on large amounts of data customer information, sales records, and website analytics but struggle to turn it into useful insights. Spreadsheets get messy. Reports take too long to put together. And by the time you have answers, the questions have changed.
+                </p>
+                
+                <p class="intro-text">
+                    We help you organize your data, build data pipelines that keep it clean, and create visual dashboards that show you what matters at a glance. No more digging through spreadsheets and CSV files. No more manual reporting.
+                </p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Data analysis</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-pie-chart"></i>
+                        <span>Data visualization</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Predictive analytics</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-database"></i>
+                        <span>Data cleaning</span>
+                    </div>
+                </div>           
+            </div>
+            
+            <div class="intro-visual" data-aos="fade-left">
+                <div class="visual-card">
+                    <img src="{% static 'images/services/analytics-dashboard.png' %}" 
+                         alt="Analytics Dashboard">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY DATA MATTERS SECTION ========== -->
+<section class="why-invest-section">
+    <div class="container">
+        <div class="why-invest-wrapper" data-aos="fade-up">
+            
+            <div class="why-invest-grid">
+                <div class="why-invest-content" data-aos="fade-right">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Why Data Matters</span>
+                    </div>
+                    
+                    <h2 class="why-invest-title">
+                        What Good Data <span class="gradient-text">Actually Does For You</span>
+                    </h2>
+                    
+                    <p class="why-invest-text">
+                        Data isn't useful by itself. It's useful when it helps you answer questions: Which products are actually profitable? Why are customers leaving? Where should we focus our marketing budget?
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        We build systems that answer those questions automatically. Instead of spending hours pulling reports, you spend minutes looking at dashboards. Instead of guessing, you know.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        The goal isn't more data. It's better answers. We help you get from raw numbers to clear, actionable insights.
+                    </p>
+                    
+                    <div class="why-invest-highlights">
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Faster decision-making</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Spot trends and patterns</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Identify problems early</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Measure what matters</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-invest-visual" data-aos="fade-left">
+                    <div class="invest-stats-card">
+                        <div class="stat-item-large">
+                            <span class="stat-number">5x</span>
+                            <span class="stat-label">faster decision-making with automated dashboards vs. manual reporting</span>
+                        </div>
+                        
+                        <div class="stat-divider-horizontal"></div>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item-small">
+                                <span class="stat-number">80%</span>
+                                <span class="stat-label">of data scientists' time is spent cleaning data, not analyzing it</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <span class="stat-number">30%</span>
+                                <span class="stat-label">average revenue increase for data-driven companies</span>
+                            </div>
+                        </div>
+                        
+                        <div class="invest-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>Companies that use analytics are 5x more likely to make faster decisions</span>
+                        </div>
+                    </div>
+                    
+                    {% comment %} <div class="invest-quote-card">
+                        <i class="bi bi-quote"></i>
+                        <p>"MoonNova built us a dashboard that shows our real-time sales, inventory, and customer data in one place. We went from weekly reporting to daily insights."</p>
+                        <div class="quote-author">
+                            <span class="author-name">— Marcus Webb</span>
+                            <span class="author-title">CEO, UrbanDash</span>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ DATA SERVICES ========== -->
+<section class="offerings-section">
+    <div class="offerings-bg">
+        <div class="bg-pattern"></div>
+        <div class="bg-glow"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Data Services</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Data Solutions <span class="gradient-text">We Provide</span>
+            </h2>
+            <p class="section-description">
+                From cleaning up messy data to building predictive models, we help you make the most of your information.
+            </p>
+        </div>
+        
+        <div class="offerings-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1: Data Analysis -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Data Analysis</h3>
+                        <p class="offering-brief">We dig into your data to find patterns, trends, and answers to your specific business questions.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Sales and revenue analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Customer behavior analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Cohort and segmentation studies</li>
+                            <li><i class="bi bi-check-lg"></i> Trend identification</li>
+                            <li><i class="bi bi-check-lg"></i> Root cause analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Ad-hoc reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Data Visualization -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-pie-chart"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Data Visualization</h3>
+                        <p class="offering-brief">Interactive dashboards and charts that make complex data easy to understand at a glance.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Custom dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Interactive charts and graphs</li>
+                            <li><i class="bi bi-check-lg"></i> Real-time data updates</li>
+                            <li><i class="bi bi-check-lg"></i> KPI tracking</li>
+                            <li><i class="bi bi-check-lg"></i> Executive summaries</li>
+                            <li><i class="bi bi-check-lg"></i> Mobile-friendly views</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Business Intelligence -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Business Intelligence</h3>
+                        <p class="offering-brief">Complete BI solutions that combine data from multiple sources into one view of your business.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Data warehouse setup</li>
+                            <li><i class="bi bi-check-lg"></i> Multi-source integration</li>
+                            <li><i class="bi bi-check-lg"></i> Automated reporting</li>
+                            <li><i class="bi bi-check-lg"></i> Executive dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Scheduled email reports</li>
+                            <li><i class="bi bi-check-lg"></i> Self-service analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: Predictive Analytics -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Predictive Analytics</h3>
+                        <p class="offering-brief">Use historical data to forecast future trends, customer behavior, and business outcomes.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Sales forecasting</li>
+                            <li><i class="bi bi-check-lg"></i> Customer churn prediction</li>
+                            <li><i class="bi bi-check-lg"></i> Demand forecasting</li>
+                            <li><i class="bi bi-check-lg"></i> Risk assessment</li>
+                            <li><i class="bi bi-check-lg"></i> What-if scenarios</li>
+                            <li><i class="bi bi-check-lg"></i> Trend projection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: Data Cleaning & Preparation -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-database"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Data Cleaning & Preparation</h3>
+                        <p class="offering-brief">Fix messy data, remove duplicates, and structure your information for analysis.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Duplicate removal</li>
+                            <li><i class="bi bi-check-lg"></i> Missing data handling</li>
+                            <li><i class="bi bi-check-lg"></i> Data standardization</li>
+                            <li><i class="bi bi-check-lg"></i> Format normalization</li>
+                            <li><i class="bi bi-check-lg"></i> Data validation rules</li>
+                            <li><i class="bi bi-check-lg"></i> Ongoing data quality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Data Scraping & Automation -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Data Scraping & Automation</h3>
+                        <p class="offering-brief">Collect data from websites, APIs, and documents automatically on a schedule.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Web scraping</li>
+                            <li><i class="bi bi-check-lg"></i> API data collection</li>
+                            <li><i class="bi bi-check-lg"></i> PDF and document extraction</li>
+                            <li><i class="bi bi-check-lg"></i> Scheduled data pulls</li>
+                            <li><i class="bi bi-check-lg"></i> Competitor monitoring</li>
+                            <li><i class="bi bi-check-lg"></i> Market research automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offerings-footer" data-aos="fade-up">
+            <p>Have a specific data challenge? <a href="{% url 'contact:contact' %}">Let's talk about what you need</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ OUR PROCESS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Process</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                From Data to <span class="gradient-text">Decisions</span>
+            </h2>
+            <p class="section-description">
+                We follow a structured approach to turn your raw data into useful insights.
+            </p>
+        </div>
+        
+        <div class="process-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-center">
+                <div class="center-icon">
+                    <i class="bi bi-bar-chart"></i>
+                </div>
+                <div class="center-text">Data-Driven<br>Decisions</div>
+            </div>
+            
+            <div class="process-step step-1">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Discovery</h3>
+                    <p>We learn about your business questions and what data you have available.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Business questions</li>
+                            <li>Data inventory</li>
+                            <li>Goal definition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-2">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Data Audit</h3>
+                    <p>We assess your data quality and identify what needs cleaning or organizing.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Data quality assessment</li>
+                            <li>Gap identification</li>
+                            <li>Source mapping</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-3">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Cleaning & Preparation</h3>
+                    <p>We clean, structure, and prepare your data for analysis.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Duplicate removal</li>
+                            <li>Data standardization</li>
+                            <li>Missing data handling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-4">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Analysis & Modeling</h3>
+                    <p>We analyze the data and build models to answer your questions.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Statistical analysis</li>
+                            <li>Pattern identification</li>
+                            <li>Predictive modeling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-5">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Visualization</h3>
+                    <p>We create dashboards and reports that make insights clear and actionable.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Dashboard design</li>
+                            <li>Interactive visuals</li>
+                            <li>Automated reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-6">
+                <div class="step-marker">06</div>
+                <div class="step-content">
+                    <h3>Ongoing Support</h3>
+                    <p>We help you maintain data quality and update reports as your business evolves.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Data monitoring</li>
+                            <li>Dashboard updates</li>
+                            <li>New analysis requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-connector"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ TOOLS & TECHNOLOGIES ========== -->
+<section class="tech-stack-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Tools We Use</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Analytics & BI <span class="gradient-text">Technologies</span>
+            </h2>
+            <p class="section-description">
+                We use industry-standard tools to collect, clean, analyze, and visualize your data.
+            </p>
+        </div>
+        
+        <div class="tech-tabs" data-aos="fade-up" data-aos-delay="100">
+            <div class="tech-tab-content active" id="tab-all">
+                <div class="tech-masonry-grid">
+                    <!-- BI & Visualization -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-pie-chart"></i>
+                            BI & Visualization
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Power BI">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/powerbi" alt="Power BI">
+                                </div>
+                                <span>Power BI</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Tableau">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/tableau" alt="Tableau">
+                                </div>
+                                <span>Tableau</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Metabase">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/metabase" alt="Metabase">
+                                </div>
+                                <span>Metabase</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Looker">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/looker" alt="Looker">
+                                </div>
+                                <span>Looker</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Analysis -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-bar-chart"></i>
+                            Data Analysis
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Python">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/python" alt="Python">
+                                </div>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="R">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/r" alt="R">
+                                </div>
+                                <span>R</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Pandas">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/pandas" alt="Pandas">
+                                </div>
+                                <span>Pandas</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Jupyter">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/jupyter" alt="Jupyter">
+                                </div>
+                                <span>Jupyter</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Databases -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-database"></i>
+                            Databases
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="PostgreSQL">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL">
+                                </div>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="MySQL">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/mysql" alt="MySQL">
+                                </div>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="MongoDB">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB">
+                                </div>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="BigQuery">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/googlebigquery" alt="BigQuery">
+                                </div>
+                                <span>BigQuery</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Scraping & Automation -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-robot"></i>
+                            Scraping & Automation
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Python">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/python" alt="Python">
+                                </div>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Selenium">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/selenium" alt="Selenium">
+                                </div>
+                                <span>Selenium</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="BeautifulSoup">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/beautifulsoup" alt="BeautifulSoup">
+                                </div>
+                                <span>BeautifulSoup</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Airflow">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/apacheairflow" alt="Airflow">
+                                </div>
+                                <span>Airflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY CHOOSE US ========== -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why MoonNova</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                A Practical Approach to <span class="gradient-text">Your Data</span>
+            </h2>
+            <p class="section-description">
+                We focus on answers, not algorithms. Here's what makes us different.
+            </p>
+        </div>
+        
+        <div class="choose-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="choose-center">
+                <img src="{% static 'images/logo-icon.svg' %}" alt="MoonNova" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="center-text-fallback">MoonNova</span>
+            </div>
+            
+            <div class="benefit-item benefit-1">
+                <div class="benefit-icon">
+                    <i class="bi bi-question-circle"></i>
+                </div>
+                <h3>Start with Questions</h3>
+                <p>We begin with your business questions, not the data. What do you actually need to know?</p>
+            </div>
+            
+            <div class="benefit-item benefit-2">
+                <div class="benefit-icon">
+                    <i class="bi bi-eye"></i>
+                </div>
+                <h3>Clear Visuals</h3>
+                <p>We build dashboards that anyone can understand. No training required.</p>
+            </div>
+            
+            <div class="benefit-item benefit-3">
+                <div class="benefit-icon">
+                    <i class="bi bi-database"></i>
+                </div>
+                <h3>Work With Messy Data</h3>
+                <p>We're comfortable with imperfect, real-world data. We clean it up and make it usable.</p>
+            </div>
+            
+            <div class="benefit-item benefit-4">
+                <div class="benefit-icon">
+                    <i class="bi bi-clock"></i>
+                </div>
+                <h3>Automated Updates</h3>
+                <p>Your dashboards update automatically. No manual reporting ever again.</p>
+            </div>
+            
+            <div class="benefit-item benefit-5">
+                <div class="benefit-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <h3>Team Training</h3>
+                <p>We show your team how to use the dashboards and understand the insights.</p>
+            </div>
+            
+            <div class="benefit-item benefit-6">
+                <div class="benefit-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <h3>Evolve With You</h3>
+                <p>As your business changes, we update your analytics to answer new questions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 7️⃣ USE CASES ========== -->
+<section class="industries-section">
+    <div class="industries-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Use Cases</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Analytics for <span class="gradient-text">Every Business</span>
+            </h2>
+            <p class="section-description">
+                Here are some of the ways we've helped businesses use their data.
+            </p>
+        </div>
+        
+        <div class="industries-premium-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/sales-analytics.png' %}" alt="Sales Analytics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <h3>Sales Analytics</h3>
+                    <p>Track revenue, conversion rates, and sales performance by product, region, or team.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/customer-analytics.png' %}" alt="Customer Analytics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>Customer Analytics</h3>
+                    <p>Understand customer behavior, segment your audience, and reduce churn.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/marketing-analytics.png' %}" alt="Marketing Analytics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-megaphone"></i>
+                    </div>
+                    <h3>Marketing Analytics</h3>
+                    <p>Measure campaign performance, ROI, and attribution across channels.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/financial-analytics.png' %}" alt="Financial Analytics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-bank"></i>
+                    </div>
+                    <h3>Financial Analytics</h3>
+                    <p>Cash flow analysis, expense tracking, and profitability by product or service.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/operations-analytics.png' %}" alt="Operations Analytics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>Operations Analytics</h3>
+                    <p>Track efficiency, bottlenecks, and performance of your operational processes.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/product-analytics.png' %}" alt="Product Analytics">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+                    <h3>Product Analytics</h3>
+                    <p>Understand how customers use your product and which features drive engagement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ BLOG ========== -->
+<section class="blog-premium-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">From our blog</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Data & Analytics <span class="gradient-text">Insights</span>
+            </h2>
+            <p class="section-description">
+                Practical advice on using data to run your business better.
+            </p>
+        </div>
+        
+        <div class="blog-featured-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="{% static 'images/blog/getting-started-analytics.jpg' %}" alt="Getting Started with Analytics">
+                    <div class="blog-featured-category">Analytics</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-featured-meta">
+                        <span><i class="bi bi-calendar3"></i> Mar 2024</span>
+                        <span><i class="bi bi-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>Getting started with analytics (without a data team)</h3>
+                    <p>Practical advice on what metrics to track and how to set up your first dashboards.</p>
+                    <a href="#" class="blog-featured-link">
+                        Read article <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="blog-grid-posts">
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/data-cleaning.jpg' %}" alt="Data Cleaning">
+                        <div class="blog-grid-category">Data Quality</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Feb 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h4>Why data cleaning matters (and how to do it)</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/dashboard-design.jpg' %}" alt="Dashboard Design">
+                        <div class="blog-grid-category">Visualization</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Jan 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h4>How to design dashboards people actually use</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/kpis.jpg' %}" alt="Choosing KPIs">
+                        <div class="blog-grid-category">Metrics</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Dec 2023</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h4>Choosing the right KPIs for your business</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 9️⃣ FAQ ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Common Questions About <span class="gradient-text">Data & Analytics</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        We get asked these questions a lot. If yours isn't here, just ask.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Ready to understand your data better?</h4>
+                    <p>We're happy to discuss your data challenges and how we can help.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="{% url 'contact:contact' %}" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Get in touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do I need to have clean data before we start?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>No. We're used to working with messy, real-world data. Part of our service is cleaning and preparing your data so it can be analyzed. We'll let you know what's possible with your current data and what improvements might help.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How is this different from hiring a data analyst?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>We build systems that work for you long-term, not just one-off reports. We set up automated dashboards that update themselves, so you don't need to keep coming back for new analysis. You get ongoing insights without ongoing costs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>What if my data is in different systems?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>That's common. We specialize in pulling data from multiple sources databases, spreadsheets, CRMs, analytics tools and combining it into one view. You don't need to move everything to one system.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How much does an analytics project cost?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>It depends on complexity. A basic dashboard might start around $8k-12k. A more comprehensive BI solution with multiple data sources could range from $15k-30k. We'll give you a clear estimate after understanding your needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How long does it take to build a dashboard?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>A simple dashboard can be ready in 3-4 weeks. More complex projects with multiple data sources and custom visualizations take 6-8 weeks. We'll give you a timeline after the discovery phase.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Will I be able to update the dashboard myself?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes. We build dashboards that your team can use without technical training. If you need to add new metrics or data sources later, we can help with that. We also offer training sessions for your team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 🔟 FINAL CTA ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <div class="cta-content-wrapper">
+                <h2 class="final-cta-title">
+                    Ready to Understand <span class="gradient-text">Your Data?</span>
+                </h2>
+                <p class="final-cta-text">
+                    Let's talk about your data challenges and how we can help you get clearer answers.
+                </p>
+                <div class="final-cta-buttons">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-chat-dots"></i>
+                        Start the Conversation
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-calendar-check"></i>
+                        Schedule a Call
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Free consultation • No obligation • 100% confidential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic'
+        });
+        
+        const faqItems = document.querySelectorAll('.faq-premium-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-premium-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 2}s`;
+        });
+    });
+</script>
+{% endblock %}

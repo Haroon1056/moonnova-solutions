@@ -1,0 +1,1365 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Custom Web Development Services | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Professional custom web development services by MoonNova Solutions. We build secure, scalable, and high-performance websites tailored to your business growth.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/web-development.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO SECTION - CLEAN & POWERFUL ========== -->
+<section class="service-hero">
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Custom Web Development</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Websites Built <span class="gradient-text">for Business Growth</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    At MoonNova Solutions, we design and develop custom websites and web applications tailored to your business goals. Our development approach focuses on performance, security, scalability, and modern user experience ensuring your website supports long-term growth and delivers real business results.
+                    <br/><br/>
+                    Whether you need a business website, startup platform, SaaS product, or enterprise web application, our team delivers powerful solutions built with modern technologies.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-rocket-takeoff"></i>
+                        Start Your Project
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-grid"></i>
+                        View Our Portfolio
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><span class="code-blue">function</span> <span class="code-green">buildWebsite</span>() {
+    <span class="code-orange">const</span> project = <span class="code-blue">new</span> <span class="code-green">MoonNova</span>({
+        client: <span class="code-yellow">"Your Business"</span>,
+        type: <span class="code-yellow">"Custom Web App"</span>,
+        features: [<span class="code-yellow">"scalable"</span>, <span class="code-yellow">"secure"</span>, <span class="code-yellow">"fast"</span>]
+    });
+    
+    <span class="code-blue">return</span> project.<span class="code-green">deliver</span>();
+}</pre>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Lightning Fast</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Secure</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-arrow-up-right"></i>
+                        <span>Scalable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 2️⃣ INTRODUCTION SECTION ========== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Introduction</span>
+                </div>
+                
+                <h2 class="section-title">
+                    Building Websites That <span class="gradient-text">Drive Results</span>
+                </h2>
+                
+                <p class="intro-text">
+                    Your website is more than an online presence, it is the digital foundation of your business.
+                    <br/><br/>
+                    At MoonNova Solutions, we build custom web platforms designed to perform under real business demands. Our development process focuses on creating websites that are:
+                </p>
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        <span>Fast & performance optimized</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-shield-lock-fill"></i>
+                        <span>Built with security best practices</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
+                        <span>Scalable for future growth</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>Designed to convert visitors</span>
+                    </div>
+                </div>
+
+                <p class="intro-text">
+                    From simple corporate websites to complex web-based applications, we develop solutions that help businesses operate efficiently and compete in the modern digital landscape.                
+                </p>
+                
+                {% comment %} <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        <span>Fast and optimized for performance</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-shield-lock-fill"></i>
+                        <span>Secure against modern cyber threats</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
+                        <span>Scalable for future business growth</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>Designed to convert visitors into customers</span>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+            
+            <div class="intro-visual" data-aos="fade-left">
+                <div class="visual-card">
+                    <img src="{% static 'images/services/dashboard-mockup.png' %}" 
+                         alt="Modern Dashboard Mockup"
+                         onerror="this.src='{% static 'images/services/mockup-fallback.png' %}'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ WHAT WE OFFER - 3-COLUMN CARD LAYOUT WITH BACKGROUND ========== -->
+<section class="offerings-section">
+    <div class="offerings-bg">
+        <div class="bg-pattern"></div>
+        <div class="bg-glow"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Services</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Custom Web Development <span class="gradient-text">Services</span>
+            </h2>
+            <p class="section-description">
+                We provide complete end-to-end web development services, from initial strategy to deployment and long-term support.
+            </p>
+        </div>
+        
+        <div class="offerings-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1: Corporate Websites -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Corporate & Business Websites</h3>
+                        <p class="offering-brief">Professional websites designed to establish credibility and convert visitors into clients.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Professional UI/UX design</li>
+                            <li><i class="bi bi-check-lg"></i> SEO-friendly architecture</li>
+                            <li><i class="bi bi-check-lg"></i> Fast loading performance</li>
+                            <li><i class="bi bi-check-lg"></i> Easy content management</li>
+                            <li><i class="bi bi-check-lg"></i> Mobile responsive design</li>
+                            <li><i class="bi bi-check-lg"></i> Contact forms & integrations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Web Applications -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-window"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Custom Web Applications</h3>
+                        <p class="offering-brief">Powerful web applications designed to automate workflows and support complex business operations.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Custom dashboards and portals</li>
+                            <li><i class="bi bi-check-lg"></i> Real-time data processing</li>
+                            <li><i class="bi bi-check-lg"></i> Advanced user management</li>
+                            <li><i class="bi bi-check-lg"></i> Scalable backend architecture</li>
+                            <li><i class="bi bi-check-lg"></i> Secure authentication systems</li>
+                            <li><i class="bi bi-check-lg"></i> API integrations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: E-Commerce -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-cart"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">E-Commerce Solutions</h3>
+                        <p class="offering-brief">Modern online stores designed to increase sales and improve customer experience.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Secure payment gateways</li>
+                            <li><i class="bi bi-check-lg"></i> Shopping cart systems</li>
+                            <li><i class="bi bi-check-lg"></i> Product management dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Order tracking systems</li>
+                            <li><i class="bi bi-check-lg"></i> Customer accounts</li>
+                            <li><i class="bi bi-check-lg"></i> Conversion optimized checkout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: CMS Solutions -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-file-earmark-code"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">CMS-Based Websites</h3>
+                        <p class="offering-brief">Flexible content management systems that allow businesses to update their websites easily.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Custom admin dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Content publishing tools</li>
+                            <li><i class="bi bi-check-lg"></i> Media management</li>
+                            <li><i class="bi bi-check-lg"></i> Role-based user permissions</li>
+                            <li><i class="bi bi-check-lg"></i> SEO content management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: API Integration -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-plugin"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">API Integration</h3>
+                        <p class="offering-brief">We connect your website with powerful third-party tools and services.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Payment gateways</li>
+                            <li><i class="bi bi-check-lg"></i> CRM platforms</li>
+                            <li><i class="bi bi-check-lg"></i> Marketing automation tools</li>
+                            <li><i class="bi bi-check-lg"></i> Social media integrations</li>
+                            <li><i class="bi bi-check-lg"></i> Data synchronization APIs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Performance Optimization -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Performance Optimization</h3>
+                        <p class="offering-brief">Websites optimized for speed, performance, and SEO.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Core Web Vitals optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Code optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Image compression</li>
+                            <li><i class="bi bi-check-lg"></i> Database optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Advanced caching systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offerings-footer" data-aos="fade-up">
+            <p>Need a custom solution? <a href="{% url 'contact:contact' %}">Let's discuss your project requirements.</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ OUR PROCESS - CYCLICAL LAYOUT ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">How We Work</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Our Web Development <span class="gradient-text">Process</span>
+            </h2>
+            <p class="section-description">
+                Our structured development methodology ensures transparent communication, high quality, and successful delivery.
+            </p>
+        </div>
+        
+        <div class="process-cycle" data-aos="fade-up" data-aos-delay="100">
+            <!-- Central Icon -->
+            <div class="process-center">
+                <div class="center-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <div class="center-text">Iterative<br>Development</div>
+            </div>
+            
+            <!-- Process Steps in Circular Layout -->
+            <div class="process-step step-1">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Discovery</h3>
+                    <p>We begin by understanding your business goals, users, and technical requirements.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Requirements gathering</li>
+                            <li>Market research</li>
+                            <li>Technical feasibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-2">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Strategy</h3>
+                    <p>We create a detailed technical roadmap and system architecture.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Information architecture</li>
+                            <li>Technology selection</li>
+                            <li>Project timeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-3">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Design</h3>
+                    <p>We craft intuitive and conversion-focused interfaces</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Wireframing</li>
+                            <li>UI/UX design</li>
+                            <li>Interactive prototypes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-4">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Development</h3>
+                    <p>We build scalable backend and responsive frontend</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Agile sprints</li>
+                            <li>Weekly updates</li>
+                            <li>Continuous integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-5">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Testing</h3>
+                    <p>We ensure quality, security, and performance</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Unit testing</li>
+                            <li>Security audits</li>
+                            <li>Performance testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-6">
+                <div class="step-marker">06</div>
+                <div class="step-content">
+                    <h3>Launch</h3>
+                    <p>We deploy and ensure smooth transition to live</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Deployment strategy</li>
+                            <li>Data migration</li>
+                            <li>Go-live support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-connector"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ TECH STACK - PREMIUM LOGO GRID ========== -->
+<section class="tech-stack-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Toolbox</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Modern Technologies We <span class="gradient-text">Use</span>
+            </h2>
+            <p class="section-description">
+                We use modern, scalable technologies that power high-performance web applications.
+            </p>
+        </div>
+        
+        <div class="tech-tabs" data-aos="fade-up" data-aos-delay="100">
+            <!-- Tab Navigation -->
+            {% comment %} <div class="tech-tab-nav">
+                <button class="tech-tab-btn active" data-tab="all">All Technologies</button>
+                <button class="tech-tab-btn" data-tab="frontend">Frontend</button>
+                <button class="tech-tab-btn" data-tab="backend">Backend</button>
+                <button class="tech-tab-btn" data-tab="database">Database</button>
+                <button class="tech-tab-btn" data-tab="devops">DevOps & Cloud</button>
+            </div> {% endcomment %}
+            
+            <!-- Tab Content - All Technologies -->
+            <div class="tech-tab-content active" id="tab-all">
+                <div class="tech-masonry-grid">
+                    <!-- Frontend Section -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-window"></i>
+                            Frontend
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="HTML5">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/html5" alt="HTML5">
+                                </div>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="CSS3">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/css3" alt="CSS3">
+                                </div>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="JavaScript">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                                </div>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="React">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/react" alt="React">
+                                </div>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Next.js">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js">
+                                </div>
+                                <span>Next.js</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="TypeScript">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript">
+                                </div>
+                                <span>TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Section -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-hdd-stack"></i>
+                            Backend
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Python">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/python" alt="Python">
+                                </div>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Django">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/django" alt="Django">
+                                </div>
+                                <span>Django</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Node.js">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js">
+                                </div>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Fastapi">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/fastapi" alt="Fastapi">
+                                </div>
+                                <span>Fastapi</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Flask">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/flask" alt="Flask">
+                                </div>
+                                <span>Flask</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="REST API">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/openapiinitiative" alt="REST API">
+                                </div>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Database Section -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-database"></i>
+                            Database
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="PostgreSQL">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL">
+                                </div>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="MongoDB">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB">
+                                </div>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="MySQL">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/mysql" alt="MySQL">
+                                </div>
+                                <span>MySQL</span>
+                            </div>
+                            {% comment %} <div class="tech-logo-item" data-tooltip="Redis">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/redis" alt="Redis">
+                                </div>
+                                <span>Redis</span>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                    
+                    <!-- DevOps & Cloud Section -->
+                    {% comment %} <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-cloud"></i>
+                            DevOps & Cloud
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="AWS">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/amazonaws" alt="AWS">
+                                </div>
+                                <span>AWS</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Docker">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/docker" alt="Docker">
+                                </div>
+                                <span>Docker</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="GitHub">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/github" alt="GitHub">
+                                </div>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Vercel">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/vercel" alt="Vercel">
+                                </div>
+                                <span>Vercel</span>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+            
+            <!-- Tab Content - Frontend -->
+            <div class="tech-tab-content" id="tab-frontend">
+                <div class="tech-group" style="grid-column: span 2;">
+                    <div class="tech-logo-grid" style="grid-template-columns: repeat(6, 1fr);">
+                        <div class="tech-logo-item" data-tooltip="HTML5">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/html5" alt="HTML5">
+                            </div>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="CSS3">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://unpkg.com/simple-icons@9.21.0/icons/css3.svg" alt="CSS3">
+                            </div>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="JavaScript">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="React">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/react" alt="React">
+                            </div>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="Next.js">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js">
+                            </div>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="TypeScript">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript">
+                            </div>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab Content - Backend -->
+            <div class="tech-tab-content" id="tab-backend">
+                <div class="tech-group" style="grid-column: span 2;">
+                    <div class="tech-logo-grid" style="grid-template-columns: repeat(6, 1fr);">
+                        <div class="tech-logo-item" data-tooltip="Python">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python">
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="Django">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/django" alt="Django">
+                            </div>
+                            <span>Django</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="Node.js">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js">
+                            </div>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="Express">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/express" alt="Express">
+                            </div>
+                            <span>Express</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="GraphQL">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/graphql" alt="GraphQL">
+                            </div>
+                            <span>GraphQL</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="REST API">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/openapiinitiative" alt="REST API">
+                            </div>
+                            <span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab Content - Database -->
+            <div class="tech-tab-content" id="tab-database">
+                <div class="tech-group" style="grid-column: span 2;">
+                    <div class="tech-logo-grid" style="grid-template-columns: repeat(4, 1fr);">
+                        <div class="tech-logo-item" data-tooltip="PostgreSQL">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL">
+                            </div>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="MongoDB">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB">
+                            </div>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="MySQL">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/mysql" alt="MySQL">
+                            </div>
+                            <span>MySQL</span>
+                        </div>
+                        {% comment %} <div class="tech-logo-item" data-tooltip="Redis">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/redis" alt="Redis">
+                            </div>
+                            <span>Redis</span>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab Content - DevOps -->
+            <!-- <div class="tech-tab-content" id="tab-devops">
+                <div class="tech-group" style="grid-column: span 2;">
+                    <div class="tech-logo-grid" style="grid-template-columns: repeat(4, 1fr);">
+                        <div class="tech-logo-item" data-tooltip="AWS">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/amazonaws" alt="AWS">
+                            </div>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="Docker">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/docker" alt="Docker">
+                            </div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="GitHub">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/github" alt="GitHub">
+                            </div>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-logo-item" data-tooltip="Vercel">
+                            <div class="tech-logo-wrapper">
+                                <img src="https://cdn.simpleicons.org/vercel" alt="Vercel">
+                            </div>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY CHOOSE US - CYCLE CARD LAYOUT ========== -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why MoonNova</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Why Choose <span class="gradient-text">MoonNova</span> Solutions
+            </h2>
+            <p class="section-description">
+                Businesses choose MoonNova Solutions because we combine technical expertise with strategic thinking.
+            </p>
+        </div>
+        
+        <div class="choose-cycle" data-aos="fade-up" data-aos-delay="100">
+            <!-- Center Logo -->
+            <div class="choose-center">
+                <img src="{% static 'images/logo-icon.svg' %}" alt="MoonNova" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="center-text-fallback">MoonNova</span>
+            </div>
+            
+            <!-- Benefits in Circular Layout -->
+            <div class="benefit-item benefit-1">
+                <div class="benefit-icon">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <h3>Scalable Architecture</h3>
+                <p>Built to grow with your business, handling increased traffic and features effortlessly</p>
+            </div>
+            
+            <div class="benefit-item benefit-2">
+                <div class="benefit-icon">
+                    <i class="bi bi-speedometer2"></i>
+                </div>
+                <h3>Performance Optimized</h3>
+                <p>Clean code that loads quickly and ranks higher in search results</p>
+            </div>
+            
+            <div class="benefit-item benefit-3">
+                <div class="benefit-icon">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <h3>Secure Development</h3>
+                <p>Security-first approach with protection against common vulnerabilities</p>
+            </div>
+            
+            <div class="benefit-item benefit-4">
+                <div class="benefit-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <h3>Long-Term Support</h3>
+                <p>Ongoing maintenance, updates, and technical support after launch</p>
+            </div>
+            
+            <div class="benefit-item benefit-5">
+                <div class="benefit-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <h3>Transparent Communication</h3>
+                <p>Regular updates and clear communication throughout the project</p>
+            </div>
+            
+            <div class="benefit-item benefit-6">
+                <div class="benefit-icon">
+                    <i class="bi bi-clock-history"></i>
+                </div>
+                <h3>On-Time Delivery</h3>
+                <p>We respect your timeline and deliver projects as promised</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 7️⃣ INDUSTRIES - PREMIUM CARD LAYOUT WITH IMAGE COVER ========== -->
+<section class="industries-section">
+    <div class="industries-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Industries</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Industries We <span class="gradient-text">Serve</span>
+            </h2>
+            <p class="section-description">
+                We build digital platforms for businesses across multiple industries.
+            </p>
+        </div>
+        
+        <div class="industries-premium-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- E-Commerce -->
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/ecommerce.png' %}" alt="E-Commerce">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cart"></i>
+                    </div>
+                    <h3>E-Commerce</h3>
+                    <p>Online stores, digital marketplaces, and shopping platforms</p>
+                    {% comment %} <div class="industry-premium-stats">
+                        <span>15+ projects</span>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+            
+            <!-- Startups -->
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/startup.png' %}" alt="Startups">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-rocket"></i>
+                    </div>
+                    <h3>Startups</h3>
+                    <p>MVP development and scalable growth platforms.</p>
+                    {% comment %} <div class="industry-premium-stats">
+                        <span>20+ projects</span>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+            
+            <!-- Professional Services -->
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/professional.png' %}" alt="Professional Services">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h3>Professional Services</h3>
+                    <p>Consultants, agencies, and service providers.</p>
+                    {% comment %} <div class="industry-premium-stats">
+                        <span>12+ projects</span>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+            
+            <!-- SaaS Platforms -->
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/saas.png' %}" alt="SaaS">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cloud"></i>
+                    </div>
+                    <h3>SaaS Platforms</h3>
+                    <p>Subscription-based software and cloud applications</p>
+                    {% comment %} <div class="industry-premium-stats">
+                        <span>8+ projects</span>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+            
+            <!-- Local Businesses -->
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/local.png' %}" alt="Local Businesses">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-shop"></i>
+                    </div>
+                    <h3>Local Businesses</h3>
+                    <p>Web platforms that help local businesses attract and manage customers online.</p>
+                    {% comment %} <div class="industry-premium-stats">
+                        <span>10+ projects</span>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+            
+            <!-- Enterprise -->
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/enterprise.png' %}" alt="Enterprise">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>Enterprise</h3>
+                    <p>Large-scale applications and internal business systems</p>
+                    {% comment %} <div class="industry-premium-stats">
+                        <span>5+ projects</span>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ BLOG SECTION - PREMIUM MAGAZINE LAYOUT ========== -->
+<section class="blog-premium-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Latest Insights</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Insights & <span class="gradient-text">Resources</span>
+            </h2>
+            <p class="section-description">
+                Explore expert insights on web development, performance optimization, and SEO strategy.
+            </p>
+        </div>
+        
+        <div class="blog-featured-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Featured Post (Large) -->
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="{% static 'images/blog/web-dev-trends.jpg' %}" alt="Web Development Trends 2024">
+                    <div class="blog-featured-category">Trends</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-featured-meta">
+                        <span><i class="bi bi-calendar3"></i> Mar 15, 2024</span>
+                        <span><i class="bi bi-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>Web Development Trends to Watch in 2024</h3>
+                    <p>Explore the latest technologies and methodologies shaping the future of web development, from AI integration to edge computing.</p>
+                    <a href="#" class="blog-featured-link">
+                        Read Article <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Grid Posts -->
+            <div class="blog-grid-posts">
+                <!-- Post 1 -->
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/seo-optimization.jpg' %}" alt="SEO Optimization">
+                        <div class="blog-grid-category">SEO</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Mar 10, 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h4>How to Optimize Your Website for Search Engines</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/security-best-practices.jpg' %}" alt="Security Best Practices">
+                        <div class="blog-grid-category">Security</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Mar 5, 2024</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h4>Website Security Best Practices for 2024</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/scalability-guide.jpg' %}" alt="Scalability Guide">
+                        <div class="blog-grid-category">Architecture</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Feb 28, 2024</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h4>A Guide to Building Scalable Web Applications</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {% comment %} <div class="blog-newsletter-card" data-aos="fade-up">
+            <div class="blog-newsletter-content">
+                <h4>Get the latest articles delivered to your inbox</h4>
+                <p>Subscribe to our newsletter for exclusive insights and tips</p>
+            </div>
+            <form class="blog-newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div> {% endcomment %}
+    </div>
+</section>
+
+<!-- ========== 9️⃣ FAQ SECTION - BALANCED PREMIUM LAYOUT ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <!-- Left Side - Rich Content -->
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Frequently Asked <span class="gradient-text">Questions</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        Everything you need to know about our web development process. Can't find what you're looking for? Feel free to reach out directly.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Still have questions?</h4>
+                    <p>We're here to help you with any queries about your project.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="{% url 'contact:contact' %}" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Contact Us
+                        </a>
+                        {% comment %} <a href="tel:+923187040877" class="btn-outline-light">
+                            <i class="bi bi-telephone"></i>
+                            Call Now
+                        </a> {% endcomment %}
+                    </div>
+                </div>
+                
+                {% comment %} <div class="faq-premium-stats">
+                    <div class="faq-stat-item">
+                        <span class="faq-stat-value">24/7</span>
+                        <span class="faq-stat-label">Support Available</span>
+                    </div>
+                    <div class="faq-stat-divider"></div>
+                    <div class="faq-stat-item">
+                        <span class="faq-stat-value">4hrs</span>
+                        <span class="faq-stat-label">Avg Response Time</span>
+                    </div>
+                    <div class="faq-stat-divider"></div>
+                    <div class="faq-stat-item">
+                        <span class="faq-stat-value">98%</span>
+                        <span class="faq-stat-label">Client Satisfaction</span>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+            
+            <!-- Right Side - Accordion -->
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How long does it take to build a custom website?</h3>
+                            <button class="faq-premium-toggle">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Simple websites typically take 3–4 weeks, while complex web applications may take 8–12 weeks, depending on features and integrations.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do you build SEO-friendly websites?</h3>
+                            <button class="faq-premium-toggle">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes. All our websites are developed using SEO best practices, including optimized structure, fast loading speed, and mobile responsiveness.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Can you redesign my existing website?</h3>
+                            <button class="faq-premium-toggle">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Absolutely! We specialize in modernizing outdated websites while preserving your existing content and SEO rankings. We'll create a fresh, modern design that improves user experience, performance, and conversion rates with zero downtime during the transition.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Is my website scalable for future growth?</h3>
+                            <button class="faq-premium-toggle">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes, scalability is a core principle of our development approach. We build modular architectures that can easily accommodate new features, increased traffic, and business growth without requiring a complete rebuild.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do you provide ongoing maintenance?</h3>
+                            <button class="faq-premium-toggle">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes, we offer comprehensive maintenance packages including security updates, performance monitoring, regular backups, content updates, bug fixes, and technical support. We have flexible plans to suit different needs and budgets.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>What information do you need to start?</h3>
+                            <button class="faq-premium-toggle">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>We'll need to understand your business goals, target audience, desired features, brand guidelines, and any specific technical requirements. Don't worry if you don't have everything we can guide you through the process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 🔟 FINAL CTA SECTION - BOLD & CONVERSION-FOCUSED ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <div class="cta-content-wrapper">
+                <h2 class="final-cta-title">
+                    Ready to Build Your <span class="gradient-text">Custom Website?</span>
+                </h2>
+                <p class="final-cta-text">
+                    Let's discuss your project and create a powerful digital platform designed for growth.
+                </p>
+                <div class="final-cta-buttons">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-chat-dots"></i>
+                        Start Your Project
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-calendar-check"></i>
+                        Schedule a Consultation
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Free consultation • No obligation • 100% confidential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic'
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-premium-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-premium-question');
+            const toggle = item.querySelector('.faq-premium-toggle');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Tech Tabs
+        const tabBtns = document.querySelectorAll('.tech-tab-btn');
+        const tabContents = document.querySelectorAll('.tech-tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to current button and content
+                btn.classList.add('active');
+                document.getElementById(`tab-${tabId}`).classList.add('active');
+            });
+        });
+        
+        // Floating cards animation enhancement
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 2}s`;
+        });
+    });
+</script>
+{% endblock %}

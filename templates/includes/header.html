@@ -1,0 +1,249 @@
+<!-- templates/includes/header.html -->
+<!-- MoonNova Solutions - Professional Header with Enhanced Services Dropdown -->
+<header class="moonnova-header">
+    <!-- Top Bar (Desktop Only) -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Contact Information -->
+                <div class="contact-info d-flex align-items-center gap-3">
+                    <a href="mailto:info@moonnovasolutions.com" class="contact-link d-flex align-items-center gap-2">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span class="contact-text d-none d-xl-inline">info@moonnovasolutions.com</span>
+                        <span class="contact-text-sm d-inline d-xl-none">Email Us</span>
+                    </a>
+                    
+                    <span class="contact-divider"></span>
+                    
+                    <a href="tel:+923187040877" class="contact-link d-flex align-items-center gap-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span class="contact-text">+92 (318) 704-0877</span>
+                    </a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="social-links d-flex align-items-center">
+                    <span class="social-follow d-none d-md-inline">Follow Us:</span>
+                    <div class="social-icons d-flex gap-2 ms-2">
+                        <a href="https://linkedin.com/company/moonnovasolutions" target="_blank" 
+                           class="social-link d-flex align-items-center justify-content-center" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/moonnovasolutions" target="_blank" 
+                           class="social-link d-flex align-items-center justify-content-center" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/moonnovasolutions" target="_blank" 
+                           class="social-link d-flex align-items-center justify-content-center" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/moonnovasolutions" target="_blank" 
+                           class="social-link d-flex align-items-center justify-content-center" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/moonnovasolutions" target="_blank" 
+                           class="social-link d-flex align-items-center justify-content-center" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg main-nav" id="main-nav" aria-label="Main Navigation">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="{% url 'core:home' %}" aria-label="MoonNova Solutions - Home">
+                <div class="logo-wrapper d-flex align-items-center">
+                    <div class="logo-mark me-2 me-md-3">
+                        <div class="logo-moon"></div>
+                        <div class="logo-nova"></div>
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-primary fw-bold">MoonNova</div>
+                        <div class="logo-secondary">Solutions</div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarContent" aria-controls="navbarContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="menu-text d-none d-sm-inline ms-2">Menu</span>
+            </button>
+
+            <!-- Navigation Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Navigation Menu -->
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative {% if request.path == '/' %}active{% endif %}" 
+                           href="{% url 'core:home' %}">
+                            <span class="nav-icon d-lg-none me-2"><i class="bi bi-house-door"></i></span>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <!-- ENHANCED SERVICES DROPDOWN -->
+                    <!-- 
+                        FIX: Removed data-bs-auto-close="outside" — this was causing the dropdown 
+                        to close immediately after opening on mobile because Bootstrap was 
+                        treating the touch event as an "outside" click during event propagation.
+                        
+                        FIX: Removed data-bs-toggle="dropdown" from the anchor — we now handle 
+                        the dropdown entirely via JS on mobile and CSS hover on desktop, 
+                        preventing Bootstrap from fighting our custom logic.
+                    -->
+                    <li class="nav-item dropdown mega-dropdown position-static">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" 
+                           {% comment %} href="#"  {% endcomment %}
+                           role="button" 
+                           id="servicesDropdownToggle"
+                           aria-expanded="false"
+                           aria-haspopup="true">
+                            <span class="nav-icon d-lg-none me-2"><i class="bi bi-grid"></i></span>
+                            <span class="nav-text">Services</span>
+                        </a>
+                        
+                        <!-- Premium Services Dropdown - Card-based Design -->
+                        <div class="dropdown-menu services-dropdown-menu shadow-lg border-0" 
+                             id="servicesDropdownMenu"
+                             role="menu">
+                            <div class="services-dropdown-wrapper">
+                                <div class="row g-3">
+                                    <!-- Left Column -->
+                                    <div class="col-md-6">
+                                        <div class="services-column">
+                                            <a href="{% url 'services:web_development' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-code-square"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">Web Development</span>
+                                                    <span class="service-desc">Modern, responsive websites & web apps</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                            <a href="{% url 'services:ecommerce_development' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-cart-check"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">E-Commerce Solutions</span>
+                                                    <span class="service-desc">Powerful online stores & marketplaces</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                            <a href="{% url 'services:mobile_app_development' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-phone"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">Mobile App Development</span>
+                                                    <span class="service-desc">iOS, Android & cross-platform apps</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                            <a href="{% url 'services:custom_software_development' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-gear-wide-connected"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">Custom Software</span>
+                                                    <span class="service-desc">Tailored enterprise solutions</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Right Column -->
+                                    <div class="col-md-6">
+                                        <div class="services-column">
+                                            <a href="{% url 'services:ai_ml_solutions' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-cpu"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">AI & Machine Learning</span>
+                                                    <span class="service-desc">Intelligent automation & predictions</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                            <a href="{% url 'services:data_analytics' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-bar-chart-line"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">Data Science & Analytics</span>
+                                                    <span class="service-desc">End-to-end data solutions</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                            <a href="{% url 'services:seo_digital_growth' %}" class="service-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">SEO & Digital Growth</span>
+                                                    <span class="service-desc">Boost visibility & organic traffic</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                            <!-- View All Services -->
+                                            <a href="{% url 'core:home' %}#services" class="service-item view-all-item" role="menuitem">
+                                                <span class="service-icon"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+                                                <div class="service-info">
+                                                    <span class="service-title">View All Services</span>
+                                                    <span class="service-desc">Explore our complete solutions</span>
+                                                </div>
+                                                <span class="service-arrow"><i class="bi bi-arrow-right"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Portfolio -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative {% if 'portfolio' in request.path %}active{% endif %}" 
+                           href="{% url 'portfolio:portfolio_list' %}">
+                            <span class="nav-icon d-lg-none me-2"><i class="bi bi-briefcase"></i></span>
+                            <span class="nav-text">Portfolio</span>
+                        </a>
+                    </li>
+
+                    <!-- Blog -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative {% if 'blog' in request.path %}active{% endif %}" 
+                           href="{% url 'blog:blog_list' %}">
+                            <span class="nav-icon d-lg-none me-2"><i class="bi bi-journal-text"></i></span>
+                            <span class="nav-text">Blog</span>
+                        </a>
+                    </li>
+
+                    <!-- About -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative {% if 'about' in request.path %}active{% endif %}" 
+                           href="{% url 'core:about' %}">
+                            <span class="nav-icon d-lg-none me-2"><i class="bi bi-info-circle"></i></span>
+                            <span class="nav-text">About</span>
+                        </a>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative {% if 'contact' in request.path %}active{% endif %}" 
+                           href="{% url 'contact:contact' %}">
+                            <span class="nav-icon d-lg-none me-2"><i class="bi bi-envelope"></i></span>
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- CTA Buttons -->
+                <div class="nav-actions d-flex flex-column flex-lg-row gap-3">
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-light btn-cta">
+                        <span class="btn-text">Get Quote</span>
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn btn-primary btn-cta">
+                        <span class="btn-text">Free Consultation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,1154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AI and Machine Learning Solutions | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Practical AI solutions for businesses. We build custom chatbots, predictive analytics, recommendation engines, and process automation tools that solve real problems.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/ai-ml.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO ========== -->
+<section class="service-hero">
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">AI & Machine Learning</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Practical AI Solutions <span class="gradient-text">That Actually Work</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    AI shouldn't be complicated or theoretical. We build practical machine learning applications that solve real business problems from chatbots that assist customers to predictive models that improve decision-making.
+                    <br/><br/>
+                    No hype, no buzzwords. Just AI tools that automate work, uncover insights, and help your business run better.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-cpu"></i>
+                        Discuss Your AI Project
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-grid"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="ai-visualization">
+                        <div class="ai-grid"></div>
+                        <div class="ai-circle"></div>
+                        <div class="ai-dots">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="ai-nodes">
+                            <div class="ai-node node-1"><i class="bi bi-chat-dots"></i></div>
+                            <div class="ai-node node-2"><i class="bi bi-graph-up"></i></div>
+                            <div class="ai-node node-3"><i class="bi bi-cpu"></i></div>
+                            <div class="ai-node node-4"><i class="bi bi-mic"></i></div>
+                            <div class="ai-node node-5"><i class="bi bi-star"></i></div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-chat"></i>
+                        <span>Chatbots</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Predictive analytics</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-star"></i>
+                        <span>Recommendations</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="bi bi-robot"></i>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== TRUST LINE SECTION ========== -->
+<section class="trust-line-section">
+    <div class="container">
+        <div class="trust-line-wrapper" data-aos="fade-up">
+            <div class="trust-badge">
+                <span class="trust-dot"></span>
+                <span class="trust-badge-text">Trusted by</span>
+            </div>
+            
+            <h3 class="trust-heading">
+                Trusted by businesses looking for practical AI, not just experiments.
+            </h3>
+            
+            <p class="trust-text">
+                We help companies automate processes, analyze their data, and build smarter products using AI and machine learning.
+            </p>
+            
+            <div class="trust-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="bi bi-arrow-down"></i></span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 2️⃣ INTRODUCTION ========== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Introduction</span>
+                </div>
+                
+                <h2 class="section-title">
+                    AI That Solves <span class="gradient-text">Real Business Problems</span>
+                </h2>
+                
+                <p class="intro-text">
+                    Many businesses hear about AI and assume it is out of reach too complex, too expensive, or too experimental. We take a different approach. We look for specific problems where AI can make a measurable difference and build practical solutions around them.
+                </p>
+                
+                <p class="intro-text">
+                    Whether it's automating customer support with a chatbot, forecasting demand with predictive models, or personalizing recommendations for your users, we build AI tools that integrate with your existing systems and deliver real value.
+                </p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-chat"></i>
+                        <span>AI chatbots</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Predictive analytics</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-cpu"></i>
+                        <span>Machine learning</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-star"></i>
+                        <span>Recommendation systems</span>
+                    </div>
+                </div>           
+            </div>
+            
+            <div class="intro-visual" data-aos="fade-left">
+                <div class="visual-card">
+                    <img src="{% static 'images/services/ai-dashboard.png' %}" 
+                         alt="AI Analytics Dashboard">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY AI SECTION ========== -->
+<section class="why-invest-section">
+    <div class="container">
+        <div class="why-invest-wrapper" data-aos="fade-up">
+            
+            <div class="why-invest-grid">
+                <div class="why-invest-content" data-aos="fade-right">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Why AI Matters</span>
+                    </div>
+                    
+                    <h2 class="why-invest-title">
+                        What AI Can Actually <span class="gradient-text">Do For Your Business</span>
+                    </h2>
+                    
+                    <p class="why-invest-text">
+                        AI gets talked about like magic, but it's really just a set of tools for finding patterns in data and making predictions. When applied to the right problems, these tools can save time, reduce costs, and uncover opportunities you'd otherwise miss.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        We focus on practical applications: chatbots that handle customer questions so your team doesn't have to, models that forecast demand so you stock the right products, and recommendation engines that help customers find what they're looking for.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        The goal isn't to build the most advanced AI possible. It's to build AI that makes your business work better.
+                    </p>
+                    
+                    <div class="why-invest-highlights">
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Reduce manual work</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Make better predictions</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Personalize customer experiences</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Automate repetitive tasks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-invest-visual" data-aos="fade-left">
+                    <div class="invest-stats-card">
+                        <div class="stat-item-large">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">of customer service queries can be handled by AI chatbots</span>
+                        </div>
+                        
+                        <div class="stat-divider-horizontal"></div>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item-small">
+                                <span class="stat-number">30%</span>
+                                <span class="stat-label">average increase in sales with personalized recommendations</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">faster decision-making with predictive analytics</span>
+                            </div>
+                        </div>
+                        
+                        <div class="invest-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>Businesses using AI see measurable ROI within 6-12 months</span>
+                        </div>
+                    </div>
+                    
+                    {% comment %} <div class="invest-quote-card">
+                        <i class="bi bi-quote"></i>
+                        <p>"The chatbot MoonNova built for us handles 60% of support queries automatically. Our team can focus on complex issues, and customers get answers instantly."</p>
+                        <div class="quote-author">
+                            <span class="author-name">— Rachel Kim</span>
+                            <span class="author-title">Operations Director, UrbanDash</span>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ AI SERVICES ========== -->
+<section class="offerings-section">
+    <div class="offerings-bg">
+        <div class="bg-pattern"></div>
+        <div class="bg-glow"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">AI Services</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Practical AI Solutions <span class="gradient-text">We Build</span>
+            </h2>
+            <p class="section-description">
+                We focus on AI applications that deliver measurable results. No experiments. No research projects. Just tools that work.
+            </p>
+        </div>
+        
+        <div class="offerings-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1: AI Chatbots -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-chat"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">AI Chatbots</h3>
+                        <p class="offering-brief">Intelligent chatbots that handle customer questions, support tickets, and common requests automatically.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> 24/7 customer support automation</li>
+                            <li><i class="bi bi-check-lg"></i> FAQ and knowledge base integration</li>
+                            <li><i class="bi bi-check-lg"></i> Human handoff when needed</li>
+                            <li><i class="bi bi-check-lg"></i> Multi-language support</li>
+                            <li><i class="bi bi-check-lg"></i> Website, WhatsApp, Slack integration</li>
+                            <li><i class="bi bi-check-lg"></i> Train on your own data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Predictive Analytics -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Predictive Analytics</h3>
+                        <p class="offering-brief">Forecast sales, demand, customer behavior, and business trends using your historical data.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Sales and revenue forecasting</li>
+                            <li><i class="bi bi-check-lg"></i> Inventory demand prediction</li>
+                            <li><i class="bi bi-check-lg"></i> Customer churn prediction</li>
+                            <li><i class="bi bi-check-lg"></i> Cash flow forecasting</li>
+                            <li><i class="bi bi-check-lg"></i> Interactive dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Automated reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Machine Learning Models -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Machine Learning Models</h3>
+                        <p class="offering-brief">Custom ML models trained on your data to solve specific business problems.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Classification and categorization</li>
+                            <li><i class="bi bi-check-lg"></i> Anomaly detection</li>
+                            <li><i class="bi bi-check-lg"></i> Image and document analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Sentiment analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Data clustering and segmentation</li>
+                            <li><i class="bi bi-check-lg"></i> Model retraining and updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: Natural Language Processing -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-mic"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Natural Language Processing</h3>
+                        <p class="offering-brief">Understand and analyze text data customer feedback, documents, and communications.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Sentiment analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Document summarization</li>
+                            <li><i class="bi bi-check-lg"></i> Entity extraction</li>
+                            <li><i class="bi bi-check-lg"></i> Text classification</li>
+                            <li><i class="bi bi-check-lg"></i> Language translation</li>
+                            <li><i class="bi bi-check-lg"></i> Content moderation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: Recommendation Systems -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-star"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Recommendation Systems</h3>
+                        <p class="offering-brief">Personalized product, content, or service recommendations based on user behavior.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Product recommendations</li>
+                            <li><i class="bi bi-check-lg"></i> Content personalization</li>
+                            <li><i class="bi bi-check-lg"></i> "Customers also bought" features</li>
+                            <li><i class="bi bi-check-lg"></i> Personalized email campaigns</li>
+                            <li><i class="bi bi-check-lg"></i> Real-time recommendations</li>
+                            <li><i class="bi bi-check-lg"></i> A/B testing integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Process Automation -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Process Automation</h3>
+                        <p class="offering-brief">Automate repetitive tasks and workflows using AI and machine learning.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Document processing</li>
+                            <li><i class="bi bi-check-lg"></i> Data entry automation</li>
+                            <li><i class="bi bi-check-lg"></i> Invoice and receipt processing</li>
+                            <li><i class="bi bi-check-lg"></i> Email routing and classification</li>
+                            <li><i class="bi bi-check-lg"></i> Workflow optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Approval automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offerings-footer" data-aos="fade-up">
+            <p>Have a specific problem in mind? <a href="{% url 'contact:contact' %}">Let's talk about how AI could help</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ OUR PROCESS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">How We Build AI</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Our AI Development <span class="gradient-text">Process</span>
+            </h2>
+            <p class="section-description">
+                We start with your problem, not the technology. Every AI project begins with a clear business goal.
+            </p>
+        </div>
+        
+        <div class="process-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-center">
+                <div class="center-icon">
+                    <i class="bi bi-cpu"></i>
+                </div>
+                <div class="center-text">Problem-First<br>AI</div>
+            </div>
+            
+            <div class="process-step step-1">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Discovery</h3>
+                    <p>We identify the business problem and determine if AI is the right solution.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Problem definition</li>
+                            <li>Data assessment</li>
+                            <li>Feasibility analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-2">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Data Preparation</h3>
+                    <p>We collect, clean, and prepare your data for training.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Data collection</li>
+                            <li>Cleaning and labeling</li>
+                            <li>Feature engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-3">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Model Development</h3>
+                    <p>We build and train machine learning models on your data.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Algorithm selection</li>
+                            <li>Model training</li>
+                            <li>Validation and testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-4">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Integration</h3>
+                    <p>We integrate the AI solution into your existing systems.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>API development</li>
+                            <li>Dashboard creation</li>
+                            <li>Workflow integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-5">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Testing</h3>
+                    <p>We test the solution thoroughly with real data and scenarios.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Accuracy testing</li>
+                            <li>User acceptance testing</li>
+                            <li>Performance optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-6">
+                <div class="step-marker">06</div>
+                <div class="step-content">
+                    <h3>Deploy & Monitor</h3>
+                    <p>We launch your AI solution and monitor its performance over time.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Production deployment</li>
+                            <li>Performance monitoring</li>
+                            <li>Model retraining</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-connector"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ TECH STACK ========== -->
+<section class="tech-stack-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Technologies</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                AI & ML Tools <span class="gradient-text">We Use</span>
+            </h2>
+            <p class="section-description">
+                We select the right tools for each project from popular frameworks to specialized libraries.
+            </p>
+        </div>
+        
+        <div class="tech-tabs" data-aos="fade-up" data-aos-delay="100">
+            <div class="tech-tab-content active" id="tab-all">
+                <div class="tech-masonry-grid">
+                    <!-- ML Frameworks -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-cpu"></i>
+                            ML Frameworks
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="TensorFlow">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow">
+                                </div>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="PyTorch">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/pytorch" alt="PyTorch">
+                                </div>
+                                <span>PyTorch</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Scikit-learn">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/scikitlearn" alt="Scikit-learn">
+                                </div>
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Keras">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/keras" alt="Keras">
+                                </div>
+                                <span>Keras</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- NLP & Chatbots -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-chat"></i>
+                            NLP & Chatbots
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="OpenAI">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/openai" alt="OpenAI">
+                                </div>
+                                <span>OpenAI</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="LangChain">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/langchain" alt="LangChain">
+                                </div>
+                                <span>LangChain</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Hugging Face">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/huggingface" alt="Hugging Face">
+                                </div>
+                                <span>Hugging Face</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Rasa">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/rasa" alt="Rasa">
+                                </div>
+                                <span>Rasa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Data & Analytics -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-bar-chart"></i>
+                            Data & Analytics
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Pandas">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/pandas" alt="Pandas">
+                                </div>
+                                <span>Pandas</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="NumPy">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/numpy" alt="NumPy">
+                                </div>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Jupyter">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/jupyter" alt="Jupyter">
+                                </div>
+                                <span>Jupyter</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Deployment -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-cloud"></i>
+                            Deployment & MLOps
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Docker">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/docker" alt="Docker">
+                                </div>
+                                <span>Docker</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="FastAPI">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/fastapi" alt="FastAPI">
+                                </div>
+                                <span>FastAPI</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="AWS SageMaker">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/amazonaws" alt="AWS SageMaker">
+                                </div>
+                                <span>SageMaker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY CHOOSE US ========== -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why MoonNova</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                A Practical Approach to <span class="gradient-text">Artificial Intelligence</span>
+            </h2>
+            <p class="section-description">
+                We don't sell AI because it's trendy. We sell AI because it solves problems. Here's how we're different.
+            </p>
+        </div>
+        
+        <div class="choose-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="choose-center">
+                <img src="{% static 'images/logo-icon.svg' %}" alt="MoonNova" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="center-text-fallback">MoonNova</span>
+            </div>
+            
+            <div class="benefit-item benefit-1">
+                <div class="benefit-icon">
+                    <i class="bi bi-bullseye"></i>
+                </div>
+                <h3>Problem-First Approach</h3>
+                <p>We start with your business problem, not the technology. If AI isn't the right solution, we'll tell you.</p>
+            </div>
+            
+            <div class="benefit-item benefit-2">
+                <div class="benefit-icon">
+                    <i class="bi bi-bar-chart"></i>
+                </div>
+                <h3>Measurable Results</h3>
+                <p>Every AI project has clear success metrics. We build to deliver specific, measurable outcomes.</p>
+            </div>
+            
+            <div class="benefit-item benefit-3">
+                <div class="benefit-icon">
+                    <i class="bi bi-database"></i>
+                </div>
+                <h3>Work With Your Data</h3>
+                <p>We use your existing data. No need to start from scratch or buy expensive datasets.</p>
+            </div>
+            
+            <div class="benefit-item benefit-4">
+                <div class="benefit-icon">
+                    <i class="bi bi-plug"></i>
+                </div>
+                <h3>Easy Integration</h3>
+                <p>We build AI that works with your current tools. No rip and replace, just integration.</p>
+            </div>
+            
+            <div class="benefit-item benefit-5">
+                <div class="benefit-icon">
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <h3>Continuous Improvement</h3>
+                <p>Models get better over time. We monitor performance and retrain as needed.</p>
+            </div>
+            
+            <div class="benefit-item benefit-6">
+                <div class="benefit-icon">
+                    <i class="bi bi-chat"></i>
+                </div>
+                <h3>No Black Boxes</h3>
+                <p>We explain how your AI works in plain language. No mystery, no magic, just clear logic.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 7️⃣ USE CASES ========== -->
+<section class="industries-section">
+    <div class="industries-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Use Cases</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                AI Applications <span class="gradient-text">Across Industries</span>
+            </h2>
+            <p class="section-description">
+                Here are some of the ways we've helped businesses use AI to solve real problems.
+            </p>
+        </div>
+        
+        <div class="industries-premium-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/ecommerce-ai.png' %}" alt="E-commerce AI">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cart"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>Product recommendations, demand forecasting, and customer service chatbots.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/finance-ai.png' %}" alt="Finance AI">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-bank"></i>
+                    </div>
+                    <h3>Finance</h3>
+                    <p>Fraud detection, risk assessment, and automated document processing.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/healthcare-ai.png' %}" alt="Healthcare AI">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Patient intake automation, medical record analysis, and appointment scheduling.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/saas-ai.png' %}" alt="SaaS AI">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cloud"></i>
+                    </div>
+                    <h3>SaaS</h3>
+                    <p>User behavior analysis, churn prediction, and personalized onboarding.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/manufacturing-ai.png' %}" alt="Manufacturing AI">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Predictive maintenance, quality control, and supply chain optimization.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/logistics-ai.png' %}" alt="Logistics AI">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <h3>Logistics</h3>
+                    <p>Route optimization, delivery time prediction, and automated scheduling.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ BLOG ========== -->
+<section class="blog-premium-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">From our blog</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Practical AI <span class="gradient-text">Insights</span>
+            </h2>
+            <p class="section-description">
+                No hype, no buzzwords. Just practical advice on using AI in your business.
+            </p>
+        </div>
+        
+        <div class="blog-featured-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="{% static 'images/blog/ai-chatbots.jpg' %}" alt="AI Chatbots Guide">
+                    <div class="blog-featured-category">Chatbots</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-featured-meta">
+                        <span><i class="bi bi-calendar3"></i> Mar 2024</span>
+                        <span><i class="bi bi-clock"></i> 7 min read</span>
+                    </div>
+                    <h3>When does it make sense to build an AI chatbot?</h3>
+                    <p>A practical guide to understanding if a chatbot is right for your business and what it can actually handle.</p>
+                    <a href="#" class="blog-featured-link">
+                        Read article <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="blog-grid-posts">
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/predictive-analytics.jpg' %}" alt="Predictive Analytics">
+                        <div class="blog-grid-category">Analytics</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Feb 2024</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h4>Getting started with predictive analytics (without a data science team)</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/recommendation-engines.jpg' %}" alt="Recommendation Engines">
+                        <div class="blog-grid-category">Personalization</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Jan 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h4>How recommendation systems work (and when you need one)</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/process-automation.jpg' %}" alt="Process Automation">
+                        <div class="blog-grid-category">Automation</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Dec 2023</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h4>Five business processes you can automate with AI today</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 9️⃣ FAQ ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Common Questions About <span class="gradient-text">AI & Machine Learning</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        We get asked these questions a lot. If yours isn't here, just ask.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Ready to explore AI for your business?</h4>
+                    <p>We're happy to answer questions and help you identify where AI could help.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="{% url 'contact:contact' %}" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Get in touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do I need a lot of data to use AI?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>It depends on the problem. Some AI applications need lots of data, others can work with smaller datasets. We'll assess your data during discovery and recommend approaches that fit what you have. Sometimes we can start with rule-based systems and add ML later as data grows.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How is this different from regular software?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Regular software follows explicit rules written by programmers. AI learns patterns from data and can handle situations you haven't explicitly programmed for. It's better for tasks like understanding language, making predictions, or personalizing experiences.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How much does an AI project cost?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>It varies widely based on complexity. A simple chatbot might start around $15k-25k. A custom predictive model could range from $30k-60k. We'll give you a clear estimate after understanding your specific problem and requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How long does it take to build an AI solution?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>A basic MVP can be ready in 2-3 months. More complex projects with custom models take 4-6 months. We typically start with a proof of concept to validate the approach before building a full solution.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Will AI replace my employees?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>No. We build AI to handle repetitive tasks and augment your team's capabilities, not replace them. The goal is to free your people up for higher-value work that requires human judgment and creativity.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do I need a data science team to maintain it?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Not necessarily. We build solutions that your existing team can use and maintain. We also offer ongoing support and model retraining as part of our maintenance packages. You don't need to hire data scientists to benefit from AI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 🔟 FINAL CTA ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <div class="cta-content-wrapper">
+                <h2 class="final-cta-title">
+                    Ready to Explore <span class="gradient-text">AI for Your Business?</span>
+                </h2>
+                <p class="final-cta-text">
+                    Let's talk about the problems you're trying to solve and whether AI is the right answer.
+                </p>
+                <div class="final-cta-buttons">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-chat-dots"></i>
+                        Start the Conversation
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-calendar-check"></i>
+                        Schedule a Call
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Free consultation • No obligation • 100% confidential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic'
+        });
+        
+        const faqItems = document.querySelectorAll('.faq-premium-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-premium-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 2}s`;
+        });
+    });
+</script>
+{% endblock %}

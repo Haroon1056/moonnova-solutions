@@ -1,0 +1,1175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SEO & Digital Growth Services | MoonNova Solutions{% endblock %}
+
+{% block meta_description %}Get found online and attract more customers. We provide practical SEO, technical optimization, local search, and analytics to help your business grow.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/seo-growth.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== 1️⃣ HERO ========== -->
+<section class="service-hero">
+    <div class="hero-particles"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">SEO & Digital Growth</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Get Found. Get Chosen. <span class="gradient-text">Grow.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Even the best website won't help your business if nobody sees it. We help businesses rank higher in search, attract more visitors, and turn that traffic into customers.
+                    <br/><br/>
+                    No shortcuts or black-hat tactics. Just practical, sustainable SEO and digital marketing that delivers real results over time.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-graph-up"></i>
+                        Grow Your Traffic
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-grid"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="seo-visualization">
+                        <div class="search-bar">
+                            <i class="bi bi-search"></i>
+                            <span>your business near me</span>
+                        </div>
+                        <div class="search-results">
+                            <div class="result-item result-1">
+                                <div class="result-rank">1</div>
+                                <div class="result-content">
+                                    <div class="result-title">Your Business Name</div>
+                                    <div class="result-url">yourbusiness.com</div>
+                                </div>
+                            </div>
+                            <div class="result-item result-2">
+                                <div class="result-rank">2</div>
+                                <div class="result-content">
+                                    <div class="result-title">Competitor A</div>
+                                    <div class="result-url">competitorA.com</div>
+                                </div>
+                            </div>
+                            <div class="result-item result-3">
+                                <div class="result-rank">3</div>
+                                <div class="result-content">
+                                    <div class="result-title">Competitor B</div>
+                                    <div class="result-url">competitorB.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="growth-indicator">
+                            <div class="growth-bar" style="height: 80%"></div>
+                            <div class="growth-bar" style="height: 60%"></div>
+                            <div class="growth-bar" style="height: 95%"></div>
+                            <div class="growth-bar" style="height: 70%"></div>
+                            <div class="growth-bar" style="height: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="bi bi-search"></i>
+                        <span>SEO</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="bi bi-speedometer2"></i>
+                        <span>Technical SEO</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Local SEO</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========== TRUST LINE SECTION ========== -->
+<section class="trust-line-section">
+    <div class="container">
+        <div class="trust-line-wrapper" data-aos="fade-up">
+            <div class="trust-badge">
+                <span class="trust-dot"></span>
+                <span class="trust-badge-text">Trusted by</span>
+            </div>
+            
+            <h3 class="trust-heading">
+                Trusted by businesses that want sustainable growth, not quick fixes.
+            </h3>
+            
+            <p class="trust-text">
+                We help companies get found by the right people at the right time through practical, white-hat SEO and digital marketing.
+            </p>
+            
+            <div class="trust-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="bi bi-arrow-down"></i></span>
+                <span class="divider-line"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 2️⃣ INTRODUCTION ========== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Introduction</span>
+                </div>
+                
+                <h2 class="section-title">
+                    Be Found When <span class="gradient-text">It Matters Most</span>
+                </h2>
+                
+                <p class="intro-text">
+                    Search engines are how most customers discover businesses today. But ranking high isn't about tricks or shortcuts. It's about building a site that search engines trust and users love.
+                </p>
+                
+                <p class="intro-text">
+                    We take a practical approach to SEO: fix what's broken, optimize what matters, and create content that answers real questions. The result is sustainable traffic growth that doesn't disappear when algorithms change.
+                </p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="bi bi-search"></i>
+                        <span>Search Engine Optimization</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-speedometer2"></i>
+                        <span>Technical SEO</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Local SEO</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Analytics & Tracking</span>
+                    </div>
+                </div>           
+            </div>
+            
+            <div class="intro-visual" data-aos="fade-left">
+                <div class="visual-card">
+                    <img src="{% static 'images/services/seo-dashboard.png' %}" 
+                         alt="SEO Analytics Dashboard">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY SEO MATTERS SECTION ========== -->
+<section class="why-invest-section">
+    <div class="container">
+        <div class="why-invest-wrapper" data-aos="fade-up">
+            
+            <div class="why-invest-grid">
+                <div class="why-invest-content" data-aos="fade-right">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">Why SEO Matters</span>
+                    </div>
+                    
+                    <h2 class="why-invest-title">
+                        What Good SEO <span class="gradient-text">Actually Does</span>
+                    </h2>
+                    
+                    <p class="why-invest-text">
+                        Search is how most customers find new businesses. If you're not on the first page, you're invisible to people looking for what you offer.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        Good SEO doesn't just bring more traffic. It brings the right traffic people actively searching for your products or services. And it keeps working over time, unlike paid ads that stop when you stop paying.
+                    </p>
+                    
+                    <p class="why-invest-text">
+                        We focus on the fundamentals: strong technical SEO, high-quality content, and genuine website authority. No shortcuts, just sustainable growth.
+                    </p>
+                    
+                    <div class="why-invest-highlights">
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>More qualified traffic</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Better user experience</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Long-term results</span>
+                        </div>
+                        <div class="invest-highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Higher conversion rates</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-invest-visual" data-aos="fade-left">
+                    <div class="invest-stats-card">
+                        <div class="stat-item-large">
+                            <span class="stat-number">75%</span>
+                            <span class="stat-label">of users never scroll past the first page of search results</span>
+                        </div>
+                        
+                        <div class="stat-divider-horizontal"></div>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item-small">
+                                <span class="stat-number">#1</span>
+                                <span class="stat-label">organic result gets 10x more clicks than #10</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <span class="stat-number">3x</span>
+                                <span class="stat-label">higher click-through rate for optimized listings</span>
+                            </div>
+                        </div>
+                        
+                        <div class="invest-note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>Organic search drives 53% of all website traffic</span>
+                        </div>
+                    </div>
+                    
+                    {% comment %} <div class="invest-quote-card">
+                        <i class="bi bi-quote"></i>
+                        <p>"MoonNova helped us double our organic traffic in six months. They fixed technical issues we didn't know we had and created content that actually ranks."</p>
+                        <div class="quote-author">
+                            <span class="author-name">— Jessica Chen</span>
+                            <span class="author-title">Marketing Director, UrbanDash</span>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3️⃣ SEO SERVICES ========== -->
+<section class="offerings-section">
+    <div class="offerings-bg">
+        <div class="bg-pattern"></div>
+        <div class="bg-glow"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">SEO Services</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                Complete SEO & <span class="gradient-text">Digital Growth</span>
+            </h2>
+            <p class="section-description">
+                From technical fixes to content strategy, we cover everything you need to get found online.
+            </p>
+        </div>
+        
+        <div class="offerings-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1: Search Engine Optimization -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Search Engine Optimization</h3>
+                        <p class="offering-brief">Comprehensive SEO strategy to improve rankings and drive qualified organic traffic.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Keyword research and strategy</li>
+                            <li><i class="bi bi-check-lg"></i> On-page optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Content strategy</li>
+                            <li><i class="bi bi-check-lg"></i> Link building and authority</li>
+                            <li><i class="bi bi-check-lg"></i> Competitor analysis</li>
+                            <li><i class="bi bi-check-lg"></i> Monthly reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Technical SEO -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Technical SEO</h3>
+                        <p class="offering-brief">Fix the underlying issues that prevent search engines from properly indexing your site.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Site audits and crawls</li>
+                            <li><i class="bi bi-check-lg"></i> XML sitemaps and robots.txt</li>
+                            <li><i class="bi bi-check-lg"></i> Schema markup</li>
+                            <li><i class="bi bi-check-lg"></i> Canonicalization</li>
+                            <li><i class="bi bi-check-lg"></i> Redirect management</li>
+                            <li><i class="bi bi-check-lg"></i> Index coverage optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Website Performance Optimization -->
+            <div class="offering-card featured">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-lightning"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Website Performance</h3>
+                        <p class="offering-brief">Fast-loading sites rank higher and convert better. We optimize every aspect of performance.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Core Web Vitals</li>
+                            <li><i class="bi bi-check-lg"></i> Page speed optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Image compression</li>
+                            <li><i class="bi bi-check-lg"></i> Mobile performance</li>
+                            <li><i class="bi bi-check-lg"></i> Caching implementation</li>
+                            <li><i class="bi bi-check-lg"></i> CDN setup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: Content Optimization -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-file-text"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Content Optimization</h3>
+                        <p class="offering-brief">Optimize your existing content and create new content that answers what customers are searching for.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Content audits</li>
+                            <li><i class="bi bi-check-lg"></i> Keyword mapping</li>
+                            <li><i class="bi bi-check-lg"></i> Meta descriptions and titles</li>
+                            <li><i class="bi bi-check-lg"></i> Header optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Internal linking</li>
+                            <li><i class="bi bi-check-lg"></i> Content gap analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: Local SEO & Google Business -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Local SEO</h3>
+                        <p class="offering-brief">Get found by customers in your area. Optimize for local search and Google Maps.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Google Business Profile</li>
+                            <li><i class="bi bi-check-lg"></i> Local citations</li>
+                            <li><i class="bi bi-check-lg"></i> Review management</li>
+                            <li><i class="bi bi-check-lg"></i> Local keyword targeting</li>
+                            <li><i class="bi bi-check-lg"></i> Map pack optimization</li>
+                            <li><i class="bi bi-check-lg"></i> Local content strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Analytics & Growth Tracking -->
+            <div class="offering-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="offering-icon-wrapper">
+                            <div class="offering-icon">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+                        </div>
+                        <h3 class="offering-title">Analytics & Tracking</h3>
+                        <p class="offering-brief">Know what's working. We set up proper tracking and provide clear reports on your growth.</p>
+                    </div>
+                    <div class="card-back">
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-lg"></i> Google Analytics 4 setup</li>
+                            <li><i class="bi bi-check-lg"></i> Google Search Console</li>
+                            <li><i class="bi bi-check-lg"></i> Conversion tracking</li>
+                            <li><i class="bi bi-check-lg"></i> Custom dashboards</li>
+                            <li><i class="bi bi-check-lg"></i> Monthly performance reports</li>
+                            <li><i class="bi bi-check-lg"></i> Goal and event tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offerings-footer" data-aos="fade-up">
+            <p>Ready to get found online? <a href="{% url 'contact:contact' %}">Let's talk about your goals</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 4️⃣ OUR PROCESS ========== -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Process</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                How We Grow Your <span class="gradient-text">Organic Traffic</span>
+            </h2>
+            <p class="section-description">
+                We follow a proven process to improve your search visibility and attract more customers.
+            </p>
+        </div>
+        
+        <div class="process-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-center">
+                <div class="center-icon">
+                    <i class="bi bi-graph-up"></i>
+                </div>
+                <div class="center-text">Sustainable<br>Growth</div>
+            </div>
+            
+            <div class="process-step step-1">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Audit & Analysis</h3>
+                    <p>We analyze your current SEO health, technical issues, and competitive landscape.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Technical site audit</li>
+                            <li>Keyword research</li>
+                            <li>Competitor analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-2">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Strategy</h3>
+                    <p>We create a roadmap of prioritized actions to improve your rankings.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Keyword targeting</li>
+                            <li>Content plan</li>
+                            <li>Technical fixes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-3">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Implementation</h3>
+                    <p>We fix technical issues, optimize content, and build authority.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>On-page optimization</li>
+                            <li>Technical fixes</li>
+                            <li>Content creation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-4">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Measurement</h3>
+                    <p>We track rankings, traffic, and conversions to see what's working.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Rank tracking</li>
+                            <li>Traffic analysis</li>
+                            <li>Conversion tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-5">
+                <div class="step-marker">05</div>
+                <div class="step-content">
+                    <h3>Reporting</h3>
+                    <p>You get clear monthly reports showing progress and next steps.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Monthly performance</li>
+                            <li>Key metrics</li>
+                            <li>Recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-step step-6">
+                <div class="step-marker">06</div>
+                <div class="step-content">
+                    <h3>Iterate</h3>
+                    <p>We continuously refine our approach based on data and algorithm changes.</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Ongoing optimization</li>
+                            <li>New opportunities</li>
+                            <li>Algorithm updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-connector"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 5️⃣ TOOLS & TECHNOLOGIES ========== -->
+<section class="tech-stack-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Tools We Use</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                SEO & Analytics <span class="gradient-text">Tools</span>
+            </h2>
+            <p class="section-description">
+                We use industry-standard tools to audit, track, and optimize your search presence.
+            </p>
+        </div>
+        
+        <div class="tech-tabs" data-aos="fade-up" data-aos-delay="100">
+            <div class="tech-tab-content active" id="tab-all">
+                <div class="tech-masonry-grid">
+                    <!-- SEO Platforms -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-search"></i>
+                            SEO Platforms
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Ahrefs">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/ahrefs" alt="Ahrefs">
+                                </div>
+                                <span>Ahrefs</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="SEMrush">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/semrush" alt="SEMrush">
+                                </div>
+                                <span>SEMrush</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Moz">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/moz" alt="Moz">
+                                </div>
+                                <span>Moz</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Screaming Frog">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/screamingfrog" alt="Screaming Frog">
+                                </div>
+                                <span>Screaming Frog</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Analytics & Tracking -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-bar-chart"></i>
+                            Analytics & Tracking
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Google Analytics">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/googleanalytics" alt="Google Analytics">
+                                </div>
+                                <span>Google Analytics</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Google Search Console">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/googlesearchconsole" alt="Google Search Console">
+                                </div>
+                                <span>Search Console</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Google Tag Manager">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/googletagmanager" alt="Google Tag Manager">
+                                </div>
+                                <span>Tag Manager</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Looker Studio">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/looker" alt="Looker Studio">
+                                </div>
+                                <span>Looker Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Local SEO -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-geo-alt"></i>
+                            Local SEO
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Google Business Profile">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/google" alt="Google Business Profile">
+                                </div>
+                                <span>Google Business</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="BrightLocal">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/brightlocal" alt="BrightLocal">
+                                </div>
+                                <span>BrightLocal</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Whitespark">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/whitespark" alt="Whitespark">
+                                </div>
+                                <span>Whitespark</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Performance -->
+                    <div class="tech-group">
+                        <h4 class="tech-group-title">
+                            <i class="bi bi-speedometer2"></i>
+                            Performance Tools
+                        </h4>
+                        <div class="tech-logo-grid">
+                            <div class="tech-logo-item" data-tooltip="Google PageSpeed">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/googlepagespeed" alt="Google PageSpeed">
+                                </div>
+                                <span>PageSpeed</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="GTmetrix">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/gtmetrix" alt="GTmetrix">
+                                </div>
+                                <span>GTmetrix</span>
+                            </div>
+                            <div class="tech-logo-item" data-tooltip="Lighthouse">
+                                <div class="tech-logo-wrapper">
+                                    <img src="https://cdn.simpleicons.org/lighthouse" alt="Lighthouse">
+                                </div>
+                                <span>Lighthouse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 6️⃣ WHY CHOOSE US ========== -->
+<section class="why-choose-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why MoonNova</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                A Different Approach to <span class="gradient-text">SEO</span>
+            </h2>
+            <p class="section-description">
+                We don't promise overnight results or guarantee #1 rankings. We promise sustainable growth through proven methods.
+            </p>
+        </div>
+        
+        <div class="choose-cycle" data-aos="fade-up" data-aos-delay="100">
+            <div class="choose-center">
+                <img src="{% static 'images/logo-icon.svg' %}" alt="MoonNova" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="center-text-fallback">MoonNova</span>
+            </div>
+            
+            <div class="benefit-item benefit-1">
+                <div class="benefit-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <h3>White Hat Only</h3>
+                <p>We use only ethical, Google-approved techniques. No shortcuts, no risk of penalties.</p>
+            </div>
+            
+            <div class="benefit-item benefit-2">
+                <div class="benefit-icon">
+                    <i class="bi bi-eye"></i>
+                </div>
+                <h3>Full Transparency</h3>
+                <p>You'll know exactly what we're doing and why. No black boxes, no secrets.</p>
+            </div>
+            
+            <div class="benefit-item benefit-3">
+                <div class="benefit-icon">
+                    <i class="bi bi-bar-chart"></i>
+                </div>
+                <h3>Data-Driven</h3>
+                <p>Every decision is based on data, not guesses. We track what works and adjust accordingly.</p>
+            </div>
+            
+            <div class="benefit-item benefit-4">
+                <div class="benefit-icon">
+                    <i class="bi bi-clock"></i>
+                </div>
+                <h3>Long-Term Focus</h3>
+                <p>We build sustainable traffic that grows over time, not spikes that disappear.</p>
+            </div>
+            
+            <div class="benefit-item benefit-5">
+                <div class="benefit-icon">
+                    <i class="bi bi-file-text"></i>
+                </div>
+                <h3>Clear Reporting</h3>
+                <p>Monthly reports show you exactly what's happening with your rankings and traffic.</p>
+            </div>
+            
+            <div class="benefit-item benefit-6">
+                <div class="benefit-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <h3>Human-First Content</h3>
+                <p>We write for humans first, search engines second. Content that actually helps your customers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 7️⃣ USE CASES ========== -->
+<section class="industries-section">
+    <div class="industries-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Use Cases</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                SEO for Every <span class="gradient-text">Business Type</span>
+            </h2>
+            <p class="section-description">
+                We help all kinds of businesses get found online. Here are some examples.
+            </p>
+        </div>
+        
+        <div class="industries-premium-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/local-business-seo.png' %}" alt="Local Business SEO">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-shop"></i>
+                    </div>
+                    <h3>Local Businesses</h3>
+                    <p>Get found by customers in your area. Optimize Google Business Profile and local search.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/ecommerce-seo.png' %}" alt="E-commerce SEO">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cart"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>Optimize product pages, category structure, and drive qualified shopping traffic.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/saas-seo.png' %}" alt="SaaS SEO">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-cloud"></i>
+                    </div>
+                    <h3>SaaS Companies</h3>
+                    <p>Content marketing and technical SEO to attract qualified leads and reduce CAC.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/professional-services-seo.png' %}" alt="Professional Services SEO">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h3>Professional Services</h3>
+                    <p>Attract clients searching for lawyers, consultants, accountants, and other professionals.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/blog-content.png' %}" alt="Content Sites">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-file-text"></i>
+                    </div>
+                    <h3>Content Publishers</h3>
+                    <p>Optimize content structure, internal linking, and grow organic readership.</p>
+                </div>
+            </div>
+            
+            <div class="industry-premium-card">
+                <div class="industry-premium-image">
+                    <img src="{% static 'images/industries/multi-location-seo.png' %}" alt="Multi-Location SEO">
+                    <div class="industry-premium-overlay"></div>
+                </div>
+                <div class="industry-premium-content">
+                    <div class="industry-premium-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>Multi-Location</h3>
+                    <p>SEO for businesses with multiple locations. Optimize each location's local presence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 8️⃣ BLOG ========== -->
+<section class="blog-premium-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">From our blog</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">
+                SEO & Digital Growth <span class="gradient-text">Insights</span>
+            </h2>
+            <p class="section-description">
+                Practical advice on improving your search visibility and attracting more customers.
+            </p>
+        </div>
+        
+        <div class="blog-featured-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-featured-card">
+                <div class="blog-featured-image">
+                    <img src="{% static 'images/blog/seo-basics.jpg' %}" alt="SEO Basics">
+                    <div class="blog-featured-category">SEO</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-featured-meta">
+                        <span><i class="bi bi-calendar3"></i> Mar 2024</span>
+                        <span><i class="bi bi-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>SEO basics: What actually matters in 2024</h3>
+                    <p>Forget the myths. Here's what you actually need to focus on for better search rankings.</p>
+                    <a href="#" class="blog-featured-link">
+                        Read article <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="blog-grid-posts">
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/local-seo.jpg' %}" alt="Local SEO">
+                        <div class="blog-grid-category">Local</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Feb 2024</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h4>How to optimize your Google Business Profile</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/technical-seo.jpg' %}" alt="Technical SEO">
+                        <div class="blog-grid-category">Technical</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Jan 2024</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h4>Technical SEO issues that hurt your rankings</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-grid-card">
+                    <div class="blog-grid-image">
+                        <img src="{% static 'images/blog/core-web-vitals.jpg' %}" alt="Core Web Vitals">
+                        <div class="blog-grid-category">Performance</div>
+                    </div>
+                    <div class="blog-grid-content">
+                        <div class="blog-grid-meta">
+                            <span>Dec 2023</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h4>Core Web Vitals explained (and how to improve them)</h4>
+                        <a href="#" class="blog-grid-link">
+                            Read <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 9️⃣ FAQ ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Common Questions About <span class="gradient-text">SEO</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        We get asked these questions a lot. If yours isn't here, just ask.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Ready to grow your traffic?</h4>
+                    <p>Let's discuss your goals and how SEO can help you reach more customers.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="{% url 'contact:contact' %}" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Get in touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How long does SEO take to show results?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>SEO is a long-term investment. You might see initial improvements in 3-6 months, but significant results typically take 6-12 months. It depends on your competition, current site health, and how much work is needed. We're honest about timelines from the start.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do you guarantee #1 rankings?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>No. Anyone who guarantees #1 rankings is promising something they can't control. Google's algorithm is complex and constantly changing. We guarantee that we'll use proven, ethical strategies to improve your visibility and traffic, but we can't guarantee specific rankings.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>What's included in an SEO audit?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Our SEO audit covers technical issues (crawl errors, site speed, mobile friendliness), on-page optimization (meta tags, headers, content), backlink profile, keyword opportunities, and competitor analysis. You get a detailed report with prioritized recommendations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>How much does SEO cost?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>SEO pricing varies based on your goals, competition, and how much work is needed. Monthly retainers typically range from $1,500-$4,000 for ongoing SEO. One-time audits and project work are also available. We'll give you a clear proposal after understanding your needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>Do I need SEO if I run a local business?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Absolutely. Local SEO helps you show up when people search for services in your area. Optimizing your Google Business Profile, getting local reviews, and building local citations can bring in customers who are actively looking for what you offer nearby.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon">
+                                <i class="bi bi-question-circle"></i>
+                            </div>
+                            <h3>What's the difference between SEO and Google Ads?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>SEO drives organic (free) traffic over time, while Google Ads brings paid traffic immediately. SEO is a long-term investment that compounds, while ads stop when you stop paying. Most successful businesses use both. We can help you decide what mix makes sense for your goals and budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 🔟 FINAL CTA ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <div class="cta-content-wrapper">
+                <h2 class="final-cta-title">
+                    Ready to Get <span class="gradient-text">Found Online?</span>
+                </h2>
+                <p class="final-cta-text">
+                    Let's talk about your business and how we can help you attract more customers through search.
+                </p>
+                <div class="final-cta-buttons">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                        <i class="bi bi-chat-dots"></i>
+                        Start the Conversation
+                    </a>
+                    <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                        <i class="bi bi-calendar-check"></i>
+                        Schedule a Call
+                    </a>
+                </div>
+                
+                <div class="cta-guarantee">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Free consultation • No obligation • 100% confidential</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            once: true,
+            duration: 600,
+            easing: 'ease-out-cubic'
+        });
+        
+        const faqItems = document.querySelectorAll('.faq-premium-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-premium-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 2}s`;
+        });
+    });
+</script>
+{% endblock %}

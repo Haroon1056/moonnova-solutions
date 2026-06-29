@@ -1,0 +1,383 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact MoonNova Solutions | Start Your Digital Project{% endblock %}
+
+{% block meta_description %}Contact MoonNova Solutions to discuss your web development, AI, or software project. We respond within 24 hours. Let's build something that scales together.{% endblock %}
+
+{% block meta_keywords %}contact us, web development inquiry, software project, AI solutions, get a quote, start a project{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== HERO SECTION ========== -->
+<section class="contact-hero">
+    <div class="contact-hero-bg">
+        <div class="bg-grid-pattern"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+    </div>
+    
+    <div class="container">
+        <div class="contact-hero-content" data-aos="fade-up">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">Get In Touch</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Let's Build Something That <span class="gradient-text">Grows your business</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Tell us about your project, goals, and timeline. We’ll help you plan the right solution and next steps.            
+            </p>
+            
+            {% comment %} <div class="hero-response">
+                <i class="bi bi-clock-history"></i>
+                <span>Typically respond within 24 hours</span>
+            </div> {% endcomment %}
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT FORM SECTION ========== -->
+<section id="contact-form" class="contact-form-section">
+    <div class="container">
+        <div class="form-grid">
+            <!-- LEFT SIDE - Contact Form -->
+            <div class="form-card" data-aos="fade-right">
+                <div class="form-header">
+                    <h2 class="form-title">Tell Us About Your Project</h2>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+                
+                <form method="post" action="{% url 'contact:submit_inquiry' %}" class="project-form" id="contactForm">
+                    {% csrf_token %}
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullname" name="fullname" class="form-control" placeholder="John Doe" required>
+                            <i class="bi bi-person input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
+                            <i class="bi bi-envelope input-icon"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+92 300 123 4567">
+                            <i class="bi bi-telephone input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name <span class="optional">(optional)</span></label>
+                            <input type="text" id="company" name="company" class="form-control" placeholder="Your Company">
+                            <i class="bi bi-building input-icon"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="project_type">Project Type <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="project_type" name="project_type" class="form-control" required>
+                                    <option value="" disabled selected>Select type</option>
+                                    <option value="website">Website Development</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="software">Custom Software</option>
+                                    <option value="mobile">Mobile App</option>
+                                    <option value="ai">AI Solution</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <i class="bi bi-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="timeline" name="timeline" class="form-control" required>
+                                    <option value="" disabled selected>Select timeline</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-2-months">1–2 Months</option>
+                                    <option value="3-plus-months">3+ Months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                                <i class="bi bi-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="details">Project Details <span class="required">*</span></label>
+                        <textarea id="details" name="details" class="form-control" rows="5" placeholder="Tell us about your project, goals, and requirements..." required></textarea>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">
+                            I agree to the <a href="{% url 'core:privacy_policy' %}" target="_blank">Privacy Policy</a> <span class="required">*</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-submit">
+                            <i class="bi bi-send"></i>
+                            Submit Inquiry
+                        </button>
+                    </div>
+                    
+                    <p class="form-note">No spam. No pressure. Just a conversation.</p>
+                </form>
+            </div>
+            
+            <!-- RIGHT SIDE - Contact Info -->
+            <div class="info-card" data-aos="fade-left">
+                <h3 class="info-title">Prefer Direct Communication?</h3>
+                
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:info@moonnovasolutions.com" class="info-value">info@moonnovasolutions.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Phone</span>
+                            <a href="tel:+923187040877" class="info-value">+92 318 704 0877</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Preferred Contact</span>
+                            <span class="info-value">Email or Call<br>we’ll respond within a few hours.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trust-note">
+                    <i class="bi bi-shield-lock-fill"></i>
+                    <p>All project discussions are confidential.</p>
+                </div>
+                
+                <div class="response-badge">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    <span>Average response time: 4 hours</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY WORK WITH US ========== -->
+<section class="why-work-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why Work With Us</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Building partnerships<span class="gradient-text"> that last</span></h2>
+        </div>
+        
+        <div class="benefits-grid-modern" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-bullseye"></i></div>
+                <h3 class="benefit-title">Business-Focused Approach</h3>
+                <p class="benefit-desc">We solve business problems and create measurable value.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-chat-dots"></i></div>
+                <h3 class="benefit-title">Transparent Communication</h3>
+                <p class="benefit-desc">Regular updates, clear timelines, and honest feedback.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-layers"></i></div>
+                <h3 class="benefit-title">Scalable Architecture</h3>
+                <p class="benefit-desc">Systems that grow with your business.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+                <h3 class="benefit-title">Long-Term Support</h3>
+                <p class="benefit-desc">We're here for ongoing maintenance and growth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FAQ SECTION ========== -->
+<section class="faq-premium-section">
+    <div class="container">
+        <div class="faq-premium-wrapper">
+            <div class="faq-premium-left" data-aos="fade-right">
+                <div class="faq-premium-header">
+                    <div class="section-badge">
+                        <span class="badge-line"></span>
+                        <span class="badge-text">FAQs</span>
+                    </div>
+                    <h2 class="faq-premium-title">
+                        Frequently Asked <span class="gradient-text">Questions</span>
+                    </h2>
+                    <p class="faq-premium-description">
+                        Everything you need to know about working with us. Can't find what you're looking for? Feel free to reach out directly.
+                    </p>
+                </div>
+                
+                <div class="faq-premium-contact">
+                    <h4>Still have questions?</h4>
+                    <p>We're here to help you with any queries about your project.</p>
+                    <div class="faq-premium-contact-buttons">
+                        <a href="#contact-form" class="btn-primary">
+                            <i class="bi bi-envelope"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-premium-right" data-aos="fade-left">
+                <div class="faq-premium-accordion">
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon"><i class="bi bi-question-circle"></i></div>
+                            <h3>How long does a typical project take?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Most website projects take 3–6 weeks, while complex software solutions may take 2–4 months. We'll provide a detailed timeline during consultation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon"><i class="bi bi-question-circle"></i></div>
+                            <h3>Do you work with international clients?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes, we work remotely with clients globally. Our team is experienced in collaborating across time zones.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon"><i class="bi bi-question-circle"></i></div>
+                            <h3>Do you offer post-launch support?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes, we provide comprehensive maintenance and support options to keep your solution secure and optimized.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon"><i class="bi bi-question-circle"></i></div>
+                            <h3>Can I request a custom quote?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Absolutely. Fill out the contact form, and we'll prepare a custom proposal tailored to your requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon"><i class="bi bi-question-circle"></i></div>
+                            <h3>Is my project information confidential?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>Yes, all project discussions are strictly confidential. We're happy to sign NDAs if required.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-premium-item">
+                        <div class="faq-premium-question">
+                            <div class="faq-premium-icon"><i class="bi bi-question-circle"></i></div>
+                            <h3>What information do you need to get started?</h3>
+                            <button class="faq-premium-toggle"><i class="bi bi-plus"></i></button>
+                        </div>
+                        <div class="faq-premium-answer">
+                            <p>We'll need to understand your business goals, target audience, desired features, and requirements. We can guide you through the process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FINAL CTA SECTION ========== -->
+<section class="final-cta-section">
+    <div class="container">
+        <div class="final-cta-card" data-aos="zoom-in">
+            <h2 class="final-cta-title">Have a Project in Mind?</h2>
+            <p class="final-cta-text">
+                Let’s talk and see how we can help you build it the right way.
+            </p>
+            <div class="final-cta-buttons">
+                <a href="#contact-form" class="btn-primary btn-large">
+                    <i class="bi bi-chat-dots"></i>
+                    Start your project
+                </a>
+                <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                    <i class="bi bi-calendar-check"></i>
+                    Schedule a Consultation
+                </a>
+            </div>
+            <div class="cta-guarantee">
+                <i class="bi bi-shield-check"></i>
+                <span>Free consultation • No obligation • 100% confidential</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Notification Toast -->
+<div class="notification-toast" id="notificationToast">
+    <i class="bi" id="notificationIcon"></i>
+    <span id="notificationMessage"></span>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="{% static 'js/contact.js' %}"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'ease-out-cubic',
+        offset: 50
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} | MoonNova Blog{% endblock %}
+
+{% block meta_description %}{{ category.description|default:category.name }} articles and insights.{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== CATEGORY HERO ========== -->
+<section class="category-hero">
+    <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-breadcrumb">
+                <a href="{% url 'blog:blog_list' %}">Blog</a>
+                <i class="bi bi-chevron-right"></i>
+                <span>{{ category.name }}</span>
+            </div>
+            <h1 class="hero-title">
+                {{ category.name }}
+            </h1>
+            {% if category.description %}
+            <p class="hero-subtitle">{{ category.description }}</p>
+            {% endif %}
+            <div class="hero-stats">
+                <span class="stat-badge">
+                    <i class="bi bi-file-text"></i>
+                    {{ posts.paginator.count }} Articles
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CATEGORY FILTER ========== -->
+<section class="filter-section">
+    <div class="container">
+        <div class="filter-card" data-aos="fade-up">
+            <div class="category-tabs">
+                <a href="{% url 'blog:blog_list' %}" class="tab-link">All</a>
+                {% for cat in categories %}
+                <a href="{% url 'blog:category' cat.slug %}" class="tab-link {% if cat.slug == category.slug %}active{% endif %}">
+                    {{ cat.name }}
+                    <span class="tab-count">{{ cat.post_count }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CATEGORY POSTS ========== -->
+<section class="blog-section">
+    <div class="container">
+        {% if posts %}
+        <div class="blog-grid">
+            {% for post in posts %}
+            <article class="blog-card" data-aos="fade-up">
+                <div class="card-image">
+                    <a href="{{ post.get_absolute_url }}">
+                        {% if post.featured_image %}
+                        <img src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% else %}
+                        <img src="{% static 'images/blog-placeholder.jpg' %}" alt="{{ post.title }}">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="post-date">
+                            <i class="bi bi-calendar3"></i>
+                            {{ post.published_at|date:"M d, Y" }}
+                        </span>
+                        <span class="reading-time">
+                            <i class="bi bi-clock"></i> {{ post.reading_time }} min
+                        </span>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                    </h3>
+                    <a href="{{ post.get_absolute_url }}" class="read-more">
+                        Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if is_paginated %}
+        <div class="pagination-wrapper">
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-nav prev">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                {% endif %}
+                
+                <div class="page-numbers">
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num == page_obj.number %}
+                        <span class="page-number active">{{ num }}</span>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                        <a href="?page={{ num }}" class="page-number">{{ num }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="page-nav next">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class="no-results">
+            <i class="bi bi-folder"></i>
+            <h3>No articles in this category yet</h3>
+            <p>Check back soon for new content!</p>
+            <a href="{% url 'blog:blog_list' %}" class="reset-btn">Browse All Articles</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 600
+    });
+</script>
+{% endblock %}

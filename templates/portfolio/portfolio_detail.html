@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ project.title }} | MoonNova Portfolio{% endblock %}
+
+{% block meta_description %}{{ project.meta_description|default:project.short_description }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/portfolio-detail.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== SECTION 1: LARGE FEATURED IMAGE ========== -->
+<section class="project-hero">
+    <div class="hero-image-wrapper">
+        <img 
+            src="{{ project.featured_image.url }}" 
+            alt="{{ project.image_alt|default:project.title }}"
+            class="hero-image"
+        >
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="{% url 'portfolio:portfolio_list' %}">Portfolio</a>
+                <i class="bi bi-chevron-right"></i>
+                {% if project.category %}
+                <a href="{% url 'portfolio:category' project.category.slug %}">{{ project.category.name }}</a>
+                <i class="bi bi-chevron-right"></i>
+                {% endif %}
+                <span>{{ project.title|truncatechars:30 }}</span>
+            </div>
+            
+            <h1 class="project-title">{{ project.title }}</h1>
+            {% if project.tagline %}
+            <p class="project-tagline">{{ project.tagline }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- ========== SECTION 2: PROJECT OVERVIEW ========== -->
+<section class="overview-section">
+    <div class="container">
+        <div class="overview-grid">
+            <!-- Left: Description -->
+            <div class="overview-description" data-aos="fade-right">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="description-content">
+                    {{ project.full_description|safe }}
+                </div>
+            </div>
+            
+            <!-- Right: Project Details Card -->
+            <div class="overview-details" data-aos="fade-left">
+                <div class="details-card">
+                    <h3 class="details-title">Project Details</h3>
+                    
+                    <div class="details-list">
+                        {% if project.client_name %}
+                        <div class="detail-item">
+                            <span class="detail-label">Client</span>
+                            <span class="detail-value">{{ project.client_name }}</span>
+                        </div>
+                        {% endif %}
+                        
+                        {% if project.industry %}
+                        <div class="detail-item">
+                            <span class="detail-label">Industry</span>
+                            <span class="detail-value">{{ project.industry }}</span>
+                        </div>
+                        {% endif %}
+                        
+                        {% if project.services_provided %}
+                        <div class="detail-item">
+                            <span class="detail-label">Services</span>
+                            <span class="detail-value">{{ project.services_provided }}</span>
+                        </div>
+                        {% endif %}
+                        
+                        {% if project.project_duration %}
+                        <div class="detail-item">
+                            <span class="detail-label">Duration</span>
+                            <span class="detail-value">{{ project.project_duration }}</span>
+                        </div>
+                        {% endif %}
+                        
+                        {% if technologies %}
+                        <div class="detail-item">
+                            <span class="detail-label">Technologies</span>
+                            <div class="tech-tags">
+                                {% for tech in technologies %}
+                                <span class="tech-tag">
+                                    {% if tech.icon %}
+                                    <i class="bi {{ tech.icon }}"></i>
+                                    {% endif %}
+                                    {{ tech.name }}
+                                </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SECTION 3: PROBLEM & SOLUTION ========== -->
+<section class="challenge-section">
+    <div class="container">
+        <div class="challenge-grid">
+            {% if project.challenge %}
+            <div class="challenge-block" data-aos="fade-up">
+                <div class="block-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <h2 class="block-title">The Challenge</h2>
+                <div class="block-content">
+                    {{ project.challenge|safe }}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if project.approach %}
+            <div class="challenge-block" data-aos="fade-up" data-aos-delay="100">
+                <div class="block-icon">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <h2 class="block-title">Our Approach</h2>
+                <div class="block-content">
+                    {{ project.approach|safe }}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if project.solution %}
+            <div class="challenge-block" data-aos="fade-up" data-aos-delay="200">
+                <div class="block-icon">
+                    <i class="bi bi-check-circle"></i>
+                </div>
+                <h2 class="block-title">The Solution</h2>
+                <div class="block-content">
+                    {{ project.solution|safe }}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- ========== SECTION 4: RESULTS ========== -->
+{% if project.results or result_stats %}
+<section class="results-section">
+    <div class="container">
+        <div class="results-header" data-aos="fade-up">
+            <h2 class="section-title">Results & Impact</h2>
+            <p class="section-subtitle">Measurable outcomes that matter</p>
+        </div>
+        
+        {% if result_stats %}
+        <div class="results-stats" data-aos="fade-up" data-aos-delay="100">
+            {% for stat in result_stats %}
+            <div class="stat-card">
+                <span class="stat-value">{{ stat.value }}</span>
+                <span class="stat-label">{{ stat.label }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if project.results %}
+        <div class="results-content" data-aos="fade-up" data-aos-delay="200">
+            {{ project.results|safe }}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<!-- ========== SECTION 5: PROJECT GALLERY ========== -->
+{% if gallery_images %}
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Project Gallery</h2>
+        
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+            {% for image in gallery_images %}
+            <div class="gallery-item">
+                <a href="{{ image.image.url }}" class="gallery-link" data-lightbox="project-gallery">
+                    <img src="{{ image.image.url }}" alt="{{ image.alt_text|default:project.title }}">
+                    <div class="gallery-overlay">
+                        <i class="bi bi-arrows-fullscreen"></i>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ========== SECTION 6: CTA SECTION ========== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-card">
+            <h2 class="cta-title">Have a similar project in mind?</h2>
+            <p class="cta-text">
+                Let's discuss how we can help bring your ideas to life.
+            </p>
+            <a href="{% url 'contact:contact' %}" class="cta-button">
+                Start a Project
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RELATED PROJECTS ========== -->
+{% if related_projects %}
+<section class="related-section">
+    <div class="container">
+        <h2 class="section-title">More Projects</h2>
+        
+        <div class="related-grid">
+            {% for related in related_projects %}
+            <a href="{{ related.get_absolute_url }}" class="related-card">
+                <div class="related-image">
+                    <img src="{{ related.featured_image.url }}" alt="{{ related.title }}">
+                </div>
+                <div class="related-content">
+                    <h3 class="related-title">{{ related.title }}</h3>
+                    <span class="related-category">{{ related.category.name }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Add Lightbox2 for gallery -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<script>
+    AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'ease-out-cubic'
+    });
+
+    // Initialize lightbox
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': 'Image %1 of %2'
+    });
+</script>
+{% endblock %}

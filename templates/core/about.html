@@ -1,0 +1,554 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About MoonNova Solutions | Web, App & AI Development Agency{% endblock %}
+
+{% block meta_description %}Learn about MoonNova Solutions, a development agency building custom websites, mobile apps, and AI-powered solutions for startups and growing businesses.{% endblock %}
+
+{% block meta_keywords %}about MoonNova Solutions, web development agency, mobile app development, AI solutions, custom software development, startup technology partner{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== HERO SECTION ========== -->
+<section class="about-hero">
+    <div class="hero-pattern"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">MoonNova Solutions</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Building Digital Products That Help <span class="gradient-text">Businesses Grow</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    MoonNova Solutions is a development-focused agency helping startups and growing businesses build reliable, scalable digital products. From websites and mobile apps to AI-powered systems, we focus on solutions that actually work.
+                </p>
+                
+                <div class="trust-banner">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Trusted by startups and growing businesses.</span>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="{% url 'contact:contact' %}" class="btn-primary">
+                        <i class="bi bi-rocket-takeoff"></i>
+                        Start a Project
+                    </a>
+                    <a href="{% url 'portfolio:portfolio_list' %}" class="btn-outline">
+                        <i class="bi bi-grid"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="visual-container">
+                    <div class="floating-elements">
+                        <div class="float-element e1"><i class="bi bi-code-slash"></i></div>
+                        <div class="float-element e2"><i class="bi bi-cpu"></i></div>
+                        <div class="float-element e3"><i class="bi bi-phone"></i></div>
+                        <div class="float-element e4"><i class="bi bi-graph-up"></i></div>
+                    </div>
+                    <img src="{% static 'images/about/hero-team.png' %}" 
+                         alt="MoonNova Solutions team working on innovative technology solutions" 
+                         class="hero-image"
+                         onerror="this.src='{% static 'images/about/hero-fallback.png' %}'">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHO WE ARE ========== -->
+<section class="who-we-are">
+    <div class="container">
+        <div class="who-grid">
+            <div class="who-content" data-aos="fade-right">
+                <div class="section-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">Who We Are</span>
+                </div>
+                
+                <h2 class="section-title">
+                    A small, focused team of developers and <span class="gradient-text">problem-solvers</span>
+                </h2>
+                
+                <p class="who-text">
+                    MoonNova Solutions started with a simple goal: to build software that actually works for businesses, not just looks good on the surface.
+                </p>
+                
+                <p class="who-text">
+                    We work closely with founders, teams, and business owners to understand how they operate. Then we design and develop solutions that make their work easier, faster, and more efficient.
+                </p>
+                
+                <p class="who-text">
+                    No unnecessary complexity. No overpromising. Just practical technology that solves real problems.
+                </p>
+            </div>
+
+            <!-- ========== WHO WE ARE STATS SECTION ========== -->
+            <div class="who-stats" data-aos="fade-left">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+                    <div class="stat-number">Built for Scale</div>
+                    <div class="stat-label">We write code that grows with your business</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+                    <div class="stat-number">Clean Code</div>
+                    <div class="stat-label">No shortcuts, just quality</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+                    <div class="stat-number">Clear Communication</div>
+                    <div class="stat-label">You'll always know what's happening</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <div class="stat-number">Long-Term Support</div>
+                    <div class="stat-label">Dedicated team to support your growth</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== OUR APPROACH ========== -->
+<section class="approach-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Approach</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">How We <span class="gradient-text">Work</span></h2>
+        </div>
+        
+        <div class="approach-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="approach-card">
+                <div class="approach-icon">
+                    <i class="bi bi-compass"></i>
+                </div>
+                <h3 class="approach-title">Understand First</h3>
+                <p class="approach-desc">We start by learning about your business, your goals, and what your customers actually need. No assumptions, just listening.</p>
+            </div>
+            
+            <div class="approach-card">
+                <div class="approach-icon">
+                    <i class="bi bi-scissors"></i>
+                </div>
+                <h3 class="approach-title">Build What Matters</h3>
+                <p class="approach-desc">We focus on the features that deliver real value. No bloat, no unnecessary complexity. Just what you actually need.</p>
+            </div>
+            
+            <div class="approach-card">
+                <div class="approach-icon">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <h3 class="approach-title">Keep It Scalable</h3>
+                <p class="approach-desc">We write clean, maintainable code that can grow with your business. No shortcuts, no technical debt.</p>
+            </div>
+            
+            <div class="approach-card">
+                <div class="approach-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <h3 class="approach-title">Communicate Clearly</h3>
+                <p class="approach-desc">You'll always know what we're building and why. Regular updates, plain language, no surprises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHAT WE DO ========== -->
+<section class="services-summary">
+    <div class="services-bg"></div>
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">What We Do</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Digital solutions for <span class="gradient-text">real business growth</span></h2>
+            <p class="section-description">We design and build technology that solves real problems.</p>
+        </div>
+        
+        <div class="services-cards-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Card 1: Custom Web Development -->
+            <div class="service-card">
+                <div class="service-card-icon">
+                    <i class="bi bi-code-square"></i>
+                </div>
+                <h3 class="service-card-title">Custom Web Development</h3>
+                <p class="service-card-desc">Performance-driven websites built for speed, security, and real business results.</p>
+                <a href="{% url 'services:web_development' %}" class="service-card-link">
+                    Learn More <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Card 2: E-Commerce Development -->
+            <div class="service-card">
+                <div class="service-card-icon">
+                    <i class="bi bi-cart"></i>
+                </div>
+                <h3 class="service-card-title">E-Commerce Development</h3>
+                <p class="service-card-desc">Secure, scalable online stores with seamless checkout and inventory management.</p>
+                <a href="{% url 'services:ecommerce_development' %}" class="service-card-link">
+                    Learn More <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Card 3: Mobile App Development -->
+            <div class="service-card">
+                <div class="service-card-icon">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <h3 class="service-card-title">Mobile App Development</h3>
+                <p class="service-card-desc">iOS and Android apps built with React Native and Expo from a single codebase.</p>
+                <a href="{% url 'services:mobile_app_development' %}" class="service-card-link">
+                    Learn More <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Card 4: Custom Software Solutions -->
+            <div class="service-card">
+                <div class="service-card-icon">
+                    <i class="bi bi-window"></i>
+                </div>
+                <h3 class="service-card-title">Custom Software Solutions</h3>
+                <p class="service-card-desc">Tailored software systems, dashboards, and automation tools for your operations.</p>
+                <a href="{% url 'services:custom_software_development' %}" class="service-card-link">
+                    Learn More <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Card 5: AI & Machine Learning -->
+            <div class="service-card">
+                <div class="service-card-icon">
+                    <i class="bi bi-cpu"></i>
+                </div>
+                <h3 class="service-card-title">AI & Machine Learning</h3>
+                <p class="service-card-desc">Practical AI solutions including chatbots, predictive analytics, and automation.</p>
+                <a href="{% url 'services:ai_ml_solutions' %}" class="service-card-link">
+                    Learn More <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Card 6: Data Analytics & Automation -->
+            <div class="service-card">
+                <div class="service-card-icon">
+                    <i class="bi bi-bar-chart"></i>
+                </div>
+                <h3 class="service-card-title">Data Analytics & Automation</h3>
+                <p class="service-card-desc">Turn your data into decisions with dashboards, BI, and process automation.</p>
+                <a href="{% url 'services:data_analytics' %}" class="service-card-link">
+                    Learn More <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY MOONNOVA ========== -->
+<section class="why-moonnova">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Why Choose Us</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">Why <span class="gradient-text">MoonNova Solutions</span></h2>
+        </div>
+        
+        <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="bi bi-people"></i>
+                </div>
+                <h3 class="why-title">Direct Communication</h3>
+                <p class="why-desc">When you work with MoonNova, you work directly with the people building your product. No layers of management, no handoffs.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="bi bi-bullseye"></i>
+                </div>
+                <h3 class="why-title">Real Business Results</h3>
+                <p class="why-desc">We focus on outcomes that matter: faster workflows, better customer experiences, and measurable growth.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="bi bi-layers"></i>
+                </div>
+                <h3 class="why-title">Clean, Scalable Code</h3>
+                <p class="why-desc">We write code that's maintainable, well-tested, and built to handle growth. No shortcuts, no technical debt.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="bi bi-eye"></i>
+                </div>
+                <h3 class="why-title">Transparent Process</h3>
+                <p class="why-desc">You'll know exactly what we're building, why we're building it, and when it will be ready. No surprises.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <h3 class="why-title">Long-Term Support</h3>
+                <p class="why-desc">We don't disappear after launch. We're here to help you maintain, update, and grow your software over time.</p>
+            </div>
+            
+            <div class="why-card">
+                <div class="why-icon">
+                    <i class="bi bi-clock-history"></i>
+                </div>
+                <h3 class="why-title">On-Time Delivery</h3>
+                <p class="why-desc">We respect your timeline. We deliver what we promise, when we promise it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== OUR MISSION & VISION ========== -->
+<section class="mission-vision">
+    <div class="container">
+        <div class="mission-vision-grid">
+            <div class="mission-card" data-aos="fade-right">
+                <div class="mission-icon">
+                    <i class="bi bi-flag"></i>
+                </div>
+                <h2 class="mission-title">Our Mission</h2>
+                <p class="mission-text">
+                    To help businesses use technology in a practical way. Not just to follow trends, but to solve real problems, improve efficiency, and create long-term growth.
+                </p>
+            </div>
+            
+            <div class="vision-card" data-aos="fade-left">
+                <div class="vision-icon">
+                    <i class="bi bi-eye"></i>
+                </div>
+                <h2 class="vision-title">Our Vision</h2>
+                <p class="vision-text">
+                    To become a trusted digital partner for startups and growing businesses worldwide, known for delivering reliable, scalable, and well-built software solutions.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHO WE WORK WITH ========== -->
+<section class="who-we-serve">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Who We Work With</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">We help <span class="gradient-text">businesses like yours</span></h2>
+        </div>
+        
+        <div class="serve-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="serve-card">
+                <div class="serve-icon">
+                    <i class="bi bi-rocket"></i>
+                </div>
+                <h3 class="serve-title">Startups</h3>
+                <p class="serve-desc">Building your first product? We help you launch quickly and iterate based on real feedback.</p>
+            </div>
+            
+            <div class="serve-card">
+                <div class="serve-icon">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <h3 class="serve-title">Small Businesses</h3>
+                <p class="serve-desc">Going digital or improving your online presence? We build practical solutions that work for you.</p>
+            </div>
+            
+            <div class="serve-card">
+                <div class="serve-icon">
+                    <i class="bi bi-graph-up"></i>
+                </div>
+                <h3 class="serve-title">Growing Companies</h3>
+                <p class="serve-desc">Need to improve your systems? We help you scale with clean, reliable software.</p>
+            </div>
+        </div>
+        
+        <p class="serve-note text-center">Whether you're starting from scratch or improving an existing platform, we adapt to your needs.</p>
+    </div>
+</section>
+
+<!-- ========== OUR PROCESS ========== -->
+<section class="process-simple">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Our Process</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">How we bring your <span class="gradient-text">ideas to life</span></h2>
+            <p class="section-description">You'll always know what we're building and why.</p>
+        </div>
+        
+        <div class="process-simple-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3 class="step-title">Discovery</h3>
+                    <p class="step-desc">We learn about your business, your users, and what you need to achieve.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3 class="step-title">Planning</h3>
+                    <p class="step-desc">We map out the solution, choose the right technology, and set clear timelines.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3 class="step-title">Design</h3>
+                    <p class="step-desc">We create interfaces that are intuitive, user-friendly, and aligned with your brand.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3 class="step-title">Development</h3>
+                    <p class="step-desc">We build in sprints with regular updates. You see progress every week.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3 class="step-title">Testing</h3>
+                    <p class="step-desc">We test thoroughly to ensure quality, security, and performance.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">06</div>
+                <div class="step-content">
+                    <h3 class="step-title">Launch & Support</h3>
+                    <p class="step-desc">We deploy your solution and stay around to help you grow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TRUST / SOCIAL PROOF ========== -->
+{% comment %} <section class="trust-proof">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <div class="section-badge centered">
+                <span class="badge-line"></span>
+                <span class="badge-text">Built for Real Business Needs</span>
+                <span class="badge-line"></span>
+            </div>
+            <h2 class="section-title">We focus on <span class="gradient-text">solutions that solve real problems</span></h2>
+        </div>
+        
+        <div class="proof-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="proof-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Improving workflows and saving time</span>
+            </div>
+            <div class="proof-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Helping businesses grow with reliable software</span>
+            </div>
+            <div class="proof-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Building solutions that last</span>
+            </div>
+        </div>
+        
+        <!-- Simple testimonial (can be replaced later) -->
+        <div class="simple-testimonial" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-quote">
+                <i class="bi bi-quote"></i>
+            </div>
+            <p class="testimonial-text">
+                "MoonNova Solutions built our entire e-commerce platform from scratch. They took the time to understand our products, our customers, and our workflow. The result is a system that's actually made our business run smoother."
+            </p>
+            <div class="testimonial-author">
+                <span class="author-name">Ahmed Raza</span>
+                <span class="author-title">Founder, Talha Stitching Unit</span>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<!-- ========== CTA SECTION ========== -->
+<section class="cta-final">
+    <div class="container">
+        <div class="cta-card" data-aos="zoom-in">
+            <h2 class="cta-title">Let's Build Something That Works</h2>
+            <p class="cta-text">
+                Tell us about your project, your goals, and what you're trying to achieve. We'll help you figure out the right approach.
+            </p>
+            <div class="cta-buttons">
+                <a href="{% url 'contact:contact' %}" class="btn-primary btn-large">
+                    <i class="bi bi-chat-dots"></i>
+                    Start Your Project
+                </a>
+                <a href="{% url 'core:consulting' %}" class="btn-outline-light btn-large">
+                    <i class="bi bi-calendar-check"></i>
+                    Schedule a Consultation
+                </a>
+            </div>
+            <p class="cta-note">
+                <i class="bi bi-shield-check"></i>
+                Free consultation • No obligation • 100% confidential
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="{% static 'js/about.js' %}"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 600,
+        easing: 'ease-out-cubic',
+        offset: 50
+    });
+</script>
+{% endblock %}
