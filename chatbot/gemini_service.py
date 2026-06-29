@@ -1,36 +1,59 @@
 # chatbot/gemini_service.py
+
 import google.generativeai as genai
+
 from django.conf import settings
 from django.core.cache import cache
+from django.db.utils import OperationalError, ProgrammingError
+
 from blog.models import BlogPost
 from portfolio.models import Project
 
-# Configure Gemini
-genai.configure(api_key=settings.GEMINI_API_KEY)
+
+if settings.GEMINI_API_KEY:
+    genai.configure(api_key=settings.GEMINI_API_KEY)
 
 
 class MoonNovaChatbot:
     """Professional AI Chatbot for MoonNova Solutions"""
-    
+
     def __init__(self):
-        self.model = genai.GenerativeModel('gemini-2.5-flash')
+        self.model = genai.GenerativeModel("gemini-2.5-flash")
         self.system_prompt = self._build_system_prompt()
-    
+
     def _build_system_prompt(self):
         """Build comprehensive system prompt"""
-        
-        cached_content = cache.get('moonnova_chatbot_context')
+
+        cached_content = cache.get("moonnova_chatbot_context")
         if cached_content:
             return cached_content
-        
-        # Get blog posts - store slug only, not full URL to avoid circular import
-        blog_posts = BlogPost.objects.filter(is_published=True).order_by('-published_at')[:10]
-        blog_list = "\n".join([f"- {post.title} (slug: {post.slug})" for post in blog_posts])
-        
-        # Get portfolio projects - store slug only
-        portfolio_projects = Project.objects.filter(status='published').order_by('-published_at')[:10]
-        portfolio_list = "\n".join([f"- {project.title} (slug: {project.slug})" for project in portfolio_projects])
-        
+
+        try:
+            blog_posts = BlogPost.objects.filter(
+                is_published=True
+            ).order_by("-published_at")[:10]
+
+            blog_list = "\n".join([
+                f"- {post.title} (slug: {post.slug})"
+                for post in blog_posts
+            ])
+
+        except (OperationalError, ProgrammingError):
+            blog_list = ""
+
+        try:
+            portfolio_projects = Project.objects.filter(
+                status="published"
+            ).order_by("-published_at")[:10]
+
+            portfolio_list = "\n".join([
+                f"- {project.title} (slug: {project.slug})"
+                for project in portfolio_projects
+            ])
+
+        except (OperationalError, ProgrammingError):
+            portfolio_list = ""
+
         system_prompt = f"""You are MoonNova Assistant, the official AI chatbot for MoonNova Solutions.
 
 ## IMPORTANT - HOW TO FORMAT RESPONSES WITH LINKS
@@ -91,36 +114,54 @@ Use format: [Project Title](/portfolio/project/{{slug}}/)
 7. For services: "We offer [Custom Web Development](/custom-web-development/) and more. Which interests you?"
 
 Keep responses natural, helpful, and professional. Always use the link format when mentioning any page."""
-        
-        cache.set('moonnova_chatbot_context', system_prompt, 3600)
+
+        cache.set("moonnova_chatbot_context", system_prompt, 3600)
+
         return system_prompt
-    
+
     def get_response(self, user_message, conversation_history=None):
         """Get response from Gemini AI"""
-        
+
         messages = [
-            {"role": "user", "parts": [self.system_prompt]},
-            {"role": "model", "parts": ["I understand. I'll use [Page Name](URL) format for all links and never show raw URLs."]}
+            {
+                "role": "user",
+                "parts": [self.system_prompt],
+            },
+            {
+                "role": "model",
+                "parts": [
+                    "I understand. I'll use [Page Name](URL) format for all links and never show raw URLs."
+                ],
+            },
         ]
-        
-        if conversation_history and len(conversation_history) > 0:
-            recent = conversation_history[-8:] if len(conversation_history) > 8 else conversation_history
+
+        if conversation_history:
+            recent = conversation_history[-8:]
+
             for msg in recent:
-                role = "user" if msg.get('role') == 'user' else "model"
-                content = msg.get('content', '')
+                role = "user" if msg.get("role") == "user" else "model"
+                content = msg.get("content", "")
+
                 if content:
-                    messages.append({"role": role, "parts": [content]})
-        
-        messages.append({"role": "user", "parts": [user_message]})
-        
+                    messages.append({
+                        "role": role,
+                        "parts": [content],
+                    })
+
+        messages.append({
+            "role": "user",
+            "parts": [user_message],
+        })
+
         try:
             response = self.model.generate_content(messages)
             return response.text.strip()
+
         except Exception as e:
             print(f"Gemini API Error: {e}")
             return "I'm having trouble connecting. Please email us at info@moonnovasolutions.com or call +92 318 704 0877."
-    
+
     def refresh_context(self):
-        cache.delete('moonnova_chatbot_context')
+        cache.delete("moonnova_chatbot_context")
         self.system_prompt = self._build_system_prompt()
         return True
