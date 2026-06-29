@@ -20,6 +20,7 @@ ENV/
 
 # Django generated
 staticfiles/
+media/
 
 # OS / editor
 .DS_Store
